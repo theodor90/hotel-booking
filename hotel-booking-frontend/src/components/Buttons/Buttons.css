@@ -1,0 +1,81 @@
+:root {
+  --red: #ef476f;
+  --yellow: #ffd166;
+  --green: #06d6a0;
+  --light-blue: #118ab2;
+  --dark-blue: #073b4c;
+  --black: #020e13;
+  --white: #ecf9fd;
+}
+
+.container {
+  /* Testing only! Remove before using component */
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+button:not(:last-of-type) {
+  /* Testing only! Remove before using component */
+  margin-right: 1rem;
+}
+
+.btn {
+  font-weight: 700;
+  border-radius: 0.25rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn-red {
+  color: var(--white);
+  border: 1px solid var(--red);
+  background-color: var(--red);
+}
+
+.btn-red-reverse {
+  color: var(--red);
+  border: 1px solid var(--red);
+  background-color: var(--white);
+}
+
+.btn-green {
+  color: var(--white);
+  border: 1px solid var(--green);
+  background-color: var(--green);
+}
+
+.btn-green-reverse {
+  color: var(--green);
+  border: 1px solid var(--green);
+  background-color: var(--white);
+}
+
+.btn-blue {
+  color: var(--white);
+  border: 1px solid var(--light-blue);
+  background-color: var(--light-blue);
+}
+
+.btn-blue-reverse {
+  color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  background-color: var(--white);
+}
+
+.btn-dark-blue {
+  color: var(--white);
+  border: 1px solid var(--dark-blue);
+  background-color: var(--dark-blue);
+}
+
+.btn-dark-blue-reverse {
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+  background-color: var(--white);
+}

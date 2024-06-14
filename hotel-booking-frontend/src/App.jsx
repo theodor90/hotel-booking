@@ -10,6 +10,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
+import Buttons from "./components/Buttons/Buttons";
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -22,21 +23,25 @@ PrivateRoute.propTypes = {
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route
-          path="/dashboard"
-          element={
-            <PrivateRoute>
-              <Dashboard />
-            </PrivateRoute>
-          }
-        />
-      </Routes>
+    <>
+      <Buttons />
       <Footer />
-    </Router>
+    </>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/register" element={<Register />} />
+    //     <Route path="/login" element={<Login />} />
+    //     <Route
+    //       path="/dashboard"
+    //       element={
+    //         <PrivateRoute>
+    //           <Dashboard />
+    //         </PrivateRoute>
+    //       }
+    //     />
+    //   </Routes>
+    //   <Footer />
+    // </Router>
   );
 };
 

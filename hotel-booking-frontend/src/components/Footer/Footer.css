@@ -3,6 +3,9 @@
   --yellow: #ffd166;
   --green: #06d6a0;
   --light-blue: #118ab2;
+  --dark-blue: #073b4c;
+  --black: #020e13;
+  --white: #ecf9fd;
 }
 
 .footer-nav {
@@ -69,4 +72,5 @@ footer .fa-brands {
 
 footer .fa-brands:hover {
   transform: scale(1.1);
+  color: var(--yellow);
 }

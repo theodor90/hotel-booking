@@ -12,7 +12,7 @@ export default function Footer() {
     <footer>
       <div className="footer-nav">
         <div className="footer-col">
-          <h1>LOGO</h1>
+          <h1>InnFinder</h1>
           <p>Storgatan 12</p>
           <p>111 22 Stockholm</p>
           <p>Sweden</p>
@@ -60,13 +60,13 @@ export default function Footer() {
           </li>
         </ul>
         <ul>
-          <li>
+          <li className="fa-brands">
             <FontAwesomeIcon icon={faFacebook} />
           </li>
-          <li>
+          <li className="fa-brands">
             <FontAwesomeIcon icon={faXTwitter} />
           </li>
-          <li>
+          <li className="fa-brands">
             <FontAwesomeIcon icon={faInstagram} />
           </li>
         </ul>
