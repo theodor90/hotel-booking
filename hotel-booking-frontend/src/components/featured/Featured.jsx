@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import data from "./HotelData.json";
 import "./Featured.css";
-import "../Buttons/Buttons";
+import "../../css/Buttons.css";
 
 export default function Featured() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +16,6 @@ export default function Featured() {
 
   return (
     <>
-      <h1>Featured Hotels</h1>
       <div className="carousel">
         {data.map((item, index) => (
           <div
@@ -30,7 +29,6 @@ export default function Featured() {
               <h2>{item.hotelName}</h2>
               <h5>{item.Location}</h5>
               <p>{item.description}</p>
-              <button className="btn btn-red">More info</button>
             </div>
           </div>
         ))}
