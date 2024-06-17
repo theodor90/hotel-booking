@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+nav ul li:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+nav a {
+  color: var(--light-blue);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: ease-in-out 0.5s;
+}
+
+nav a:hover {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
