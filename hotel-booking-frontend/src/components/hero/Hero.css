@@ -1,0 +1,28 @@
+.hero-bg {
+  background-image: url("https://images.unsplash.com/photo-1618064541372-289bdb6f5b7b?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  margin-left: 2rem;
+  padding: 2rem;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+}
