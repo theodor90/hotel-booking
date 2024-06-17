@@ -33,7 +33,9 @@ function ShoppingCart(props) {
           setConfirm={setConfirm}
         />
       </div>
-      <button className="btn btn-green">Next: Last step</button>
+      <div className="btn-right">
+        <button className="btn btn-blue">Next: Last step</button>
+      </div>
     </div>
   );
 }

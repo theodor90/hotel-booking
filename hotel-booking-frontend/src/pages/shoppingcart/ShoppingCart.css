@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
-.cart-container button {
+.btn {
   width: 12rem;
+}
+
+.btn-right {
+  display: flex;
+  justify-content: flex-end;
 }

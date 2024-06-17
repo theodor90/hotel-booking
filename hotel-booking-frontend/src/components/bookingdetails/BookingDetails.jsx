@@ -3,10 +3,10 @@ import "./BookingDetails.css";
 function BookingDetails(props) {
   return (
     <div className="booking-details">
-      <div>
+      <div className="hotel-details">
         <h4>{props.hotel}</h4>
       </div>
-      <div>
+      <div className="dates-details">
         <h4>Your booking details</h4>
         <div className="booking-dates">
           <div>
