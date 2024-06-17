@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import api from "../../services/api";
 import './Form.css'
-import { Container, Row, Col, Form, Button, Image } from "react-bootstrap";
+
 
 function LoginForm() {
     const [email, setEmail] = useState('');
