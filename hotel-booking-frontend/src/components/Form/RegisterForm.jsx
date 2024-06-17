@@ -26,8 +26,8 @@ function RegisterForm() {
     return (
             <div className="form-container">
                 <form onSubmit={handleRegister}>
-                    <h1>Sign Up</h1>
-                    <p>Please fill in this form to create an account.</p>
+                    <h1 className="register-title">Sign Up</h1>
+                    <p className="register-subtitle">Please fill in this form to create an account.</p>
                     <hr />
                     <div className="form-group">
                         <label htmlFor="formUser"><b>Name</b></label>

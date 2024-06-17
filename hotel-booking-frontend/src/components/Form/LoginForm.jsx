@@ -26,7 +26,7 @@ function LoginForm() {
     return (
         <div className="form-container">
             <form action="action_page.php" method="post" onSubmit={handleLogin}>
-                   <h1>Login</h1>
+                   <h1 className="login-title">Login</h1>
                     <hr />
                     <div className="form-group">
                         <label htmlFor="formUserEmail"><b>Email</b></label>
@@ -58,9 +58,9 @@ function LoginForm() {
                         <input type="checkbox" name="remember" defaultChecked />
                         <label htmlFor="formRemember">Remember me</label>
                     </div>
-                <div className="container" style={{ backgroundColor: "#f1f1f1" }}>
+                <div className="container">
                     <button type="button" className="btn-cancel">Cancel</button>
-                    <span className="psw float-right">Forgot <a href="#">password?</a></span>
+                    <span className="forgot-password">Forgot <a href="#">password?</a></span>
                 </div>
             </form>
             {error && <p>{error}</p>}
