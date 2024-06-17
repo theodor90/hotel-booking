@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import PropTypes from 'prop-types';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Product from "./pages/product/Product";
 import Dashboard from './pages/dashboard/Dashboard';
+import ProductCard from './components/productcard/ProductCard';
 
 const PrivateRoute = ({ children }) => {
     const token = localStorage.getItem('token');
@@ -16,10 +18,12 @@ PrivateRoute.propTypes = {
 
 const App = () => {
     return (
-        <Router>
-            <Routes>
+        <Router>            
+            <ProductCard/>  
+            <Routes>            
                 <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={<Login />} />                
+                <Route path="/product" element={<Product />} />
                 <Route
                     path="/dashboard"
                     element={
@@ -27,8 +31,8 @@ const App = () => {
                             <Dashboard />
                         </PrivateRoute>
                     }
-                />
-            </Routes>
+                />                
+            </Routes>            
         </Router>
     );
 };
