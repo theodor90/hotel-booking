@@ -3,7 +3,7 @@ import "./ProductCard.css";
 
 const ProductCard = () => { 
 return(
-<div className="row">    
+<div className="row"> 
 
       <div className="column">
         <div className="card">
