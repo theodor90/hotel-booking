@@ -49,6 +49,8 @@ footer a {
 
 footer a:hover {
   opacity: 0.5;
+  color: var(--yellow);
+  text-decoration: none;
 }
 
 footer .fa-solid {
