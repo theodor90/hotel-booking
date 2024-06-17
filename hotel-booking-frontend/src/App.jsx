@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Home from "./pages/home/Home";
 import Footer from "./components/footer/Footer";
+import NavBar from "./components/navbar/NavBar";
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -24,6 +25,7 @@ PrivateRoute.propTypes = {
 const App = () => {
   return (
     <Router>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
