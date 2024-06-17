@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import "./SearchBar.css";
-import "../../css/Buttons.css";
-import DatePicker from "./DatePicker/DatePicker";
-import DestinationPicker from "./DestinationPicker/DestinationPicker";
+import { useState, useEffect } from 'react';
+import './SearchBar.css';
+import '../../css/Buttons.css';
+import DatePicker from './DatePicker/DatePicker';
+import DestinationPicker from './DestinationPicker/DestinationPicker';
 
 function SearchBar() {
   const [nights, setNights] = useState(0);
