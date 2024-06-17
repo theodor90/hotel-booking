@@ -3,6 +3,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  background-color: var(--dark-blue);
+}
+
+nav h1 {
+  color: var(--yellow);
 }
 
 nav ul {
@@ -17,13 +22,14 @@ nav ul li:not(:last-of-type) {
 }
 
 nav a {
-  color: var(--light-blue);
+  color: var(--yellow);
   text-decoration: none;
   font-size: 1.1rem;
   transition: ease-in-out 0.5s;
 }
 
 nav a:hover {
-  color: var(--dark-blue);
+  color: var(--yellow);
+  opacity: 0.5;
   text-decoration: none;
 }
