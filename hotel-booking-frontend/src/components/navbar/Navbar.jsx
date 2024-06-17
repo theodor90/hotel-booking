@@ -5,10 +5,10 @@ const Navigation = () => {
     return (
     <nav>
         <ul>
-            <li>
+            
             <li><Link to="/product">Product</Link></li>
             <li><Link to="/about">About</Link></li>
-                <Link to="/register">Register</Link>
+            <li><Link to="/register">Register</Link>
                 </li>
                 <li><Link to="/login">Login</Link></li>
                 <li><Link to="/dashboard">Dashboard</Link>
