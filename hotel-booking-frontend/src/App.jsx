@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Dashboard from './pages/dashboard/Dashboard';
+import SearchBar from './components/SearchBar/SearchBar';
+import Footer from './components/Footer/Footer';
 
 const PrivateRoute = ({ children }) => {
     const token = localStorage.getItem('token');
@@ -18,6 +20,7 @@ const App = () => {
     return (
         <Router>
             <Routes>
+                <Route path="/search" element={<SearchBar />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route

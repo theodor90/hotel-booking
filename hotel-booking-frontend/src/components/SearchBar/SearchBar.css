@@ -17,14 +17,7 @@
 }
 
 .search-btn {
-    color: white;
-    background-color: #1a1a1a;
-    font-size: 1rem;
-    border-color: black;
-    border-radius: 30px;
-    width: 10rem;
-}
-
-.search-btn:hover {
-    border-color: darkgray;
+    color: var(--white);
+    border-radius: 3rem !important;
+    width: 15rem;
 }

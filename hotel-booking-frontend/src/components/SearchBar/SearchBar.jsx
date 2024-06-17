@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './SearchBar.css';
+import '../../css/Buttons.css';
 import DatePicker from './DatePicker/DatePicker';
 import DestinationPicker from './DestinationPicker/DestinationPicker';
 
@@ -28,7 +29,7 @@ function SearchBar() {
                     dates={dates} 
                     setDates={setDates} />
             </div>
-            <button className="search-item search-btn">Find Hotels</button>
+            <button className="search-item search-btn btn">Find Hotels</button>
         </div>
     );
 };
