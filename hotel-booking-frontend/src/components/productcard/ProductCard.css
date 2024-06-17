@@ -1,18 +1,11 @@
-/*.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: auto;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-  }*/
-
   /* Style the counter cards */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     padding: 16px;
-    text-align: center;
-    
+    width:fit-content;
+    text-align: center;     
   }
+
   .card-img-top {
     width: 300px;
   }
@@ -37,19 +30,7 @@
   .card button:hover {
     opacity: 0.7;
   }
-
-  /*#profile-container{
-    margin-left: 5;
-    padding-left: 5;;
-  }
-  
-  #category{
-    padding: 5% 6%;
-  }
-  #product-cards{
-    padding: 5% 10%;
-  }*/
-  
+   
   /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
     .column {
