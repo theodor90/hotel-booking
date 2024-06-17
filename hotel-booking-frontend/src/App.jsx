@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Product from "./pages/product/Product";
+import About from "./pages/about/About";
 import Dashboard from './pages/dashboard/Dashboard';
 import ProductCard from './components/productcard/ProductCard';
 
@@ -19,7 +20,8 @@ PrivateRoute.propTypes = {
 const App = () => {
     return (
         <Router>            
-            <ProductCard/>  
+            <ProductCard/> 
+            <About/>                     
             <Routes>            
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />                
