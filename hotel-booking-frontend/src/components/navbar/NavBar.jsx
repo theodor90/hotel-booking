@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import "../../css/Buttons.css";
 
 const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const scrolled = scrollTop > 20;
+      setIsScrolled(scrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav>
+    <nav className={isScrolled ? "scrolled" : ""}>
       <h1>LOGO</h1>
       <ul>
         <li>
@@ -25,4 +41,5 @@ const NavBar = () => {
     </nav>
   );
 };
+
 export default NavBar;

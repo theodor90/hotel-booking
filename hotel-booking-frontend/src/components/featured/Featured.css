@@ -49,6 +49,7 @@
 
 .carousel-caption h5 {
   margin: 1rem 0;
+  color: var(--dark-blue);
 }
 
 .carousel-caption p {

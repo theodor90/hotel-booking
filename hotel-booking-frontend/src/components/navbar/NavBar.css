@@ -1,9 +1,13 @@
 nav {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   background-color: var(--dark-blue);
+  transition: ease-in-out 0.5s;
+  padding: 1rem;
 }
 
 nav h1 {
@@ -32,4 +36,16 @@ nav a:hover {
   color: var(--yellow);
   opacity: 0.5;
   text-decoration: none;
+}
+
+nav.scrolled {
+  padding: 0;
+
+  ul {
+    padding: 0;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+  }
 }
