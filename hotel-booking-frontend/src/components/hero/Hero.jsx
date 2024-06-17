@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.css";
-import "../buttons/Buttons";
+import "../../css/Buttons.css";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 export default function Hero() {
   return (
@@ -14,13 +15,13 @@ export default function Hero() {
               error repudiandae tenetur accusantium.
             </p>
           </div>
-          <div>
+          <div className="hero-btns">
             <button className="btn btn-red">Button</button>
             <button className="btn btn-red-reverse">Button</button>
           </div>
         </div>
+        <SearchBar />
       </div>
-      <div className="search-bar"></div>
     </div>
   );
 }

@@ -1,10 +1,11 @@
 .hero-bg {
   background-image: url("https://images.unsplash.com/photo-1618064541372-289bdb6f5b7b?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .hero-content {
@@ -25,4 +26,8 @@
     font-size: 1.5rem;
     margin: 2rem 0;
   }
+}
+
+.hero-btns .btn:not(:last-of-type) {
+  margin-right: 2rem;
 }
