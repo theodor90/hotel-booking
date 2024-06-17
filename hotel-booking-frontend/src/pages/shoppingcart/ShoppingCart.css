@@ -1,0 +1,14 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-container button {
+  width: 12rem;
+}
