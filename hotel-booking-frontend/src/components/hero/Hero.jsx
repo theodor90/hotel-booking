@@ -15,8 +15,8 @@ export default function Hero() {
             </p>
           </div>
           <div>
-            <button className="btn btn-red">Hotel</button>
-            <button className="btn btn-red-reverse">Hotel</button>
+            <button className="btn btn-red">Button</button>
+            <button className="btn btn-red-reverse">Button</button>
           </div>
         </div>
       </div>
