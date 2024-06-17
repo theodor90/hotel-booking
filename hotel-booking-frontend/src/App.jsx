@@ -1,10 +1,10 @@
 import React from "react";
-import Hero from "./components/hero/Hero";
+import ProductCard from "./components/productcard/ProductCard";
 
 const App = () => {
   return (
     <>
-      <Hero />
+      <ProductCard />
     </>
   );
 };

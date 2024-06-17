@@ -1,0 +1,44 @@
+:root {
+  --red: #ef476f;
+  --yellow: #ffd166;
+  --green: #06d6a0;
+  --light-blue: #118ab2;
+  --dark-blue: #073b4c;
+  --black: #020e13;
+  --white: #ecf9fd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  gap: 1rem;
+  padding: 1rem;
+  width: 50%; /* remove this when merged */
+}
+
+.card-img {
+  background-image: url("https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  aspect-ratio: 16 / 9;
+}
+
+.card-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* remove this when merged */
+.card-hr {
+  width: 50%;
+  margin: 2rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
