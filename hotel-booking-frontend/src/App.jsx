@@ -1,10 +1,10 @@
 import React from "react";
-import ProductCard from "./components/productcard/ProductCard";
+import Featured from "./components/featured/Featured";
 
 const App = () => {
   return (
     <>
-      <ProductCard />
+      <Featured />
     </>
   );
 };
