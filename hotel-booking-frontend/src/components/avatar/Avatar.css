@@ -1,0 +1,30 @@
+.profile {
+  display: flex;
+}
+
+.profile img {
+  border-radius: 0.5rem;
+}
+
+.profile-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-content {
+  width: 100%;
+}
+
+.profile hr {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+}
+
+.profile-card img {
+  border-radius: 50%;
+}
+
+.profile-history h2 {
+  margin-bottom: 2rem;
+}
