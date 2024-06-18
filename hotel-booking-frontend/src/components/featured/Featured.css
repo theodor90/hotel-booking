@@ -1,0 +1,57 @@
+.white-space {
+  padding: 5rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-caption {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--black);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.carousel-caption h2 {
+  color: var(--light-blue);
+}
+
+.carousel-caption h5 {
+  margin: 1rem 0;
+  color: var(--dark-blue);
+}
+
+.carousel-caption p {
+  margin: 2rem 0;
+}

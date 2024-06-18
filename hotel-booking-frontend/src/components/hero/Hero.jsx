@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import "../../css/Buttons.css";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchBar from "../../components/searchbar/SearchBar";
 
 export default function Hero() {
   return (
