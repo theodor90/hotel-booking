@@ -1,8 +1,11 @@
 import React from "react";
+import "./About.css"
 
 export default function About() {
   return (
-    <div>
+    
+    <div className="container">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ0MnxGem8zenVPSE42d3x8ZW58MHx8fHx8"></img>
       <h1>About Us</h1>
       <p>Welcome to LuxuryStay, your trusted partner in finding the perfect hotel for your travels. Whether you're planning 
         a business trip, a family vacation, or a romantic getaway, we are here to make your booking experience seamless and 
