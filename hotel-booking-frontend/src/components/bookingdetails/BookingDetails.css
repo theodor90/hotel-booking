@@ -1,19 +1,22 @@
+.booking-details {
+  width: 35%;
+}
+
 .hotel-details {
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   border-radius: 0.5rem;
 }
 
 .dates-details {
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   border-radius: 0.5rem;
 }
 
 .booking-dates {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
 }

@@ -1,7 +1,15 @@
+.cart-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .cart-container {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  margin-top: 100px;
+  width: 100%;
+  max-width: 70rem;
+  justify-content: center;
 }
 
 .details-container {
@@ -16,4 +24,5 @@
 .btn-right {
   display: flex;
   justify-content: flex-end;
+  margin: 0.5rem;
 }

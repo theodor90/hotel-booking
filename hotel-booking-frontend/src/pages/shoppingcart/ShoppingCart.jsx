@@ -11,32 +11,39 @@ function ShoppingCart(props) {
   const [country, setCountry] = useState("");
   const [phone, setPhone] = useState("");
   const [confirm, setConfirm] = useState(true);
+  const [dates, setDates] = useState([
+    new Date(),
+    new Date()
+  ]);
 
   //Take Hotel and Dates as props to display in BookingDetails
 
   return (
-    <div className="cart-container">
-      <div className="details-container">
-        <BookingDetails hotel="Example Hotel" startDate="Start" endDate="End" />
-        <UserDetails
-          firstName={firstName}
-          setFirstName={setFirstName}
-          lastName={lastName}
-          setLastName={setLastName}
-          email={email}
-          setEmail={setEmail}
-          country={country}
-          setCountry={setCountry}
-          phone={phone}
-          setPhone={setPhone}
-          confirm={confirm}
-          setConfirm={setConfirm}
-        />
-      </div>
-      <div className="btn-right">
-        <button className="btn btn-blue">Next: Last step</button>
+    <div className="cart-wrapper">
+      <div className="cart-container">
+        <div className="details-container">
+          <BookingDetails hotel="Example Hotel" startDate={dates[0].toDateString()} endDate={dates[1].toDateString()} />
+          <UserDetails
+            firstName={firstName}
+            setFirstName={setFirstName}
+            lastName={lastName}
+            setLastName={setLastName}
+            email={email}
+            setEmail={setEmail}
+            country={country}
+            setCountry={setCountry}
+            phone={phone}
+            setPhone={setPhone}
+            confirm={confirm}
+            setConfirm={setConfirm}
+          />
+        </div>
+        <div className="btn-right">
+          <button className="btn btn-blue">Next: Checkout</button>
+        </div>
       </div>
     </div>
+
   );
 }
 
