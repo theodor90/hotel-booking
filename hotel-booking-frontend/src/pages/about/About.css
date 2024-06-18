@@ -1,0 +1,16 @@
+.h1{
+    padding-top: 100px;
+  }
+
+  .container{
+    padding-top: 100px;
+    padding-left: 10px;
+  }
+
+  img {
+    float: left;
+    width: 500px;
+    height: auto;
+    padding-right: 10px;
+  }  
+  
