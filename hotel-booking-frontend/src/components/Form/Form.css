@@ -1,112 +1,96 @@
-
 :root {
-    --red: #ef476f;
-    --yellow: #ffd166;
-    --green: #06d6a0;
-    --light-blue: #118ab2;
-    --dark-blue: #073b4c;
-    --black: #020e13;
-    --white: #ecf9fd; 
+  --red: #ef476f;
+  --yellow: #ffd166;
+  --green: #06d6a0;
+  --light-blue: #118ab2;
+  --dark-blue: #073b4c;
+  --black: #020e13;
+  --white: #ecf9fd;
 }
 
 .form-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 50%;
-    min-height: 80vh;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 50%;
+  min-height: 80vh;
+  margin: 0 auto;
+  background-color: #f9f9f9;
 }
 
 .register-title {
-   font-weight: 700;
-   font-size: 2.5rem;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 .register-subtitle {
-     font-weight: 700;
-     font-size: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .login-title {
-   font-weight: 700;
-   font-size: 2.5rem;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: block;
 }
 
 .form-group input {
-    display: inline-block;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid  var(--black);
-    border-radius: 4px;
-    background: #f1f1f1;
+  display: inline-block;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  background: #f1f1f1;
 }
 
 .form-group input:focus {
-    background-color: #ddd;
-    outline: none;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    opacity: 0.8;
+  background-color: #ddd;
+  outline: none;
 }
 
 .btn-login {
-    font-weight: 700;
-    border-radius: 0.25rem;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    color: var(--white);
-    border:  1px solid var(--white);
-    background-color: var(--green);
-    transition: ease-in-out 0.5s;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  color: var(--white);
+  border: 1px solid var(--white);
+  background-color: var(--green);
+  transition: ease-in-out 0.5s;
 }
 
-.btn-cancel  {
-    font-weight: 700;
-    border-radius: 0.25rem;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    color: var(--white);
-    border:  1px solid var(--whie);
-    background-color: var(--red);
-    transition: ease-in-out 0.5s;
+.btn-cancel {
+  font-weight: 700;
+  border-radius: 0.25rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  color: var(--white);
+  border: 1px solid var(--whie);
+  background-color: var(--red);
+  transition: ease-in-out 0.5s;
 }
 
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 p a {
-    color: dodgerblue;
+  color: dodgerblue;
 }
