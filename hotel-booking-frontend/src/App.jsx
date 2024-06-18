@@ -10,6 +10,8 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Product from "./pages/product/Product";
 import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/Navbar";
 
@@ -28,6 +30,8 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Product />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route
