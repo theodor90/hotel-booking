@@ -4,38 +4,50 @@ export default function About() {
   return (
     <div>
       <h1>About Us</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id lorem eu mauris mattis tincidunt in ut nulla. 
-          Vestibulum vehicula accumsan luctus. Sed blandit malesuada bibendum. Maecenas ullamcorper ornare arcu, 
-          vitae aliquet leo aliquet in. Praesent sagittis, tortor et tristique aliquam, lorem ex egestas orci, et rutrum 
-          felis urna at sapien. Aenean vel porttitor neque. Ut metus lorem, maximus at erat id, posuere ornare libero. 
-          Fusce dictum finibus mauris, eu sodales sapien tempus id. Proin pulvinar, nisi vitae sagittis sodales, urna dui 
-          lacinia nisl, fermentum tristique tortor neque eget augue. Nam venenatis felis ut lacus porta tempor.</p> 
+      <p>Welcome to LuxuryStay, your trusted partner in finding the perfect hotel for your travels. Whether you're planning 
+        a business trip, a family vacation, or a romantic getaway, we are here to make your booking experience seamless and 
+        enjoyable.</p> 
+      <p></p>
                 
-      <p>Pellentesque quam nunc, tincidunt quis iaculis sit amet, elementum eu risus. Sed augue felis, aliquet non blandit 
-          vitae, feugiat ut justo. Suspendisse fermentum felis eget accumsan rhoncus. Phasellus sed pharetra lectus. Nullam 
-          ultrices lacinia risus, quis sollicitudin massa pharetra a. Phasellus at libero lacus. Vestibulum nec diam tempor, 
-          porta tellus at, euismod leo. Donec rhoncus in turpis id pellentesque. Sed luctus ipsum in scelerisque finibus. 
-          Fusce massa enim, rhoncus at placerat nec, mattis ac ex. Ut pellentesque ex ut vehicula dignissim. Mauris cursus 
-          imperdiet leo, nec finibus libero efficitur nec. Phasellus tellus velit, pharetra et metus sed, sagittis condimentum ex. 
-          Nullam id justo est. Etiam et ligula luctus, finibus nunc quis, feugiat nisi.</p>
-                
-      <p>Vivamus eget ullamcorper mi. Phasellus et neque quis nisl volutpat tempus. Quisque non finibus velit, quis fringilla 
-          turpis. Nullam malesuada faucibus finibus. Integer quam velit, sodales vel enim non, convallis pretium enim. In hac 
-          habitasse platea dictumst. Nunc arcu sem, feugiat in porttitor id, dictum lacinia nulla. Phasellus vitae ligula a odio 
-          tincidunt venenatis sit amet tristique nulla. Mauris at viverra orci. Donec ac consectetur velit. Quisque tincidunt ante 
-          sapien, id ultrices magna malesuada non.</p>
-                
-      <p>Phasellus orci augue, interdum sollicitudin nulla in, ornare hendrerit enim. Fusce ullamcorper varius eros. Etiam at 
-          felis non nunc viverra accumsan congue consectetur arcu. Donec porttitor nisl est, id ultricies nisi aliquam efficitur. 
-          Etiam consequat justo a placerat faucibus. In lacinia pulvinar libero, non porta dolor consequat eu. Duis sagittis tellus 
-          erat, eget maximus tortor fringilla quis.</p>
-                
-      <p>Fusce sed lorem vel quam consequat mattis. Pellentesque rhoncus pellentesque eleifend. Vivamus scelerisque sollicitudin 
-          mi. Suspendisse ac lacinia nibh. Vestibulum diam enim, efficitur ac lacus et, ultrices vulputate enim. Nam ut fermentum nisl. 
-          Maecenas finibus commodo lectus, id auctor quam. Vivamus rhoncus tincidunt enim ut sollicitudin. Phasellus vitae tincidunt 
-          massa, quis tempor nulla. Quisque eu nibh at nisl sagittis consequat. Maecenas rhoncus ante vel convallis sollicitudin. 
-          Curabitur erat velit, vulputate sit amet lacinia non, luctus vel nisl. Sed vel erat faucibus, pellentesque ligula in, posuere 
-          massa. Mauris mattis posuere placerat. Donec quam massa, volutpat at est quis, commodo ullamcorper urna.</p> 
+      <h1>Our Story</h1>
+      <p>Founded in 2010, LuxuryStay was born out of a passion for travel and a desire to provide travelers with an easy and 
+        reliable way to book their accommodations. We started with a small team of travel enthusiasts and have grown into a 
+        global platform, offering a wide range of hotels, from budget-friendly options to luxury resorts.</p>
+      <p></p>
+
+      <h1>Our Mission</h1>
+      <p>Our mission is simple: to help you find the perfect stay, no matter where you are in the world. We believe that a 
+        great hotel can enhance your travel experience, and we are committed to bringing you the best selection of 
+        accommodations at the best prices.</p>
+      <p></p>
+
+      <h1>What We Offer</h1>   
+      <p>Wide Selection: From boutique hotels to international chains, we offer a diverse range of options to suit every 
+        traveler's needs.<br/>
+        Best Price Guarantee: We are committed to providing you with the best rates available. If you find a lower price 
+        elsewhere, we'll match it.<br/>
+        24/7 Customer Support: Our dedicated customer service team is available around the clock to assist you with your 
+        booking and answer any questions you may have.<br/>
+        User-Friendly Experience: Our website is designed to be intuitive and easy to use, allowing you to book your stay 
+        quickly and efficiently.</p>
+      <p></p>
+      
+      <h1>Why Choose Us?</h1>
+      <p>Trusted by Millions: We have helped millions of travelers find their perfect stay, and our satisfied customers 
+        speak to our reliability and quality of service.<br/>
+        Secure Booking: Your safety is our priority. Our secure booking process ensures that your personal information is 
+        protected at all times.<br/>
+        Travel Tips and Guides: Our blog and travel guides offer valuable insights and tips to help you make the most of 
+        your trip. </p>
+      <p></p>
+      
+      <h1>Contact Us</h1>
+      <p>Have questions or need assistance? Feel free to reach out to us:<br/>
+         Email: support@luxurystay.com<br/>
+         Phone: 1-800-123-4567<br/>
+         Address: 123 Luxury Lane, Suite 100, Travel City, TX 75001<br/>
+         Thank you for choosing LuxuryStay. We look forward to helping you find your perfect stay!
+      </p>
     </div>    
   );
 }
