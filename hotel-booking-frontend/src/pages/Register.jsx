@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import RegisterForm from '../components/Form/RegisterForm';
+import RegisterForm from '../components/form/RegisterForm';
 import api from '../services/api';
 
 const Register = () => {
