@@ -28,6 +28,12 @@ const NavBar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/products">Hotels</Link>
+        </li>
+        <li>
           <Link to="/register">Register</Link>
         </li>
         <li>
