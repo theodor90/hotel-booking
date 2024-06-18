@@ -48,6 +48,7 @@ export default function About() {
          Address: 123 Luxury Lane, Suite 100, Travel City, TX 75001<br/>
          Thank you for choosing LuxuryStay. We look forward to helping you find your perfect stay!
       </p>
+      <p></p>
     </div>    
   );
 }
