@@ -57,11 +57,11 @@ footer .fa-solid {
   margin-right: 0.5rem;
 }
 
-footer .fa-brands {
+.footer-icon {
   transition: 0.5s;
   cursor: pointer;
 }
 
-footer .fa-brands:hover {
+.footer-icon:hover {
   transform: scale(1.1);
 }
