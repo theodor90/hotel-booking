@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Avatar.css";
-import "../Buttons/Buttons";
+import "../../Buttons/Buttons";
 
 function Avatar() {
   const [user, setUser] = useState(null);
