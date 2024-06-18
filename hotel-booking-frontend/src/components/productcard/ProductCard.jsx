@@ -1,22 +1,24 @@
 import React from 'react';
-import "./ProductCard.css";
+import "./ProductCard.css"
+import data from "./hotels.json";
 
-const ProductCard = () => { 
-return(
-<div className="row"> 
-
-      <div className="column">
-        <div className="card">
-          <img src="./src/assets/images/danai-tsoutreli-unsplash.jpg" className="card-img-top shop-item-image" alt="..."/>                    
-          <h4 className="card-title shop-item-title">  Cassandra Hotel </h4>
-          <p>Sunshine </p>
-          <p className="card-text shop-item-price"> </p>
-          <button className="btn-dark-blue">Book Now</button>                    
-        </div>
+const ProductCard = () => {
+  return (
+      <div className="container">
+        {data.map(hotel => {
+            return(
+              <div className="card" key={hotel.name}>
+                    <img src={hotel.image} alt={`${hotel.name}`} className="object-cover rounded-md w-60 shadow-md" />
+                    <p>{hotel.name}</p>
+                    <p>{hotel.location}</p> 
+                    <p>{hotel.description}</p> 
+                    <button className="btn-dark-blue">Book Now</button>                                       
+                </div>
+                )
+            })
+        }
       </div>
-  </div>
-  )
-
+  );
 };
 
 export default ProductCard;
