@@ -1,0 +1,25 @@
+.profile-history h2 {
+  text-align: center;
+}
+
+.profile-history table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.profile-history table th {
+  text-align: start;
+}
+
+.profile-history table th,
+.profile-history table td {
+  padding: 0.5rem 0;
+}
+
+.profile-history table tbody tr:nth-child(even) {
+  background-color: lightgray; /* Change to variable color */
+}
+
+.profile-history table tbody tr:hover {
+  opacity: 0.8;
+}

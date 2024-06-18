@@ -1,10 +1,10 @@
 import React from "react";
-import Featured from "./components/featured/Featured";
+import Profile from "./pages/profile/Profile";
 
 const App = () => {
   return (
     <>
-      <Featured />
+      <Profile />
     </>
   );
 };
