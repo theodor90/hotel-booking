@@ -19,7 +19,7 @@ function ShoppingCart(props) {
   return (
     <div className="cart-wrapper">
       <div className="cart-container">
-        <ProgressBar />
+        <ProgressBar active="2" />
         <div className="details-container">
           <BookingDetails
             hotel="Example Hotel"
