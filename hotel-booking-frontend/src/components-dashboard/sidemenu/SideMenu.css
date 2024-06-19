@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#nav-bar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+#nav-title {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#nav-title i {
+    margin-left: 5px;
+}
+
+#nav-toggle-burger {
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button i {
+    margin-right: 10px;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+#nav-footer {
+    margin-top: auto;
+    padding: 10px;
+}
+
+#nav-footer-heading {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#nav-footer-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#nav-footer-title {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav-footer-subtitle {
+    display: block;
+    color: #ccc;
+    font-size: 12px;
+}
+
+#nav-footer-toggle {
+    display: none;
+}
+
+#nav-footer-content {
+    display: none;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+#nav-footer-toggle:checked + #nav-footer-heading + #nav-footer-content {
+    display: block;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #444;
+    margin: 10px 0;
+}
+
+.container {
+    width: 1050px;
+  }
+  
+ 
+  a.activeLink {
+    border-top: 3px solid var(--color-primary-btn);
+    border-bottom: 7px solid white;
+    font-weight: bold;
+    color: var(--color-primary);
+  }
