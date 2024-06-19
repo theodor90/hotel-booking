@@ -2,12 +2,13 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     padding: 16px;
-    width:fit-content;
+    width: fit-content;
     text-align: center;     
   }
 
   img {
     width: 300px;
+    padding-bottom: 10px;
   }
 
   .card-img-top {
@@ -19,12 +20,12 @@
     font-size: 22px;
   }
   
-  .card button {
-    border: none;
+  .card button {    
     outline: 0;
     padding: 12px;
-    color: white;
-    background-color: #000;
+    color: var(--white);
+    border: 1px solid var(--dark-blue);
+    background-color: var(--dark-blue);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -38,7 +39,7 @@
   .container{
     padding-top: 100px;
     padding-left: 10px;
-  }
+  }  
    
   /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
