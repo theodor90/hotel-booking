@@ -9,10 +9,10 @@ const ProductCard = () => {
             return(
               <div className="card" key={hotel.name}>
                     <img src={hotel.image} alt={`${hotel.name}`} className="object-cover rounded-md w-60 shadow-md" />
-                    <p>{hotel.name}</p>
-                    <p>{hotel.location}</p> 
+                    <h2>{hotel.name}</h2>
+                    <h4>{hotel.location}</h4> 
                     <p>{hotel.description}</p> 
-                    <button className="btn-dark-blue">Book Now</button>                                       
+                    <button>Book Now</button>                                       
                 </div>
                 )
             })
