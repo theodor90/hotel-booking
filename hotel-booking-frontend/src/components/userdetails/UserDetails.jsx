@@ -63,7 +63,7 @@ function UserDetails(props) {
         />
       </div>
       <div className="input-container">
-        <label htmlFor="country">
+        <label htmlFor="city">
           <b>City</b>
         </label>
         <input
@@ -86,8 +86,8 @@ function UserDetails(props) {
           id="postal"
           name="postal"
           required
-          value={props.country}
-          onChange={props.setCountry}
+          value={props.postal}
+          onChange={props.setPostal}
         />
       </div>
       <div className="input-container">

@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import UserDetails from "../../components/userdetails/UserDetails";
 import BookingDetails from "../../components/bookingdetails/BookingDetails";
 import ProgressBar from "../../components/progressbar/ProgressBar";
 import "../../css/Buttons.css";
 import "./ShoppingCart.css";
 
-function ShoppingCart(props) {
+function ShoppingCart() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,12 +17,26 @@ function ShoppingCart(props) {
   const [phone, setPhone] = useState("");
   const [confirm, setConfirm] = useState(true);
   const [dates, setDates] = useState([new Date(), new Date()]);
+  const navigate = useNavigate();
 
-  //Take Hotel and Dates as props to display in BookingDetails
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem("firstName", firstName); 
+    localStorage.setItem("lastName", lastName); 
+    localStorage.setItem("email", email); 
+    localStorage.setItem("address", address); 
+    localStorage.setItem("city", city); 
+    localStorage.setItem("postal", postal); 
+    localStorage.setItem("country", country); 
+    localStorage.setItem("phone", phone); 
+    localStorage.setItem("confirm", confirm); 
+    localStorage.setItem("dates", dates); 
+    navigate("/");  //Change to payment/checkout
+  };
 
   return (
     <div className="cart-wrapper">
-      <div className="cart-container">
+      <form className="cart-form" method="post" onSubmit={handleSubmit}>
         <ProgressBar active="2" />
         <div className="details-container">
           <BookingDetails
@@ -31,31 +46,31 @@ function ShoppingCart(props) {
           />
           <UserDetails
             firstName={firstName}
-            setFirstName={setFirstName}
+            setFirstName={(e) => setFirstName(e.target.value)}
             lastName={lastName}
-            setLastName={setLastName}
+            setLastName={(e) => setLastName(e.target.value)}
             email={email}
-            setEmail={setEmail}
+            setEmail={(e) => setEmail(e.target.value)}
             address={address}
-            setAddress={setAddress}
+            setAddress={(e) => setAddress(e.target.value)}
             city={city}
-            setCity={setCity}
+            setCity={(e) => setCity(e.target.value)}
             postal={postal}
-            setPostal={setPostal}
+            setPostal={(e) => setPostal(e.target.value)}
             country={country}
-            setCountry={setCountry}
+            setCountry={(e) => setCountry(e.target.value)}
             phone={phone}
-            setPhone={setPhone}
+            setPhone={(e) => setPhone(e.target.value)}
             confirm={confirm}
-            setConfirm={setConfirm}
+            setConfirm={(e) => setConfirm(e.target.value)}
           />
         </div>
         <div className="btn-right">
-          <button className="btn btn-blue">Next: Checkout</button>
+          <button className="btn btn-blue" >Next: Checkout</button>
         </div>
-      </div>
+      </form>
     </div>
   );
-}
+};
 
 export default ShoppingCart;
