@@ -20,15 +20,20 @@
   .btn-dark-blue {
     color: var(--white);
     border: 1px solid var(--dark-blue);
-    background-color: var(--dark-blue);    
+    background-color: var(--dark-blue); 
+    margin-bottom: 10px;      
   }
 
    /* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
-  width: fit-content;
-  text-align: center;     
+  width: fit-content; 
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;      
 }
 
 img {
@@ -36,8 +41,11 @@ img {
   padding-bottom: 10px;
 }
 
-.card-img-top {
-  width: 300px;
+.card-footer { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  bottom:5px; 
 }
 
 .card button {    
@@ -49,7 +57,8 @@ img {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 18px; 
+  margin-bottom: 10px;
 }
 
 .card button:hover {
