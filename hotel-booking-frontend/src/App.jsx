@@ -14,6 +14,7 @@ import About from "./pages/about/About";
 import Product from "./pages/product/Product";
 import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/NavBar";
+import './index.css'
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
