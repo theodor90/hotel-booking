@@ -26,3 +26,82 @@
   justify-content: flex-end;
   margin: 0.5rem;
 }
+
+.stepper {
+  width: 100%;
+  display: flex;
+}
+
+li {
+  display: inline-block;
+  position: relative;
+  margin-top: 32px;
+}
+
+li + li {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+li + li::before {
+  display: block;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  content: "";
+  width: 100%;
+  height: 2px;
+}
+
+ul, li {
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  padding-top: 8px;
+  z-index: 1;
+  text-align: center;
+}
+
+.item::before {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  content: "";
+  top: -26px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.ready::before {
+  background-color: lightgrey;
+}
+
+.ready > .item::before {
+  background-color: lightgrey;
+}
+
+.wip::before {
+  background-color: var(--dark-blue);
+}
+
+.wip > .item::before {
+  border: solid 8px var(--dark-blue);
+  background-color: white;
+}
+
+.done::before {
+  background-color: var(--dark-blue);
+}
+
+.done > .item::before {
+  background-color: var(--dark-blue);
+}

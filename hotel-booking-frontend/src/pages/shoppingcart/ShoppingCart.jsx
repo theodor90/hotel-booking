@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UserDetails from "../../components/userdetails/UserDetails";
 import BookingDetails from "../../components/bookingdetails/BookingDetails";
+import ProgressBar from "../../components/progressbar/ProgressBar";
 import "../../css/Buttons.css";
 import "./ShoppingCart.css";
 
@@ -18,6 +19,7 @@ function ShoppingCart(props) {
   return (
     <div className="cart-wrapper">
       <div className="cart-container">
+        <ProgressBar />
         <div className="details-container">
           <BookingDetails
             hotel="Example Hotel"
