@@ -21,12 +21,12 @@ const ProgressBar = (props) => {
       <ul className="bar">
         <li className={selectionClass}>
           <div className="item">
-            <b>Selection</b>
+            <b>Your selection</b>
           </div>
         </li>
         <li className={detailsClass}>
           <div className="item">
-            <b>Details</b>
+            <b>Your details</b>
           </div>
         </li>
         <li className={checkoutClass}>
