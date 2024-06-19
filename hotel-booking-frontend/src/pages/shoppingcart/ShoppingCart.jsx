@@ -9,6 +9,9 @@ function ShoppingCart(props) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [postal, setPostal] = useState("");
   const [country, setCountry] = useState("");
   const [phone, setPhone] = useState("");
   const [confirm, setConfirm] = useState(true);
@@ -33,6 +36,12 @@ function ShoppingCart(props) {
             setLastName={setLastName}
             email={email}
             setEmail={setEmail}
+            address={address}
+            setAddress={setAddress}
+            city={city}
+            setCity={setCity}
+            postal={postal}
+            setPostal={setPostal}
             country={country}
             setCountry={setCountry}
             phone={phone}

@@ -49,6 +49,48 @@ function UserDetails(props) {
         />
       </div>
       <div className="input-container">
+        <label htmlFor="address">
+          <b>Address</b>
+        </label>
+        <input
+          type="text"
+          placeholder=""
+          id="address"
+          name="address"
+          required
+          value={props.address}
+          onChange={props.setAddress}
+        />
+      </div>
+      <div className="input-container">
+        <label htmlFor="country">
+          <b>City</b>
+        </label>
+        <input
+          type="text"
+          placeholder=""
+          id="city"
+          name="city"
+          required
+          value={props.city}
+          onChange={props.setCity}
+        />
+      </div>
+      <div className="input-container">
+        <label htmlFor="postal">
+          <b>Zip/Postal code</b>
+        </label>
+        <input
+          type="text"
+          placeholder=""
+          id="postal"
+          name="postal"
+          required
+          value={props.country}
+          onChange={props.setCountry}
+        />
+      </div>
+      <div className="input-container">
         <label htmlFor="country">
           <b>Country/region</b>
         </label>
