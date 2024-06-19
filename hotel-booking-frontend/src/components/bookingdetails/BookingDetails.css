@@ -16,7 +16,7 @@
   border-radius: 0.5rem;
 }
 
-.booking-dates {
+.dates {
   display: flex;
   gap: 3rem;
 }

@@ -7,8 +7,8 @@ function BookingDetails(props) {
         <h4>{props.hotel}</h4>
       </div>
       <div className="dates-details">
-        <h4>Your booking details</h4>
-        <div className="booking-dates">
+        <h5>Your booking details</h5>
+        <div className="dates">
           <div>
             <p>Check-in</p>
             {props.startDate}

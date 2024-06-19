@@ -11,10 +11,7 @@ function ShoppingCart(props) {
   const [country, setCountry] = useState("");
   const [phone, setPhone] = useState("");
   const [confirm, setConfirm] = useState(true);
-  const [dates, setDates] = useState([
-    new Date(),
-    new Date()
-  ]);
+  const [dates, setDates] = useState([new Date(), new Date()]);
 
   //Take Hotel and Dates as props to display in BookingDetails
 
@@ -22,7 +19,11 @@ function ShoppingCart(props) {
     <div className="cart-wrapper">
       <div className="cart-container">
         <div className="details-container">
-          <BookingDetails hotel="Example Hotel" startDate={dates[0].toDateString()} endDate={dates[1].toDateString()} />
+          <BookingDetails
+            hotel="Example Hotel"
+            startDate={dates[0].toDateString()}
+            endDate={dates[1].toDateString()}
+          />
           <UserDetails
             firstName={firstName}
             setFirstName={setFirstName}
@@ -43,7 +44,6 @@ function ShoppingCart(props) {
         </div>
       </div>
     </div>
-
   );
 }
 

@@ -18,6 +18,10 @@ h3 {
   gap: 1rem;
 }
 
+.name-container .input-container {
+  width: 50%;
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
