@@ -21,16 +21,15 @@ function ShoppingCart() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("firstName", firstName); 
-    localStorage.setItem("lastName", lastName); 
-    localStorage.setItem("email", email); 
-    localStorage.setItem("address", address); 
-    localStorage.setItem("city", city); 
-    localStorage.setItem("postal", postal); 
-    localStorage.setItem("country", country); 
-    localStorage.setItem("phone", phone); 
-    localStorage.setItem("confirm", confirm); 
-    localStorage.setItem("dates", dates); 
+    sessionStorage.setItem("firstName", firstName); 
+    sessionStorage.setItem("lastName", lastName); 
+    sessionStorage.setItem("email", email); 
+    sessionStorage.setItem("address", address); 
+    sessionStorage.setItem("city", city); 
+    sessionStorage.setItem("postal", postal); 
+    sessionStorage.setItem("country", country); 
+    sessionStorage.setItem("phone", phone); 
+    sessionStorage.setItem("dates", dates); 
     navigate("/");  //Change to payment/checkout
   };
 
