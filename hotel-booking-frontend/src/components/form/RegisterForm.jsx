@@ -26,7 +26,7 @@ function RegisterForm() {
     return (
             <div className="form-container">
                 <form onSubmit={handleRegister}>
-                    <h1 className="register-title">Sign Up</h1>
+                    <h3 className="register-title">Sign Up</h3>
                     <p className="register-subtitle">Please fill in this form to create an account.</p>
                     <hr />
                     <div className="form-group">
@@ -70,10 +70,6 @@ function RegisterForm() {
                             name="password-repeat"
                             required
                         />
-                    </div>
-                    <div className="form-group mb-3">
-                        <input type="checkbox" name="remember" defaultChecked />
-                        <label htmlFor="formRemember"> Remember me</label>
                     </div>
                     <p>By creating an account you agree to our <a href="#" style={{ color: "dodgerblue" }}>Terms & Privacy</a>.</p>
                     <div className="clearfix">

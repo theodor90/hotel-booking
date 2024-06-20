@@ -13,6 +13,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Product from "./pages/product/Product";
 import Footer from "./components/footer/Footer";
+import Contact from "./pages/contact/Contact";
 import NavBar from "./components/navbar/NavBar";
 import './index.css'
 
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/products" element={<Product />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path="/dashboard"
           element={
