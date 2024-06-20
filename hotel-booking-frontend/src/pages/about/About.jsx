@@ -11,7 +11,7 @@ export default function About() {
         a business trip, a family vacation, or a romantic getaway, we are here to make your booking experience seamless and 
         enjoyable.</p>      
 
-      <h3 classname ="h2">Our Story</h3>
+      <h3>Our Story</h3>
       <p>Founded in 2010, LuxuryStay was born out of a passion for travel and a desire to provide travelers with an easy and 
         reliable way to book their accommodations. We started with a small team of travel enthusiasts and have grown into a 
         global platform, offering a wide range of hotels, from budget-friendly options to luxury resorts.</p>
