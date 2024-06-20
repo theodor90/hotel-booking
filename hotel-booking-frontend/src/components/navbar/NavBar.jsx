@@ -20,12 +20,18 @@ const NavBar = () => {
     };
   }, []);
 
-  return (
+    return (
     <nav className={isScrolled ? "scrolled" : ""}>
       <h1>LOGO</h1>
       <ul>
         <li>
           <Link to="/">Home</Link>
+                </li>
+                <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/products">Hotels</Link>
         </li>
         <li>
           <Link to="/register">Register</Link>
@@ -35,11 +41,11 @@ const NavBar = () => {
         </li>
         <li>
           <Link to="/dashboard">Dashboard</Link>
-        </li>
-      </ul>
+                </li>
+                </ul>
       <button className="btn btn-blue">Login</button>
-    </nav>
-  );
-};
+                </nav>
+                ); 
+            }; 
 
 export default NavBar;

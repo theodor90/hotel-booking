@@ -13,7 +13,7 @@ function Grid() {
             <h4>{hotel.location}</h4> 
             <p>{hotel.description}</p>                                                  
         </div> 
-        <button className="card-footer">Book Now</button>        
+        <button className="btn btn-blue">Book Now</button>        
       </div >
     ))
     }

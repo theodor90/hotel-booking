@@ -11,7 +11,7 @@ export default function About() {
         a business trip, a family vacation, or a romantic getaway, we are here to make your booking experience seamless and 
         enjoyable.</p> 
       <p></p>
-                
+           
       <h1>Our Story</h1>
       <p>Founded in 2010, LuxuryStay was born out of a passion for travel and a desire to provide travelers with an easy and 
         reliable way to book their accommodations. We started with a small team of travel enthusiasts and have grown into a 
@@ -43,14 +43,14 @@ export default function About() {
         Travel Tips and Guides: Our blog and travel guides offer valuable insights and tips to help you make the most of 
         your trip. </p>
       <p></p>
-      
+      <img src="https://images.unsplash.com/photo-1713843841925-6af6ed0df472?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU2NHxGem8zenVPSE42d3x8ZW58MHx8fHx8" className="side-img"/>
       <h1>Contact Us</h1>
       <p>Have questions or need assistance? Feel free to reach out to us:<br/>
          Email: support@luxurystay.com<br/>
          Phone: 1-800-123-4567<br/>
          Address: 123 Luxury Lane, Suite 100, Travel City, TX 75001<br/>
          Thank you for choosing LuxuryStay. We look forward to helping you find your perfect stay!
-      </p>
+      </p>      
       <p></p>
     </div>    
   );

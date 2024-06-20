@@ -41,13 +41,6 @@ img {
   padding-bottom: 10px;
 }
 
-.card-footer { 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  bottom:5px; 
-}
-
 .card button {    
   outline: 0;
   padding: 12px;
