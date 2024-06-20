@@ -14,7 +14,7 @@ import About from "./pages/about/About";
 import Product from "./pages/product/Product";
 import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/NavBar";
-import './index.css'
+import "./index.css";
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
@@ -28,6 +28,7 @@ PrivateRoute.propTypes = {
 const App = () => {
   return (
     <Router>
+      {/* Remove NavBar at dashboard */}
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -36,7 +37,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route
-          path="/dashboard"
+          path="/dashboard/*"
           element={
             <PrivateRoute>
               <Dashboard />
@@ -44,6 +45,7 @@ const App = () => {
           }
         />
       </Routes>
+      {/* Remove footer at dashboard */}
       <Footer />
     </Router>
   );
