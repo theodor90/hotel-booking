@@ -6,10 +6,14 @@
   border: 1px solid lightgray;
   border-radius: 0.5rem;
   width: 65%;
+  background-color: #fcfcf8;
+  outline: 1px solid transparent;
+  box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
 }
 
 .user-wrapper > h3 {
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .name-container {
@@ -26,6 +30,10 @@
   display: flex;
   flex-direction: column;
   margin: 0.5rem 0;
+}
+
+.input-container label {
+  font-size: 1rem;
 }
 
 input[type="text"] {
