@@ -1,0 +1,32 @@
+.input-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  grid-gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.input-form label {
+  display: block;
+}
+
+.input-form input {
+  padding: 0.2rem;
+  border: none;
+  border-bottom: 2px solid var(--light-blue);
+  width: 100%;
+  outline: none;
+}
+
+.input-form .btn-blue {
+  margin-right: 1rem;
+}
+
+.input-form-group {
+  width: 100%;
+}
+
+.input-form-group {
+  margin-bottom: 2rem;
+}

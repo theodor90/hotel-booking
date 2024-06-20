@@ -1,0 +1,53 @@
+.overview {
+  width: 80%;
+  margin: auto;
+  padding: 4rem 0;
+}
+
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  color: var(--dark-blue);
+}
+
+.overview-content {
+  width: 80%;
+  margin: auto;
+}
+
+.overview-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.overview-row:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.overview-col {
+  width: 25%;
+}
+
+.overview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  color: var(--light-blue);
+  transition: ease-in-out 0.5s;
+}
+
+.overview-card:hover {
+  opacity: 0.8;
+}
+
+.overview-card h5 {
+  color: var(--dark-blue);
+  margin-bottom: 1rem;
+}
