@@ -17,11 +17,10 @@
     width: 100%;    
   }
 
-  .btn-dark-blue {
+  .btn-blue {
     color: var(--white);
     border: 1px solid var(--dark-blue);
-    background-color: var(--dark-blue); 
-    margin-bottom: 10px;      
+    background-color: var(--dark-blue);              
   }
 
    /* Style the counter cards */
@@ -36,28 +35,22 @@
   justify-content: space-between;      
 }
 
+.card-footer {
+  display: flex;
+}
+
 img {
   width: 300px;
   padding-bottom: 10px;
 }
 
-.card button {    
-  outline: 0;
-  padding: 12px;
-  color: var(--white);
-  border: 1px solid var(--dark-blue);
-  background-color: var(--dark-blue);
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px; 
-  margin-bottom: 10px;
-}
+.price-info {
+  text-align: left;
+  font-weight: bold;
+  padding-right: 120px;
+}  
 
-.card button:hover {
-  opacity: 0.7;
-}
- 
+
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
   .column {
