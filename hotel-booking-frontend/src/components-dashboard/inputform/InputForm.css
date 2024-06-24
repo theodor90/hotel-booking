@@ -30,3 +30,8 @@
 .input-form-group {
   margin-bottom: 2rem;
 }
+
+.input-form select {
+  padding: 0.2rem;
+  width: 100%;
+}

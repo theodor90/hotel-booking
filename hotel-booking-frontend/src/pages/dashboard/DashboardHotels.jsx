@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import InputForm from "../../components-dashboard/inputform/InputForm";
+import InputForm from "../../components-dashboard/inputform/HotelForm";
 import "../../components-dashboard/dashboardcss/DashboardHotels.css";
 
 export default function DashboardHotels() {
@@ -44,13 +44,13 @@ export default function DashboardHotels() {
   };
 
   return (
-    <div className="dashboard-hotels">
-      <div className="dashboard-hotels-header">
+    <div className="dashboard">
+      <div className="dashboard-header">
         <div>
           <h2 style={{ display: "inline" }}>Hotels</h2>
         </div>
         <button className="btn btn-blue" onClick={toggleInputForm}>
-          Add Hotel
+          + Add Hotel
         </button>
       </div>
 

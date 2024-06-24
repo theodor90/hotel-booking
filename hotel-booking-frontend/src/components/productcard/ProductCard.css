@@ -1,73 +1,72 @@
-  /* Style the counter cards */
+/* Style the counter cards */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 16px;
-    width: fit-content;
-    text-align: center;     
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  width: fit-content;
+  text-align: center;
+}
 
-  img {
-    max-height: 200px;
-    padding-bottom: 10px;
-  }
+.card img {
+  max-height: 200px;
+  padding-bottom: 10px;
+}
 
-  .card-img-top {
-    width: 300px;
-  }
-  
-  p {
-    text-align: left;
-    padding-left: 10px;
-  }
-  
-  .card button {    
-    outline: 0;
-    padding: 12px;
-    color: var(--white);
-    border: 1px solid var(--dark-blue);
-    background-color: var(--dark-blue);
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  .card button:hover {
-    opacity: 0.7;
-  }
+.card-img-top {
+  width: 300px;
+}
 
-  .container{
-    padding-top: 100px;
-    padding-left: 10px;
-  }  
-   
-  /* Responsive columns - one column layout (vertical) on small screens */
+p {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.card button {
+  outline: 0;
+  padding: 12px;
+  color: var(--white);
+  border: 1px solid var(--dark-blue);
+  background-color: var(--dark-blue);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.container {
+  padding-top: 100px;
+  padding-left: 10px;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-  
-  /* Larger screens: 4 columns */
-  @media (min-width: 1000px) {
-    .grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
+}
+
+/* Larger screens: 4 columns */
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  /* Medium screens: 3 columns */
-  @media (min-width: 768px) and (max-width: 999px) {
-    .grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+}
+
+/* Medium screens: 3 columns */
+@media (min-width: 768px) and (max-width: 999px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  /* Smaller screens: 2 columns */
-  @media (max-width: 767px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  } 
-  
+}
+
+/* Smaller screens: 2 columns */
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

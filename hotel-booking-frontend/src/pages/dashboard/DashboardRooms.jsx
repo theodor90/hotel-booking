@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import InputForm from "../../components-dashboard/inputform/RoomForm";
 import "../../components-dashboard/dashboardcss/DashboardRooms.css";
 
 export default function DashboardRooms() {
-  const [rooms, setRooms] = useState([]);
-  const [hotels, setHotels] = useState({});
+  const [rooms, setRooms] = useState([]); // State to hold rooms data
+  const [hotels, setHotels] = useState([]); // State to hold hotels data
+  const [showInputForm, setShowInputForm] = useState(false); // State to toggle input form visibility
+  const [error, setError] = useState(""); // State to manage errors
 
   useEffect(() => {
-    const fetchRoomsAndHotels = async () => {
+    // Function to fetch rooms and hotels data from API on component mount
+    const fetchData = async () => {
       try {
         // Fetch rooms data
         const roomsResponse = await fetch("https://localhost:7204/api/Rooms");
@@ -16,41 +20,103 @@ export default function DashboardRooms() {
         const roomsData = await roomsResponse.json();
         setRooms(roomsData);
 
-        // Extract unique hotelIds from rooms data
-        const hotelIds = [...new Set(roomsData.map((room) => room.hotelId))];
-
-        // Fetch hotels data for each hotelId
-        const hotelsDataPromises = hotelIds.map(async (hotelId) => {
-          const hotelResponse = await fetch(
-            `https://localhost:7204/api/Hotels/${hotelId}`
-          );
-          if (!hotelResponse.ok) {
-            throw new Error(`Failed to fetch hotel ${hotelId}`);
-          }
-          const hotelData = await hotelResponse.json();
-          return { [hotelId]: hotelData };
-        });
-
-        // Wait for all hotel data promises to resolve
-        const hotelsDataArray = await Promise.all(hotelsDataPromises);
-        const hotelsData = Object.assign({}, ...hotelsDataArray);
+        // Fetch hotels data
+        const hotelsResponse = await fetch("https://localhost:7204/api/Hotels");
+        if (!hotelsResponse.ok) {
+          throw new Error("Failed to fetch hotels");
+        }
+        const hotelsData = await hotelsResponse.json();
         setHotels(hotelsData);
+
+        setError(""); // Clear any previous errors on successful data fetch
       } catch (error) {
         console.error("Error fetching data:", error);
-        // Handle error state as needed
+        setError("Failed to fetch data. Please try again.");
       }
     };
 
-    fetchRoomsAndHotels();
+    fetchData(); // Call fetchData function on component mount
   }, []);
 
+  const toggleInputForm = () => {
+    // Function to toggle input form visibility
+    setShowInputForm(!showInputForm);
+  };
+
+  const deleteRoom = async (roomId) => {
+    // Function to delete a room by ID
+    try {
+      const response = await fetch(
+        `https://localhost:7204/api/Rooms/${roomId}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to delete room");
+      }
+
+      // Update rooms state to remove the deleted room
+      setRooms(rooms.filter((room) => room.roomId !== roomId));
+    } catch (error) {
+      console.error("Error deleting room:", error);
+      setError("Failed to delete room. Please try again.");
+    }
+  };
+
+  const addRoom = async (newRoom) => {
+    // Function to add a new room
+    try {
+      const response = await fetch("https://localhost:7204/api/Rooms", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newRoom),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add room");
+      }
+
+      const addedRoom = await response.json();
+      setRooms([...rooms, addedRoom]);
+      setShowInputForm(false); // Hide input form after successful addition
+      setError(""); // Clear any previous errors
+    } catch (error) {
+      console.error("Error adding room:", error);
+      setError("Failed to add room. Please try again.");
+    }
+  };
+
+  const handleCancelForm = () => {
+    // Function to handle canceling the input form
+    setShowInputForm(false); // Hide input form
+    setError(""); // Clear any previous errors
+  };
+
   return (
-    <div className="dashboard-rooms">
-      <div className="dashboard-rooms-header">
+    <div className="dashboard">
+      <div className="dashboard-header">
         <h2>Rooms</h2>
-        {/* Sort out function */}
-        <button className="btn btn-blue">Add Room</button>
+        <button className="btn btn-blue" onClick={toggleInputForm}>
+          + Add Room
+        </button>
       </div>
+
+      {/* Display error message if there's an error */}
+      {error && <p className="error-message">{error}</p>}
+
+      {/* Display input form if showInputForm is true */}
+      {showInputForm && (
+        <InputForm
+          hotels={hotels}
+          onRoomAdded={addRoom}
+          onCancel={handleCancelForm}
+        />
+      )}
+
       <table>
         <thead>
           <tr>
@@ -66,8 +132,14 @@ export default function DashboardRooms() {
           {rooms.map((room) => (
             <tr key={room.roomId}>
               <td>{room.roomType}</td>
-              <td>{hotels[room.hotelId]?.hotelName || "Hotel Name"}</td>
-              <td>{hotels[room.hotelId]?.location || "Location"}</td>
+              <td>
+                {hotels.find((hotel) => hotel.hotelId === room.hotelId)
+                  ?.hotelName || "Hotel Name"}
+              </td>
+              <td>
+                {hotels.find((hotel) => hotel.hotelId === room.hotelId)
+                  ?.location || "Location"}
+              </td>
               <td>${room.price}</td>
               <td
                 style={{
@@ -77,9 +149,22 @@ export default function DashboardRooms() {
                 {room.availability ? "Available" : "Not Available"}
               </td>
               <td>
-                {/* Sort out functions */}
-                {/* <a href="#">Edit</a> |&nbsp; */}
-                {/* <a href="#">Delete</a> */}
+                {/* Delete room link */}
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (
+                      window.confirm(
+                        `Are you sure you want to delete "${room.roomType}"?`
+                      )
+                    ) {
+                      deleteRoom(room.roomId);
+                    }
+                  }}
+                >
+                  Delete
+                </a>
               </td>
             </tr>
           ))}

@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import BookingForm from "../../components-dashboard/inputform/BookingForm"; // Make sure to create this component
 import "../../components-dashboard/dashboardcss/DashboardBookings.css";
 
 export default function DashboardBookings() {
@@ -6,6 +7,7 @@ export default function DashboardBookings() {
   const [users, setUsers] = useState([]);
   const [rooms, setRooms] = useState([]);
   const [hotels, setHotels] = useState([]);
+  const [showInputForm, setShowInputForm] = useState(false);
 
   useEffect(() => {
     fetch("https://localhost:7204/api/Bookings")
@@ -29,6 +31,15 @@ export default function DashboardBookings() {
       .catch((error) => console.error("Error fetching hotels:", error));
   }, []);
 
+  const handleBookingAdded = (newBooking) => {
+    setBookings([...bookings, newBooking]);
+    setShowInputForm(false);
+  };
+
+  const handleCancelForm = () => {
+    setShowInputForm(false);
+  };
+
   const getUserName = (userId) => {
     const user = users.find((user) => user.userId === userId);
     return user ? user.userName : "Unknown User";
@@ -44,11 +55,24 @@ export default function DashboardBookings() {
   };
 
   return (
-    <div className="dashboard-bookings">
-      <div className="dashboard-bookings-header">
+    <div className="dashboard">
+      <div className="dashboard-header">
         <h2>Bookings</h2>
-        <button className="btn btn-blue">Add Booking</button>
+        <button className="btn btn-blue" onClick={() => setShowInputForm(true)}>
+          + Add Booking
+        </button>
       </div>
+
+      {showInputForm && (
+        <BookingForm
+          onBookingAdded={handleBookingAdded}
+          onCancel={handleCancelForm}
+          users={users}
+          rooms={rooms}
+          hotels={hotels}
+        />
+      )}
+
       <table>
         <thead>
           <tr>
@@ -82,9 +106,40 @@ export default function DashboardBookings() {
                 {booking.status}
               </td>
               <td>
-                {/* Manage actions */}
-                {/* <a href="#">Edit</a> |&nbsp; */}
-                {/* <a href="#">Delete</a> */}
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (
+                      window.confirm(
+                        `Are you sure you want to delete booking with ID ${booking.bookingId}?`
+                      )
+                    ) {
+                      // Implement delete functionality
+                      fetch(
+                        `https://localhost:7204/api/Bookings/${booking.bookingId}`,
+                        {
+                          method: "DELETE",
+                        }
+                      )
+                        .then((response) => {
+                          if (response.ok) {
+                            const updatedBookings = bookings.filter(
+                              (b) => b.bookingId !== booking.bookingId
+                            );
+                            setBookings(updatedBookings);
+                          } else {
+                            throw new Error("Failed to delete booking");
+                          }
+                        })
+                        .catch((error) =>
+                          console.error("Error deleting booking:", error)
+                        );
+                    }
+                  }}
+                >
+                  Delete
+                </a>
               </td>
             </tr>
           ))}

@@ -2,3 +2,71 @@
   display: flex;
   height: 100vh;
 }
+
+.dashboard {
+  width: 80%;
+  margin: auto;
+  padding: 4rem 0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  color: var(--dark-blue);
+}
+
+.dashboard table {
+  width: 100%;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  table-layout: fixed;
+}
+
+.dashboard th {
+  text-align: start;
+  color: var(--white);
+  background-color: var(--dark-blue);
+}
+
+.dashboard th:first-of-type {
+  border-radius: 0.5rem 0 0 0;
+}
+
+.dashboard th:last-of-type {
+  border-radius: 0 0.5rem 0 0;
+}
+
+.dashboard table tr:last-child td:first-child {
+  border-radius: 0 0 0 0.5rem;
+}
+
+.dashboard table tr:last-child td:last-child {
+  border-radius: 0 0 0.5rem 0;
+}
+
+.dashboard th,
+.dashboard td {
+  padding: 0.5rem;
+}
+
+.dashboard tr:not(:last-of-type) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dashboard tbody tr:hover {
+  background-color: rgb(250, 250, 250);
+}
+
+.dashboard a {
+  color: var(--light-blue);
+  text-decoration: none;
+  transition: ease-in-out 0.5;
+}
+
+.dashboard a:hover {
+  color: var(--light-blue);
+  opacity: 0.5;
+  text-decoration: none;
+}

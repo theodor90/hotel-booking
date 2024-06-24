@@ -4,24 +4,8 @@ import "./NavBar.css";
 import "../../css/Buttons.css";
 
 const NavBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const scrolled = scrollTop > 20;
-      setIsScrolled(scrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <nav className={isScrolled ? "scrolled" : ""}>
+    <nav>
       <h1>LOGO</h1>
       <ul>
         <li>
