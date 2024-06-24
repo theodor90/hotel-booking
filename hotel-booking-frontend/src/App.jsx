@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
+import Payment from "./pages/payment/Payment";
 import Product from "./pages/product/Product";
 import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/NavBar";
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/products" element={<Product />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/payment" element = {<Payment />} />
         <Route
           path="/dashboard/*"
           element={
