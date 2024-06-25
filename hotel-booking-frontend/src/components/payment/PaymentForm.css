@@ -1,74 +1,66 @@
   .paymentform-container {
-    display: flex;
+    box-sizing: border-box;
     justify-content: center;
+    padding: 2rem;
+    box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+    border-radius: 1rem;
     align-items: center;
-    border: 1px solid  lightgray;
+    border: 1px solid lightgray;
     width: 50%;
-    min-height: 100vh;
     margin: 0 auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
     background-color: #fcfcf8;
-  
-    &:nth-of-type(1) {
-      padding: 2rem 2rem 0;
-      border-radius: 1rem 1rem 0 0;
-      box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
-    }
-    &.paymentform-container:nth-of-type(2) {
-      padding: 2rem;
-      border-radius: 0 0 1rem 1rem;
-      box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05), inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
-    }
-  
   }
 
-    
- .paymentform-container form .row { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 0.94rem; 
-} 
-  
-.paymentform-container form .row .col { 
-    flex: 1 1 15.63rem; 
-} 
+  .paymentform-container .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-.flex { 
-    display: flex; 
-    gap: 0.94rem; 
-} 
+  .paymentform-container .col {
+    width: 50%;
+    gap: 1rem;
+    flex: 1;
+  }
 
-.select { 
-    width: 100%; 
-    border: 1px solid #ccc; 
-    padding: 0.63rem 0.94rem; 
-    font-size: 15px; 
-} 
 
-.col .form-group img { 
-    height: 40px; 
-    margin-top: 5px; 
-    filter: drop-shadow(0 0 1px #000); 
-} 
-  
-  
-  .payment-title {
+  .paymentform-container select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.63rem 1rem;
+    font-size: 15px;
+  }
+
+  .paymentform-container img {
+    height: 40px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+  }
+
+
+  .paymentform-title {
     font-weight: 700;
     font-size: 1.5rem;
 
   }
-  
-  .form-group {
-    margin-bottom: 0.94rem;
+
+  .paymentform-container .form-group{
+    margin-bottom: 1rem;
   }
-  
+
   .form-group label {
     font-weight: 700;
     font-size: 1rem;
     display: block;
   }
-  
+
+  .paymentform-container .cvc {
+    padding: 0.63rem 1rem;
+    width: 100%;
+  }
+
   .form-group input {
     display: inline-block;
     width: 100%;
@@ -79,9 +71,27 @@
     border-radius: 4px;
     background: white;
   }
-  
+
+
   .form-group input:focus {
     background-color: #ddd;
     outline: none;
   }
-  
+
+  .form-group input:valid {
+    border: black;
+  }
+
+  .form-group:required:valid {
+    border-color: green;
+  }
+
+  /*.form-group input:invalid {
+    border-color: red;
+  }*/
+
+  .paymentform-container .btn {
+    width: 100%;
+    display: block;
+    flex-basis: 100%;
+  }

@@ -19,8 +19,7 @@ function PaymentForm() {
             <form action="" method="post">
                 <div className="row">
                     <div className="col">
-                        <h3 className="payment-title">Billing address</h3>
-                        <hr />
+                        <h3 className="paymentform-title">Billing address</h3>
                         <div className="form-group">
                             <label htmlFor="formFullName"><b>Full name</b></label>
                             <input
@@ -55,17 +54,6 @@ function PaymentForm() {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="formZip"><b>Zip code</b></label>
-                            <input
-                                type="text"
-                                placeholder="Enter Zip code"
-                                name="email"
-                                required
-                                value={zipCode}
-                                onChange={(e) => setZipCode(e.target.value)}
-                            />
-                        </div>
-                        <div className="form-group">
                             <label htmlFor="formCity"><b>City</b></label>
                             <input
                                 type="text"
@@ -76,10 +64,20 @@ function PaymentForm() {
                                 onChange={(e) => setCity(e.target.value)}
                             />
                         </div>
+                        <div className="form-group">
+                            <label htmlFor="formZip"><b>Zip code</b></label>
+                            <input
+                                type="text"
+                                placeholder="Enter Zip code"
+                                name="email"
+                                required
+                                value={zipCode}
+                                onChange={(e) => setZipCode(e.target.value)}
+                            />
+                        </div>
                     </div>
-                </div>
                 <div className="col">
-                    <h3 className="payment-title">Payment</h3>
+                    <h3 className="paymentform-title">Payment</h3>
                     <div className="form-group">
                         <label htmlFor="formPayment"><b>Card accepted: </b></label>
                         <input
@@ -90,8 +88,6 @@ function PaymentForm() {
                             value={payment}
                             onChange={(e) => setPayment(e.target.value)}
                         />
-                        <img src="src/assets/images/cards.png"
-                            alt="cards" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="formCardName"><b>Card name</b></label>
@@ -115,8 +111,7 @@ function PaymentForm() {
                             onChange={(e) => setCardNumber(e.target.value)}
                         />
                     </div>
-                    <div className="flex">
-                        <div className="form-group">
+                    <div className="form-group">
                             <label htmlFor="formExpMonth"><b>Exp month</b></label>
                             <select name="" id="">
                                 <option value="">Choose month</option>
@@ -134,6 +129,8 @@ function PaymentForm() {
                                 <option value="December">December</option>
                             </select>
                         </div>
+                    <div className="row">
+                        <div className="col">
                         <label htmlFor="formExpYear"><b>Exp year</b></label>
                         <select name="" id="">
                             <option value="">Choose Year</option>
@@ -143,8 +140,10 @@ function PaymentForm() {
                             <option value="2026">2026</option>
                             <option value="2027">2027</option>
                         </select>
+                        </div>
+                        <div className="col">
                         <label htmlFor="formCVC"><b>CVC</b></label>
-                        <input
+                        <input className="cvc"
                             type="text"
                             placeholder="Enter CVC"
                             name="cvc"
@@ -152,9 +151,11 @@ function PaymentForm() {
                             value={cvc}
                             onChange={(e) => setCVC(e.target.value)}
                         />
+                       </div> 
                     </div>
                 </div>
-                <button type="submit" className="btn btn-green btn-right">Pay</button>
+                </div>
+               <button type="submit" className="btn btn-green">Pay</button>      
             </form>
             {error && <p>{error}</p>}
         </div>
