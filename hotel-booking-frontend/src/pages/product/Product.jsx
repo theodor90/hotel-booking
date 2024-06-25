@@ -1,12 +1,13 @@
 import React from 'react';
-import Grid from '../../components/grid/Grid';
-import ProductCard from '../../components/productcard/ProductCard';
+import './Product.css';
 
 export default function Product() {
   return (
-    <div>      
-      <h1>Hotels</h1>           
-      <Grid/>
+    <div>   
+      <div>
+      <h1 className="header"></h1>
+      </div>                       
+      
     </div>
   );
 }

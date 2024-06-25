@@ -1,123 +1,183 @@
 [
     {
+        "id": 1,
         "name": "Hera Hotel",
-        "location": "Miami, Florida, USA",
-        "description": "The Hera Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
+        "location": "Bali, Indonesia",
+        "details": "Breakfast is included in the price per night.",
+        "price": "$ /night",
+        "description": "The Hera Hotel offers a luxurious waterfront experience in the heart of Bali. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to the beach and various cultural attractions.",
         "image": "https://images.unsplash.com/photo-1712129461388-8a817640c849?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIyOXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
-        "name": "Pallas Athena Hotel",
-        "location": "Miami, Florida, USA",
-        "description": "The Pallas Athena Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
-        "image": "https://images.unsplash.com/photo-1713888208547-a34db5993a05?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDYyMXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
+        "id": 2,
+        "name": "Athena Hotel",
+        "location": "The Maldives",
+        "details": "Breakfast and access to the golf course are included in the price per night.",
+        "price": "$ /night",
+        "description": "The Athena Hotel offers a luxurious waterfront experience in the heart of the Maldives. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to the beach and various cultural attractions.",
+        "image": "https://images.unsplash.com/photo-1614867416715-cbba3a318f85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExNnxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 3,
         "name": "Demeter Hotel",
-        "location": "Miami, Florida, USA",
-        "description": "The Demeter Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
+        "location": "Zuri Zanzibar, Tanzania",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Demeter Hotel offers a luxurious waterfront experience in the heart of Zanzibar. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to various cultural attractions.",
         "image": "https://images.unsplash.com/photo-1646668072507-b2215b873c70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU1MXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 4,
         "name": "Aphrodite Hotel",
         "location": "Sydney, Australia",
-        "description": "The Grand Marina Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Aphrodite Hotel offers a luxurious waterfront experience in the heart of Sydney harbour. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to surfing and various cultural attractions.",
         "image": "https://images.unsplash.com/photo-1718186001240-15ec57eb2473?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY0fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D"
     },
     {
+        "id": 5,
         "name": "Taleia Hotel",
         "location": "Venice, Italy",
-        "description": "The Taleia Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
+        "details": " ",
+        "price": "$ /night",
+        "description": "Located at the heart of Venice, The Taleia Hotel offers a rich variety of culural experiences and access to international cuisine. Boasting modern amenities and spacious rooms, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to various cultural attractions and gondola transportation service.",
         "image": "https://images.unsplash.com/photo-1609884487653-4186d63b7a77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMxOXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 6,
         "name": "Artemis Hotel",
         "location": "Seattle, Washington, USA",
-        "description": "The Grand Marina Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Artemis Hotel offers an urban vacation experience in the heart of Seattle. Boasting modern amenities, spacious rooms, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to restaurants, clubs, and various cultural attractions.",
         "image": "https://images.unsplash.com/photo-1578023110180-ee277d6d95c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM2M3xGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 7,
         "name": "Neptune Hotel",
-        "location": "Miami, Florida, USA",
-        "description": "The Grand Marina Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
+        "location": "Cayman Islands",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Neptune Hotel offers a luxurious waterfront experience in the heart of Seven Mile Beach. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to various cultural attractions.",
         "image": "https://images.unsplash.com/photo-1709988366577-7d8912e311c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDcwNXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 8,
         "name": "Zeus Hotel",
-        "location": "Miami, Florida, USA",
-        "description": "The Grand Marina Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
+        "location": "Hamburg, Germany",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Zeus Hotel offers a luxurious waterfront experience in the heart of Hamburg. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to restaurants, clubs, and various cultural attractions.",
         "image": "https://images.unsplash.com/photo-1714254580658-82a0ebd128b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDUxN3xGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 9,
         "name": "Apollo Hotel",
         "location": "Miami, Florida, USA",
-        "description": "The Grand Marina Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Apollo Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
         "image": "https://images.unsplash.com/photo-1713835209335-8f6f56dccbc2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU5M3xGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 10,
         "name": "Alessandra Hotel",
-        "location": "Ravello, Amalfi Coast, Italy",
-        "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
-        "image": "https://images.unsplash.com/photo-1713856874595-2dd7857a0398?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ5NHxGem8zenVPSE42d3x8ZW58MHx8fHx8"
+        "location": "London, UK",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Alessandra Hotel in London offers a rich mix of urban vibes and vacation activities. Guests can immerse themselves in cultural experiences, enjoy international cuisine, or just take a leisurely stroll in one of the nearby parks.Come explore the historic town of London, relax in the luxurious spa, and take in the panoramic views.",
+        "image": "https://images.unsplash.com/photo-1713100948626-878aa44633c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY3M3xGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },    
     {
+        "id": 11,
         "name": "Anastasia Hotel",
         "location": "Ravello, Amalfi Coast, Italy",
+        "details": " ",
+        "price": "$ /night",
         "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
         "image": "https://images.unsplash.com/photo-1604145195376-e2c8195adf29?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDUzMXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     }, 
     {
+        "id": 12,
         "name": "Hercules Hotel",
-        "location": "Ravello, Amalfi Coast, Italy",
-        "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
-        "image": "https://images.unsplash.com/photo-1575992042651-e35f5a391252?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU1MHxGem8zenVPSE42d3x8ZW58MHx8fHx8"
+        "location": "The Maldives",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Hercules Hotel offers a luxurious waterfront experience in the heart of Seven Mile Beach. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to various cultural attractions.",
+        "image": "https://images.unsplash.com/photo-1544473244-f6895e69ad8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDk0MnxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 13,
         "name": "Dionysos Hotel",
-        "location": "Ravello, Amalfi Coast, Italy",
-        "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
+        "location": "Dinant, Belgium",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Dionysos Hotel offers breathtaking views of the river banks of Dinant. Guests can explore the quaint and artsy town of Dinant, go hiking, relax in the luxurious spa, and dine on authentic Begian cuisine while enjoying the panoramic views.",
         "image": "https://images.unsplash.com/photo-1491557345352-5929e343eb89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU1MnxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 14,
         "name": "Ariadne Hotel",
         "location": "Ravello, Amalfi Coast, Italy",
+        "details": " ",
+        "price": "$ /night",
         "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
         "image": "https://images.unsplash.com/photo-1710668169244-b6cc08a249a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU3OXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 15,
         "name": "Freya Hotel",
-        "location": "Ravello, Amalfi Coast, Italy",
-        "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
-        "image": "https://images.unsplash.com/photo-1592862546334-f958506f9631?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ4NnxGem8zenVPSE42d3x8ZW58MHx8fHx8"
+        "location": "Copenhagen, Denmark",
+        "details": " ",
+        "price": "$ /night",
+        "description": "Located in the Nyhavn area, the Freya Hotel in Copenhagen offers breathtaking views of the Danish capital. Guests can explore the historic city of Copenhagen, relax in the luxurious spa, and dine on international cuisine while enjoying the unique urban vibes of Copenhagen.",
+        "image": "https://images.unsplash.com/photo-1690882128105-a65e15269d1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwMjd8RnpvM3p1T0hONnd8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        "name": "Bayou Hotel",
-        "location": "New Orleans, Louisiana, USA",
-        "description": "A luxurious beachfront resort with an urban vibe. The area provides access to a wide variety of restaurants and clubs, as well as museums and cultural sites. The Bayou Hotel is the perfect home away from home for those who enjoy water sports and city life. The resort is only a short commute away from the French Quarter.",
+        "id": 16,
+        "name": "Harbour Hotel",
+        "location": "Bristol, UK",
+        "details": " ",
+        "price": "$ /night",
+        "description": "A luxurious beachfront resort with an urban vibe. The area provides access to a wide variety of restaurants and clubs, as well as museums and cultural sites. The Harbour Hotel is the perfect home away from home for those who enjoy water sports and city life.",
         "image": "https://images.unsplash.com/photo-1567622292277-b9a6d98fdbcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ4NXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 17,
         "name": "Imperial Hotel",
-        "location": "Ravello, Amalfi Coast, Italy",
-        "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
+        "location": "Lucerne, Switzerland",
+        "details": " ",
+        "price": "$ /night",
+        "description": "Located by a beautiful lake, the Imperial Hotel in Lucerne offers breathtaking views of the city. This luxury resort is surrounded by unique architecture and breathtaking nature. Guests can explore the historic town of Lucerne, relax in the luxurious spa, and dine on authentic Swiss cuisine while soaking up the panoramic views.",
         "image": "https://images.unsplash.com/photo-1702762490865-ef185d9c6bdf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI5MHxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 18,
         "name": "Callisto Hotel",
-        "location": "Ravello, Amalfi Coast, Italy",
-        "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
+        "location": "Fuzhou, China",
+        "details": " ",
+        "price": "$ /night",
+        "description": "Perched high above the bustling city, the Callisto Hotel offers breathtaking views. This skyscraper is beautifully reflected in the sea below. Guests can explore the downtown area of Fuzhou, relax in the luxurious spa, and dine on authentic Asian cuisine while soaking up the sun and panoramic views.",
         "image": " https://images.unsplash.com/photo-1500087326943-dcabb70c026f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU1NXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     {
+        "id": 19,
         "name": "Cassandra Hotel",
         "location": "Las Vegas, Nevada, USA",
-        "description": "A luxurious beachfront resort with an urban vibe. The resort boasts spacious suites and villas with private terraces, direct beach access, and stunning ocean views. Guests can enjoy the resort's championship golf course, world-class spa, and gourmet dining options, as well as participate in various water activities such as snorkeling, scuba diving, and deep-sea fishing.",
+        "details": " ",
+        "price": "$ /night",
+        "description": "The Cassandra Hotel is a luxurious downtown resort with an urban vibe, undoubtably an oasis in the desert. The resort boasts spacious suites and villas with private terraces and access to several swimming pools. Guests can enjoy the resort's championship golf course, world-class spa, and gourmet dining options.",
         "image": "https://images.unsplash.com/photo-1716276590903-f7703efa9177?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI5NXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     },
     
     {
+        "id": 20,
         "name": "Wellington Hotel",
-        "location": "Ravello, Amalfi Coast, Italy",
-        "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
+        "location": "Shanghai, China",
+        "details": " ",
+        "price": "$ /night",
+        "description": "Perched high above the bustling city, the Wellington Hotel offers breathtaking views. This skyscraper is beautifully reflected in the sea below. Guests can explore the historic city of Shanghai, relax in the luxurious spa, and dine on authentic Asian cuisine while soaking up the sun and panoramic views.",
         "image": "https://images.unsplash.com/photo-1517422688858-c17ab068121c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU0OXxGem8zenVPSE42d3x8ZW58MHx8fHx8"
     }
 ]

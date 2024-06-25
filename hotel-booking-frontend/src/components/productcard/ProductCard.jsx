@@ -8,15 +8,25 @@ const ProductCard = () => {
         {data.map(hotel => {
             return(
               <div className="card" key={hotel.name}>
-                    <img src={hotel.image} alt={`${hotel.name}`} className="object-cover rounded-md w-60 shadow-md" />
+                <div>
+                <img src={hotel.image} alt={`${hotel.name}`} className="image"/>
                     <h2>{hotel.name}</h2>
-                    <h4>{hotel.location}</h4> 
-                    <p>{hotel.description}</p> 
-                    <button>Book Now</button>                                       
+                    <h4>{hotel.location}</h4>
                 </div>
+                <div>
+                <p>{hotel.description}</p> 
+                <p>{hotel.details}</p>
+                </div>
+                <div className="card-footer">
+                <p className="price">{hotel.price}</p>
+                <button className="btn btn-blue">Book Now</button>
+                </div>                                                                            
+              </div>
                 )
             })
-        }
+        }       
+        
+        
       </div>
   );
 };
