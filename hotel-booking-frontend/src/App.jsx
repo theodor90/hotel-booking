@@ -11,8 +11,9 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
+import Payment from "./pages/payment/Payment";
 import Product from "./pages/product/Product";
-import Grid from './components//grid/Grid';
+import Grid from "./components//grid/Grid";
 import ProductList from "./pages/productlist/ProductList";
 import Footer from "./components/footer/Footer";
 import Contact from "./pages/contact/Contact";
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/productlist" element={<ProductList />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="/contact" element={<Contact />} />
         <Route
           path="/dashboard/*"

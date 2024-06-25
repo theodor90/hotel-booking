@@ -38,6 +38,11 @@
   background-color: var(--green);
 }
 
+.btn-right {
+  float: right;
+  margin: 1rem;
+}
+
 .btn-green-reverse {
   color: var(--green);
   border: 1px solid var(--green);
