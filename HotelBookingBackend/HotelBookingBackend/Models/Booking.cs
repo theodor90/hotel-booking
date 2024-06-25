@@ -9,7 +9,5 @@
         public DateTime CheckOutDate { get; set; }
         public string Status { get; set; }
 
-        public User User { get; set; }
-        public Room Room { get; set; }
     }
 }

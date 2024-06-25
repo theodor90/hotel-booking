@@ -8,6 +8,5 @@
         public float Price { get; set; }
         public bool Availability { get; set; }
 
-        public Hotel Hotel { get; set; }
     }
 }

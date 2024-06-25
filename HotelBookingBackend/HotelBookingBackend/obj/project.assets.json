@@ -4325,11 +4325,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Theodor\\Desktop\\hotelbooking\\HotelBookingBackend\\HotelBookingBackend\\HotelBookingBackend.csproj",
+      "projectUniqueName": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\HotelBookingBackend.csproj",
       "projectName": "HotelBookingBackend",
-      "projectPath": "C:\\Users\\Theodor\\Desktop\\hotelbooking\\HotelBookingBackend\\HotelBookingBackend\\HotelBookingBackend.csproj",
+      "projectPath": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\HotelBookingBackend.csproj",
       "packagesPath": "C:\\Users\\Theodor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Theodor\\Desktop\\hotelbooking\\HotelBookingBackend\\HotelBookingBackend\\obj\\",
+      "outputPath": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
