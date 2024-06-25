@@ -15,6 +15,7 @@ import Product from "./pages/product/Product";
 import Grid from './components//grid/Grid';
 import ProductList from "./pages/productlist/ProductList";
 import Footer from "./components/footer/Footer";
+import Contact from "./pages/contact/Contact";
 import NavBar from "./components/navbar/NavBar";
 import "./index.css";
 
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/productlist" element={<ProductList />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path="/dashboard/*"
           element={

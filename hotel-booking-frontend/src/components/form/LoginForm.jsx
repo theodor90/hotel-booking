@@ -26,7 +26,7 @@ function LoginForm() {
     return (
         <div className="form-container">
             <form action="action_page.php" method="post" onSubmit={handleLogin}>
-                   <h1 className="login-title">Login</h1>
+                   <h3 className="login-title">Login</h3>
                     <hr />
                     <div className="form-group">
                         <label htmlFor="formUserEmail"><b>Email</b></label>
