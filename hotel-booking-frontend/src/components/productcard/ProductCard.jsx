@@ -9,7 +9,7 @@ const ProductCard = () => {
             return(
               <div className="card" key={hotel.name}>
                 <div>
-                <img src={hotel.image} alt={`${hotel.name}`} />
+                <img src={hotel.image} alt={`${hotel.name}`} className="image"/>
                     <h2>{hotel.name}</h2>
                     <h4>{hotel.location}</h4>
                 </div>

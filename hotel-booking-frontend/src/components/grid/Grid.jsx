@@ -8,7 +8,7 @@ function Grid() {
     {data.map(hotel => (
       <div key={hotel.image} className="card">
         <div key={hotel.name}>
-            <img src={hotel.image} alt={`${hotel.name}`} className="image"/>
+            <img src={hotel.image} alt={`${hotel.name}`} className="card-image"/>
             <h2>{hotel.name}</h2>
             <h4>{hotel.location}</h4> 
             <p>{hotel.description}</p>                                                             
