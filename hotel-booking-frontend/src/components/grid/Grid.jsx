@@ -11,7 +11,7 @@ function Grid() {
             <img src={hotel.image} alt={`${hotel.name}`} className="card-image"/>
             <h2>{hotel.name}</h2>
             <h4>{hotel.location}</h4> 
-            <p>{hotel.description}</p>                                                             
+            <p className="hotel-description">{hotel.description}</p>                                                             
         </div> 
         <div className="card-footer">
           <p className="price-info">{hotel.price}</p>
