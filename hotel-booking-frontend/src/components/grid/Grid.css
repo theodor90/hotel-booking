@@ -39,11 +39,6 @@
   display: flex;
 }
 
-img {
-  width: 300px;
-  padding-bottom: 10px;
-}
-
 .price-info {
   text-align: left;
   font-weight: bold;
