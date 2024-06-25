@@ -14,7 +14,7 @@ const ProductCard = () => {
                     <h4>{hotel.location}</h4>
                 </div>
                 <div>
-                <p>{hotel.description}</p> 
+                <p className="hotel-description">{hotel.description}</p> 
                 <p>{hotel.details}</p>
                 </div>
                 <div className="card-footer">
