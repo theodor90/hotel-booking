@@ -20,13 +20,7 @@
   .card-image {    
     padding-bottom: 10px;    
     float: center;
-  }
-
-  .btn-blue {
-    color: var(--white);
-    border: 1px solid var(--dark-blue);
-    background-color: var(--dark-blue);              
-  }
+  }  
 
    /* Style the counter cards */
 .card {
