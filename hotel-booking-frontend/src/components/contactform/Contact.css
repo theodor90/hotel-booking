@@ -1,23 +1,21 @@
-
 :root {
-    --red: #ef476f;
-    --yellow: #ffd166;
-    --green: #06d6a0;
-    --light-blue: #118ab2;
-    --dark-blue: #073b4c;
-    --black: #020e13;
-    --white: #ecf9fd; 
+  --red: #ef476f;
+  --yellow: #ffd166;
+  --green: #06d6a0;
+  --light-blue: #118ab2;
+  --dark-blue: #073b4c;
+  --black: #020e13;
+  --white: #ecf9fd;
 }
-
 
 .contact-title {
-   margin: 0;
-   padding: 0;
-   text-align: center;
-   font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
- .side p {
+.side p {
   margin: 0;
   padding: 0;
 }
@@ -34,8 +32,8 @@
   font-size: 1rem;
 }
 
-
-.side textarea, input {
+.side textarea,
+input {
   line-height: 1.5rem;
   border: 0;
   outline: none;
@@ -44,7 +42,6 @@
   color: var(--dark-blue);
   background-color: white;
 }
-
 
 .side textarea {
   width: 100%;
@@ -60,7 +57,6 @@
   float: right;
 }
 
-
 .letter {
   width: 30rem;
   margin: auto;
@@ -72,7 +68,6 @@
   height: 20rem;
   background-color: #fcfcf8;
   outline: 1px solid transparent;
-  
 
   &:nth-of-type(1) {
     padding: 2rem 2rem 0;
@@ -82,20 +77,20 @@
   &.side:nth-of-type(2) {
     padding: 2rem;
     border-radius: 0 0 1rem 1rem;
-    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05), inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05),
+      inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
   }
 }
 
-
-input[type=text], select, textarea {
-    width: 100%;
-    border: 1px solid lightgray;
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  
-  
+.contact-wrapper input[type="text"],
+select,
+textarea {
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
