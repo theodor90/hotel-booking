@@ -5,6 +5,7 @@ import "../../components-dashboard/dashboardcss/DashboardHotels.css";
 export default function DashboardHotels() {
   const [hotels, setHotels] = useState([]);
   const [showInputForm, setShowInputForm] = useState(false);
+  const [editHotelId, setEditHotelId] = useState(null);
 
   useEffect(() => {
     fetch("https://localhost:7204/api/Hotels")
@@ -39,8 +40,22 @@ export default function DashboardHotels() {
     setShowInputForm(false);
   };
 
+  const handleHotelUpdated = (updatedHotel) => {
+    const updatedHotels = hotels.map((hotel) =>
+      hotel.hotelId === updatedHotel.hotelId ? updatedHotel : hotel
+    );
+    setHotels(updatedHotels);
+    setEditHotelId(null); // Reset edit mode if needed
+  };
+
   const handleCancelForm = () => {
     setShowInputForm(false);
+    setEditHotelId(null); // Reset edit mode
+  };
+
+  const updateHotel = (hotelId) => {
+    setEditHotelId(hotelId);
+    setShowInputForm(true);
   };
 
   return (
@@ -57,7 +72,9 @@ export default function DashboardHotels() {
       {showInputForm && (
         <InputForm
           onHotelAdded={handleHotelAdded}
+          onHotelUpdated={handleHotelUpdated}
           onCancel={handleCancelForm}
+          editHotelData={hotels.find((hotel) => hotel.hotelId === editHotelId)}
         />
       )}
 
@@ -75,8 +92,10 @@ export default function DashboardHotels() {
               <td>{hotel.hotelName}</td>
               <td>{hotel.location}</td>
               <td>
-                {/* Sort out function */}
-                {/* <a href="#">Edit</a> |&nbsp; */}
+                <a href="#" onClick={() => updateHotel(hotel.hotelId)}>
+                  Edit
+                </a>{" "}
+                |&nbsp;
                 <a
                   href="#"
                   onClick={() => {
