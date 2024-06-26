@@ -7,11 +7,15 @@ export default function DashboardHotels() {
   const [showInputForm, setShowInputForm] = useState(false);
   const [editHotelId, setEditHotelId] = useState(null);
 
-  useEffect(() => {
+  const fetchHotels = () => {
     fetch("https://localhost:7204/api/Hotels")
       .then((response) => response.json())
       .then((data) => setHotels(data))
       .catch((error) => console.error("Error fetching hotels:", error));
+  };
+
+  useEffect(() => {
+    fetchHotels();
   }, []);
 
   const toggleInputForm = () => {
@@ -24,10 +28,7 @@ export default function DashboardHotels() {
     })
       .then((response) => {
         if (response.ok) {
-          const updatedHotels = hotels.filter(
-            (hotel) => hotel.hotelId !== hotelId
-          );
-          setHotels(updatedHotels);
+          fetchHotels();
         } else {
           throw new Error("Failed to delete hotel");
         }
@@ -36,16 +37,14 @@ export default function DashboardHotels() {
   };
 
   const handleHotelAdded = (newHotel) => {
-    setHotels([...hotels, newHotel]);
-    setShowInputForm(false);
+    fetchHotels();
+    setShowInputForm(false);  // Close the input form
   };
 
   const handleHotelUpdated = (updatedHotel) => {
-    const updatedHotels = hotels.map((hotel) =>
-      hotel.hotelId === updatedHotel.hotelId ? updatedHotel : hotel
-    );
-    setHotels(updatedHotels);
-    setEditHotelId(null); // Reset edit mode if needed
+    fetchHotels();
+    setShowInputForm(false);  // Close the input form
+    setEditHotelId(null);     // Reset edit mode
   };
 
   const handleCancelForm = () => {
@@ -75,6 +74,7 @@ export default function DashboardHotels() {
           onHotelUpdated={handleHotelUpdated}
           onCancel={handleCancelForm}
           editHotelData={hotels.find((hotel) => hotel.hotelId === editHotelId)}
+          fetchHotels={fetchHotels} // Pass fetchHotels as a prop
         />
       )}
 

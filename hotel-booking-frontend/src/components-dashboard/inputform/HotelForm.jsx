@@ -38,7 +38,7 @@ export default function InputForm({
 
   function handleSubmit(e) {
     e.preventDefault();
-
+  
     if (
       formData.hotelName.trim() === "" ||
       formData.location.trim() === "" ||
@@ -47,17 +47,17 @@ export default function InputForm({
       setError("Please fill out all fields");
       return;
     }
-
+  
     setError("");
-
+  
     const url = editHotelData
       ? `https://localhost:7204/api/Hotels/${formData.hotelId}`
       : "https://localhost:7204/api/Hotels";
     const method = editHotelData ? "PUT" : "POST";
-
+  
     const body = editHotelData
       ? JSON.stringify({
-          hotelId: formData.hotelId, // Include hotelId for PUT
+          hotelId: formData.hotelId,
           hotelName: formData.hotelName,
           location: formData.location,
           description: formData.description,
@@ -69,9 +69,9 @@ export default function InputForm({
           description: formData.description,
           imgUrl: formData.imgUrl,
         });
-
+  
     console.log("Sending request with body:", body);
-
+  
     fetch(url, {
       method: method,
       headers: {
@@ -80,34 +80,28 @@ export default function InputForm({
       body: body,
     })
       .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else if (response.status === 400) {
-          throw new Error("Bad request - please check your input");
-        } else {
-          throw new Error("Unexpected response status: " + response.status);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
+        return response.text();  // Read as text first
+      })
+      .then((text) => {
+        return text ? JSON.parse(text) : {};  // Parse if not empty
       })
       .then((data) => {
-        console.log("Received response:", data);
+        console.log("Success:", data);
         if (editHotelData) {
           onHotelUpdated(data);
         } else {
           onHotelAdded(data);
         }
-        setFormData({
-          hotelName: "",
-          location: "",
-          description: "",
-          imgUrl: "",
-          hotelId: null,
-        });
       })
       .catch((error) => {
         console.error("Error:", error);
-        setError("An error occurred while processing your request.");
+        setError("Failed to save hotel data");
       });
   }
+  
 
   function handleChange(e) {
     const { name, value } = e.target;
