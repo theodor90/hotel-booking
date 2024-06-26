@@ -1,37 +1,37 @@
 /* Grid */
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 10px;
-    padding: 20px;    
-  }
-  
-  .grid-item {    
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    height: 100%;
-    width: 100%;    
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  padding: 20px;
+}
 
-  .card-image {    
-    padding-bottom: 10px;    
-    float: center;
-  }  
+.grid-item {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
 
-   /* Style the counter cards */
+.card-image {
+  width: 100px;
+  padding-bottom: 10px;
+}
+
+/* Style the counter cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
-  width: fit-content; 
+  width: fit-content;
   flex: 1 1 auto;
   padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;      
+  justify-content: space-between;
 }
 
 .card-footer {
@@ -42,7 +42,7 @@
   text-align: left;
   font-weight: bold;
   padding-right: 120px;
-}  
+}
 
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
@@ -72,4 +72,4 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-} 
+}

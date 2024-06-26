@@ -6,6 +6,7 @@ export default function RoomForm({ hotels, onRoomAdded, onCancel }) {
   const [hotelId, setHotelId] = useState("");
   const [price, setPrice] = useState("");
   const [availability, setAvailability] = useState("Available");
+  const [imgUrl, setImgUrl] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ export default function RoomForm({ hotels, onRoomAdded, onCancel }) {
       hotelId,
       price: parseFloat(price),
       availability: availability === "Available",
+      imgUrl,
     };
     onRoomAdded(newRoom);
   };
@@ -65,6 +67,15 @@ export default function RoomForm({ hotels, onRoomAdded, onCancel }) {
           <option value="Available">Available</option>
           <option value="Not Available">Not Available</option>
         </select>
+      </div>
+      <div className="input-form-group">
+        <label>Image URL:</label>
+        <input
+          type="text"
+          value={imgUrl}
+          onChange={(e) => setImgUrl(e.target.value)}
+          required
+        />
       </div>
       <div className="form-buttons">
         <button type="submit" className="btn btn-blue">

@@ -6,6 +6,7 @@ export default function InputForm({ onHotelAdded, onCancel }) {
     hotelName: "",
     location: "",
     description: "",
+    imgUrl: "",
   });
   const [error, setError] = useState("");
 
@@ -32,6 +33,7 @@ export default function InputForm({ onHotelAdded, onCancel }) {
         hotelName: formData.hotelName,
         location: formData.location,
         description: formData.description,
+        imgUrl: formData.imgUrl,
       }),
     })
       .then((response) => {
@@ -45,6 +47,7 @@ export default function InputForm({ onHotelAdded, onCancel }) {
           hotelName: "",
           location: "",
           description: "",
+          imgUrl: "",
         });
         onHotelAdded(data);
       })
@@ -66,6 +69,7 @@ export default function InputForm({ onHotelAdded, onCancel }) {
       hotelName: "",
       location: "",
       description: "",
+      imgUrl: "",
     });
     setError("");
     onCancel(); // Trigger onCancel function passed from DashboardHotels
@@ -103,6 +107,17 @@ export default function InputForm({ onHotelAdded, onCancel }) {
           name="description"
           placeholder="Enter description"
           value={formData.description}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="input-form-group">
+        <label htmlFor="imgUrl">Image URL</label>
+        <input
+          type="text"
+          id="imgUrl"
+          name="imgUrl"
+          placeholder="Enter image url"
+          value={formData.imgUrl}
           onChange={handleChange}
         />
       </div>
