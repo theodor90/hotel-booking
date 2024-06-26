@@ -48,10 +48,6 @@ namespace HotelBookingBackend.Migrations
 
                     b.HasKey("BookingId");
 
-                    b.HasIndex("RoomId");
-
-                    b.HasIndex("UserId");
-
                     b.ToTable("Bookings");
                 });
 
@@ -68,6 +64,10 @@ namespace HotelBookingBackend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HotelName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -122,6 +122,10 @@ namespace HotelBookingBackend.Migrations
                     b.Property<int>("HotelId")
                         .HasColumnType("int");
 
+                    b.Property<string>("ImgUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
@@ -130,8 +134,6 @@ namespace HotelBookingBackend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RoomId");
-
-                    b.HasIndex("HotelId");
 
                     b.ToTable("Rooms");
                 });
@@ -161,25 +163,6 @@ namespace HotelBookingBackend.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("HotelBookingBackend.Models.Booking", b =>
-                {
-                    b.HasOne("HotelBookingBackend.Models.Room", "Room")
-                        .WithMany()
-                        .HasForeignKey("RoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HotelBookingBackend.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Room");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("HotelBookingBackend.Models.Payment", b =>
                 {
                     b.HasOne("HotelBookingBackend.Models.Booking", "Booking")
@@ -189,17 +172,6 @@ namespace HotelBookingBackend.Migrations
                         .IsRequired();
 
                     b.Navigation("Booking");
-                });
-
-            modelBuilder.Entity("HotelBookingBackend.Models.Room", b =>
-                {
-                    b.HasOne("HotelBookingBackend.Models.Hotel", "Hotel")
-                        .WithMany()
-                        .HasForeignKey("HotelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Hotel");
                 });
 #pragma warning restore 612, 618
         }
