@@ -1,5 +1,11 @@
 /* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
 
+/* 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -22,9 +28,8 @@
   padding-bottom: 10px;
 }
 
-/* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   width: fit-content;
   flex: 1 1 auto;
@@ -32,16 +37,88 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
-.card-footer {
+
+.hotel-card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 10px 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.price-info {
-  text-align: left;
-  font-weight: bold;
-  padding-right: 120px;
+.hotel-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+
+
+.hotel-card h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.hotel-card h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 5px 0;
+  color: #777;
+}
+
+ 
+.room-card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.room-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.room-card h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.room-card h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 5px 0;
+  color: #777;
+}
+
+.hotel-card div, .room-card div {
+  width: 100%;
+  padding: 15px;
+  text-align: center;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

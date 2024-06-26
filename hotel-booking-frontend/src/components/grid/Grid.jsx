@@ -20,12 +20,11 @@ function Grid({ type }) {
     <div className="grid-container">
       {type === "hotels" &&
         data.map((hotel) => (
-          <div key={hotel.hotelId} className="card-wrapper">
+          <div key={hotel.hotelId} className="hotel-card">
             <div>
               <img
                 src={hotel.imgUrl}
                 alt={`${hotel.name}`}
-                className="card-image-wrapper"
               />
               <h2>{hotel.name}</h2>
               <h4>{hotel.location}</h4>
@@ -36,18 +35,17 @@ function Grid({ type }) {
         ))}
       {type === "rooms" &&
         data.map((room) => (
-          <div key={room.roomId} className="card-wrapper">
+          <div key={room.roomId} className="room-card">
             <div>
               <img
                 src={room.imgUrl}
                 alt={`${room.name}`}
-                className="card-image-wrapper"
               />
-              {/* <h2>{room.name}</h2> */}
+              <div>
               <h2>{room.type}</h2>
               <h4>{room.price}</h4>
               <h4>{room.availability}</h4>
-              {/* <p className="hotel-description-text">{room.description}</p> */}
+            </div>  
             </div>
             <button className="custom-btn btn-blue">Book Now</button>
           </div>
