@@ -5,12 +5,17 @@ import "../../components-dashboard/dashboardcss/DashboardHotels.css";
 export default function DashboardHotels() {
   const [hotels, setHotels] = useState([]);
   const [showInputForm, setShowInputForm] = useState(false);
+  const [editHotelId, setEditHotelId] = useState(null);
 
-  useEffect(() => {
+  const fetchHotels = () => {
     fetch("https://localhost:7204/api/Hotels")
       .then((response) => response.json())
       .then((data) => setHotels(data))
       .catch((error) => console.error("Error fetching hotels:", error));
+  };
+
+  useEffect(() => {
+    fetchHotels();
   }, []);
 
   const toggleInputForm = () => {
@@ -23,10 +28,7 @@ export default function DashboardHotels() {
     })
       .then((response) => {
         if (response.ok) {
-          const updatedHotels = hotels.filter(
-            (hotel) => hotel.hotelId !== hotelId
-          );
-          setHotels(updatedHotels);
+          fetchHotels();
         } else {
           throw new Error("Failed to delete hotel");
         }
@@ -35,12 +37,24 @@ export default function DashboardHotels() {
   };
 
   const handleHotelAdded = (newHotel) => {
-    setHotels([...hotels, newHotel]);
-    setShowInputForm(false);
+    fetchHotels();
+    setShowInputForm(false);  // Close the input form
+  };
+
+  const handleHotelUpdated = (updatedHotel) => {
+    fetchHotels();
+    setShowInputForm(false);  // Close the input form
+    setEditHotelId(null);     // Reset edit mode
   };
 
   const handleCancelForm = () => {
     setShowInputForm(false);
+    setEditHotelId(null); // Reset edit mode
+  };
+
+  const updateHotel = (hotelId) => {
+    setEditHotelId(hotelId);
+    setShowInputForm(true);
   };
 
   return (
@@ -57,7 +71,10 @@ export default function DashboardHotels() {
       {showInputForm && (
         <InputForm
           onHotelAdded={handleHotelAdded}
+          onHotelUpdated={handleHotelUpdated}
           onCancel={handleCancelForm}
+          editHotelData={hotels.find((hotel) => hotel.hotelId === editHotelId)}
+          fetchHotels={fetchHotels} // Pass fetchHotels as a prop
         />
       )}
 
@@ -75,8 +92,10 @@ export default function DashboardHotels() {
               <td>{hotel.hotelName}</td>
               <td>{hotel.location}</td>
               <td>
-                {/* Sort out function */}
-                {/* <a href="#">Edit</a> |&nbsp; */}
+                <a href="#" onClick={() => updateHotel(hotel.hotelId)}>
+                  Edit
+                </a>{" "}
+                |&nbsp;
                 <a
                   href="#"
                   onClick={() => {

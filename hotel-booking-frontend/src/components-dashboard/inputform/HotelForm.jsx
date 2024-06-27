@@ -1,18 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./InputForm.css";
 
-export default function InputForm({ onHotelAdded, onCancel }) {
+export default function InputForm({
+  onHotelAdded,
+  onHotelUpdated,
+  onCancel,
+  editHotelData,
+}) {
   const [formData, setFormData] = useState({
     hotelName: "",
     location: "",
     description: "",
     imgUrl: "",
+    hotelId: null, // Include hotelId in formData
   });
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    if (editHotelData) {
+      setFormData({
+        hotelName: editHotelData.hotelName,
+        location: editHotelData.location,
+        description: editHotelData.description,
+        imgUrl: editHotelData.imgUrl,
+        hotelId: editHotelData.hotelId, // Include hotelId in formData for PUT
+      });
+    } else {
+      setFormData({
+        hotelName: "",
+        location: "",
+        description: "",
+        imgUrl: "",
+        hotelId: null,
+      });
+    }
+  }, [editHotelData]);
+
   function handleSubmit(e) {
     e.preventDefault();
-
+  
     if (
       formData.hotelName.trim() === "" ||
       formData.location.trim() === "" ||
@@ -21,40 +47,61 @@ export default function InputForm({ onHotelAdded, onCancel }) {
       setError("Please fill out all fields");
       return;
     }
-
+  
     setError("");
-
-    fetch("https://localhost:7204/api/Hotels", {
-      method: "POST",
+  
+    const url = editHotelData
+      ? `https://localhost:7204/api/Hotels/${formData.hotelId}`
+      : "https://localhost:7204/api/Hotels";
+    const method = editHotelData ? "PUT" : "POST";
+  
+    const body = editHotelData
+      ? JSON.stringify({
+          hotelId: formData.hotelId,
+          hotelName: formData.hotelName,
+          location: formData.location,
+          description: formData.description,
+          imgUrl: formData.imgUrl,
+        })
+      : JSON.stringify({
+          hotelName: formData.hotelName,
+          location: formData.location,
+          description: formData.description,
+          imgUrl: formData.imgUrl,
+        });
+  
+    console.log("Sending request with body:", body);
+  
+    fetch(url, {
+      method: method,
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        hotelName: formData.hotelName,
-        location: formData.location,
-        description: formData.description,
-        imgUrl: formData.imgUrl,
-      }),
+      body: body,
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error('Network response was not ok');
         }
-        return response.json();
+        return response.text();  // Read as text first
+      })
+      .then((text) => {
+        return text ? JSON.parse(text) : {};  // Parse if not empty
       })
       .then((data) => {
-        setFormData({
-          hotelName: "",
-          location: "",
-          description: "",
-          imgUrl: "",
-        });
-        onHotelAdded(data);
+        console.log("Success:", data);
+        if (editHotelData) {
+          onHotelUpdated(data);
+        } else {
+          onHotelAdded(data);
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
+        setError("Failed to save hotel data");
       });
   }
+  
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -70,9 +117,10 @@ export default function InputForm({ onHotelAdded, onCancel }) {
       location: "",
       description: "",
       imgUrl: "",
+      hotelId: null,
     });
     setError("");
-    onCancel(); // Trigger onCancel function passed from DashboardHotels
+    onCancel();
   }
 
   return (
@@ -124,7 +172,7 @@ export default function InputForm({ onHotelAdded, onCancel }) {
       {error && <p style={{ color: "var(--red)" }}>{error}</p>}
       <div>
         <button className="btn btn-blue" onClick={handleSubmit}>
-          Add Hotel
+          {editHotelData ? "Update Hotel" : "Add Hotel"}
         </button>
         <button className="btn btn-red" onClick={handleCancel}>
           Cancel

@@ -7,44 +7,46 @@ export default function DashboardRooms() {
   const [hotels, setHotels] = useState([]); // State to hold hotels data
   const [showInputForm, setShowInputForm] = useState(false); // State to toggle input form visibility
   const [error, setError] = useState(""); // State to manage errors
+  const [editRoomId, setEditRoomId] = useState(null); // State to hold room ID for editing
+
+  const fetchRooms = async () => {
+    try {
+      const roomsResponse = await fetch("https://localhost:7204/api/Rooms");
+      if (!roomsResponse.ok) {
+        throw new Error("Failed to fetch rooms");
+      }
+      const roomsData = await roomsResponse.json();
+      setRooms(roomsData);
+    } catch (error) {
+      console.error("Error fetching rooms:", error);
+      setError("Failed to fetch rooms. Please try again.");
+    }
+  };
+
+  const fetchHotels = async () => {
+    try {
+      const hotelsResponse = await fetch("https://localhost:7204/api/Hotels");
+      if (!hotelsResponse.ok) {
+        throw new Error("Failed to fetch hotels");
+      }
+      const hotelsData = await hotelsResponse.json();
+      setHotels(hotelsData);
+    } catch (error) {
+      console.error("Error fetching hotels:", error);
+      setError("Failed to fetch hotels. Please try again.");
+    }
+  };
 
   useEffect(() => {
-    // Function to fetch rooms and hotels data from API on component mount
-    const fetchData = async () => {
-      try {
-        // Fetch rooms data
-        const roomsResponse = await fetch("https://localhost:7204/api/Rooms");
-        if (!roomsResponse.ok) {
-          throw new Error("Failed to fetch rooms");
-        }
-        const roomsData = await roomsResponse.json();
-        setRooms(roomsData);
-
-        // Fetch hotels data
-        const hotelsResponse = await fetch("https://localhost:7204/api/Hotels");
-        if (!hotelsResponse.ok) {
-          throw new Error("Failed to fetch hotels");
-        }
-        const hotelsData = await hotelsResponse.json();
-        setHotels(hotelsData);
-
-        setError(""); // Clear any previous errors on successful data fetch
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setError("Failed to fetch data. Please try again.");
-      }
-    };
-
-    fetchData(); // Call fetchData function on component mount
+    fetchRooms();
+    fetchHotels();
   }, []);
 
   const toggleInputForm = () => {
-    // Function to toggle input form visibility
     setShowInputForm(!showInputForm);
   };
 
   const deleteRoom = async (roomId) => {
-    // Function to delete a room by ID
     try {
       const response = await fetch(
         `https://localhost:7204/api/Rooms/${roomId}`,
@@ -57,43 +59,32 @@ export default function DashboardRooms() {
         throw new Error("Failed to delete room");
       }
 
-      // Update rooms state to remove the deleted room
-      setRooms(rooms.filter((room) => room.roomId !== roomId));
+      fetchRooms(); // Refresh the room list
     } catch (error) {
       console.error("Error deleting room:", error);
       setError("Failed to delete room. Please try again.");
     }
   };
 
-  const addRoom = async (newRoom) => {
-    // Function to add a new room
-    try {
-      const response = await fetch("https://localhost:7204/api/Rooms", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newRoom),
-      });
+  const handleRoomAdded = (newRoom) => {
+    fetchRooms();
+    setShowInputForm(false);  // Close the input form
+  };
 
-      if (!response.ok) {
-        throw new Error("Failed to add room");
-      }
-
-      const addedRoom = await response.json();
-      setRooms([...rooms, addedRoom]);
-      setShowInputForm(false); // Hide input form after successful addition
-      setError(""); // Clear any previous errors
-    } catch (error) {
-      console.error("Error adding room:", error);
-      setError("Failed to add room. Please try again.");
-    }
+  const handleRoomUpdated = (updatedRoom) => {
+    fetchRooms();
+    setShowInputForm(false);  // Close the input form
+    setEditRoomId(null);      // Reset edit mode
   };
 
   const handleCancelForm = () => {
-    // Function to handle canceling the input form
-    setShowInputForm(false); // Hide input form
-    setError(""); // Clear any previous errors
+    setShowInputForm(false);
+    setEditRoomId(null); // Reset edit mode
+  };
+
+  const updateRoom = (roomId) => {
+    setEditRoomId(roomId);
+    setShowInputForm(true);
   };
 
   return (
@@ -112,8 +103,10 @@ export default function DashboardRooms() {
       {showInputForm && (
         <InputForm
           hotels={hotels}
-          onRoomAdded={addRoom}
+          onRoomAdded={handleRoomAdded}
+          onRoomUpdated={handleRoomUpdated}
           onCancel={handleCancelForm}
+          editRoomData={rooms.find((room) => room.roomId === editRoomId)}
         />
       )}
 
@@ -149,7 +142,10 @@ export default function DashboardRooms() {
                 {room.availability ? "Available" : "Not Available"}
               </td>
               <td>
-                {/* Delete room link */}
+                <a href="#" onClick={() => updateRoom(room.roomId)}>
+                  Edit
+                </a>{" "}
+                |&nbsp;
                 <a
                   href="#"
                   onClick={(e) => {
