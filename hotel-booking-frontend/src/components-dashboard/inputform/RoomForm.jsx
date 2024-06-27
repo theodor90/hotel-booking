@@ -1,62 +1,52 @@
 import React, { useState, useEffect } from "react";
 import "./InputForm.css";
 
-export default function BookingForm({
-  onBookingAdded,
-  onBookingUpdated,
-  onCancel,
-  rooms,
+export default function RoomForm({
   hotels,
-  editBookingData,
+  onRoomAdded,
+  onRoomUpdated,
+  onCancel,
+  editRoomData,
 }) {
   const [formData, setFormData] = useState({
-    bookingId: null,
-    guestName: "",
-    guestEmail: "",
-    guestPhone: "",
-    roomId: "",
-    checkInDate: "",
-    checkOutDate: "",
-    status: "Pending", // Default status
+    roomId: null,
+    hotelId: "",
+    roomType: "",
+    price: "",
+    availability: true,
+    imgUrl: "",
   });
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (editBookingData) {
+    if (editRoomData) {
       setFormData({
-        bookingId: editBookingData.bookingId,
-        guestName: editBookingData.guestName || "",
-        guestEmail: editBookingData.guestEmail || "",
-        guestPhone: editBookingData.guestPhone || "",
-        roomId: editBookingData.roomId.toString(),
-        checkInDate: editBookingData.checkInDate,
-        checkOutDate: editBookingData.checkOutDate,
-        status: editBookingData.status,
+        roomId: editRoomData.roomId,
+        hotelId: editRoomData.hotelId.toString(),
+        roomType: editRoomData.roomType,
+        price: editRoomData.price.toString(),
+        availability: editRoomData.availability,
+        imgUrl: editRoomData.imgUrl,
       });
     } else {
       setFormData({
-        bookingId: null,
-        guestName: "",
-        guestEmail: "",
-        guestPhone: "",
-        roomId: "",
-        checkInDate: "",
-        checkOutDate: "",
-        status: "Pending",
+        roomId: null,
+        hotelId: "",
+        roomType: "",
+        price: "",
+        availability: true,
+        imgUrl: "",
       });
     }
-  }, [editBookingData]);
+  }, [editRoomData]);
 
   function handleSubmit(e) {
     e.preventDefault();
 
     if (
-      formData.guestName.trim() === "" ||
-      formData.guestEmail.trim() === "" ||
-      formData.guestPhone.trim() === "" ||
-      formData.roomId.trim() === "" ||
-      formData.checkInDate.trim() === "" ||
-      formData.checkOutDate.trim() === ""
+      formData.roomType.trim() === "" ||
+      formData.hotelId.trim() === "" ||
+      formData.price.trim() === ""
     ) {
       setError("Please fill out all fields");
       return;
@@ -65,22 +55,20 @@ export default function BookingForm({
     setError("");
 
     const body = {
-      bookingId: formData.bookingId ?? 0,
-      guestName: formData.guestName,
-      guestEmail: formData.guestEmail,
-      guestPhone: formData.guestPhone,
-      roomId: parseInt(formData.roomId, 10),
-      checkInDate: formData.checkInDate,
-      checkOutDate: formData.checkOutDate,
-      status: formData.status,
+      roomId: formData.roomId ?? 0,
+      hotelId: parseInt(formData.hotelId, 10),
+      roomType: formData.roomType,
+      price: parseFloat(formData.price),
+      availability: formData.availability, // Boolean value
+      imgUrl: formData.imgUrl,
     };
 
     console.log("Request Body:", body);
 
-    const url = editBookingData
-      ? `https://localhost:7204/api/Bookings/${formData.bookingId}`
-      : "https://localhost:7204/api/Bookings";
-    const method = editBookingData ? "PUT" : "POST";
+    const url = editRoomData
+      ? `https://localhost:7204/api/Rooms/${formData.roomId}`
+      : "https://localhost:7204/api/Rooms";
+    const method = editRoomData ? "PUT" : "POST";
 
     fetch(url, {
       method: method,
@@ -101,12 +89,11 @@ export default function BookingForm({
       })
       .then((data) => {
         console.log("Response Data:", data);
-        if (editBookingData) {
-          onBookingUpdated(data);
+        if (editRoomData) {
+          onRoomUpdated(data);
         } else {
-          onBookingAdded(data);
+          onRoomAdded(data);
         }
-        handleSuccess();
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -116,111 +103,82 @@ export default function BookingForm({
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  }
-
-  function handleSuccess() {
-    setFormData({
-      bookingId: null,
-      guestName: "",
-      guestEmail: "",
-      guestPhone: "",
-      roomId: "",
-      checkInDate: "",
-      checkOutDate: "",
-      status: "Pending",
-    });
-    onCancel();
+    if (name === "availability") {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value === "Available",
+      }));
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
+    }
   }
 
   return (
     <form onSubmit={handleSubmit} className="input-form">
-      <h2>{editBookingData ? "Edit Booking" : "Add Booking"}</h2>
+      <h2>{editRoomData ? "Edit Room" : "Add Room"}</h2>
       {error && <p className="error">{error}</p>}
       <div>
-        <label>Guest Name:</label>
-        <input
-          type="text"
-          name="guestName"
-          value={formData.guestName}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label>Guest Email:</label>
-        <input
-          type="email"
-          name="guestEmail"
-          value={formData.guestEmail}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label>Guest Phone:</label>
-        <input
-          type="tel"
-          name="guestPhone"
-          value={formData.guestPhone}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label>Room:</label>
+        <label>Hotel:</label>
         <select
-          name="roomId"
-          value={formData.roomId}
+          name="hotelId"
+          value={formData.hotelId}
           onChange={handleChange}
           required
         >
-          <option value="">Select Room</option>
-          {rooms.map((room) => (
-            <option key={room.roomId} value={room.roomId}>
-              {room.roomType}
+          <option value="">Select Hotel</option>
+          {hotels.map((hotel) => (
+            <option key={hotel.hotelId} value={hotel.hotelId}>
+              {hotel.hotelName}
             </option>
           ))}
         </select>
       </div>
       <div>
-        <label>Check-In Date:</label>
+        <label>Room Type:</label>
         <input
-          type="date"
-          name="checkInDate"
-          value={formData.checkInDate}
+          type="text"
+          name="roomType"
+          value={formData.roomType}
           onChange={handleChange}
           required
         />
       </div>
       <div>
-        <label>Check-Out Date:</label>
+        <label>Price:</label>
         <input
-          type="date"
-          name="checkOutDate"
-          value={formData.checkOutDate}
+          type="number"
+          name="price"
+          value={formData.price}
           onChange={handleChange}
           required
         />
       </div>
       <div>
-        <label>Status:</label>
+        <label>Availability:</label>
         <select
-          name="status"
-          value={formData.status}
+          name="availability"
+          value={formData.availability ? "Available" : "Not Available"}
           onChange={handleChange}
           required
         >
-          <option value="Pending">Pending</option>
-          <option value="Confirmed">Confirmed</option>
-          <option value="Cancelled">Cancelled</option>
+          <option value="Available">Available</option>
+          <option value="Not Available">Not Available</option>
         </select>
       </div>
+      <div>
+        <label>Image URL:</label>
+        <input
+          type="text"
+          name="imgUrl"
+          value={formData.imgUrl}
+          onChange={handleChange}
+        />
+      </div>
       <div className="form-actions">
-        <button type="submit">{editBookingData ? "Update" : "Create"}</button>
+        <button type="submit">{editRoomData ? "Update" : "Create"}</button>
         <button type="button" onClick={onCancel}>
           Cancel
         </button>
