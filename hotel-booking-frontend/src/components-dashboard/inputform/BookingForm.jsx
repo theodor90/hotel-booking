@@ -1,15 +1,19 @@
-import React, { useState } from "react";
-import "./InputForm.css"; // Make sure to include your CSS file for styling
+import React, { useState, useEffect } from "react";
+import "./InputForm.css";
 
 export default function BookingForm({
   onBookingAdded,
+  onBookingUpdated,
   onCancel,
-  users,
   rooms,
   hotels,
+  editBookingData,
 }) {
   const [formData, setFormData] = useState({
-    userId: "",
+    bookingId: null,
+    guestName: "",
+    guestEmail: "",
+    guestPhone: "",
     roomId: "",
     checkInDate: "",
     checkOutDate: "",
@@ -17,11 +21,39 @@ export default function BookingForm({
   });
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    if (editBookingData) {
+      setFormData({
+        bookingId: editBookingData.bookingId,
+        guestName: editBookingData.guestName || "",
+        guestEmail: editBookingData.guestEmail || "",
+        guestPhone: editBookingData.guestPhone || "",
+        roomId: editBookingData.roomId.toString(),
+        checkInDate: editBookingData.checkInDate.split('T')[0], // Extract only the date part
+        checkOutDate: editBookingData.checkOutDate.split('T')[0], // Extract only the date part
+        status: editBookingData.status,
+      });
+    } else {
+      setFormData({
+        bookingId: null,
+        guestName: "",
+        guestEmail: "",
+        guestPhone: "",
+        roomId: "",
+        checkInDate: "",
+        checkOutDate: "",
+        status: "Pending",
+      });
+    }
+  }, [editBookingData]);
+
   function handleSubmit(e) {
     e.preventDefault();
 
     if (
-      formData.userId.trim() === "" ||
+      formData.guestName.trim() === "" ||
+      formData.guestEmail.trim() === "" ||
+      formData.guestPhone.trim() === "" ||
       formData.roomId.trim() === "" ||
       formData.checkInDate.trim() === "" ||
       formData.checkOutDate.trim() === ""
@@ -32,38 +64,53 @@ export default function BookingForm({
 
     setError("");
 
-    // Assuming you have an API endpoint to add bookings
-    fetch("https://localhost:7204/api/Bookings", {
-      method: "POST",
+    const body = {
+      bookingId: formData.bookingId ?? 0,
+      guestName: formData.guestName,
+      guestEmail: formData.guestEmail,
+      guestPhone: formData.guestPhone,
+      roomId: parseInt(formData.roomId, 10),
+      checkInDate: formData.checkInDate,
+      checkOutDate: formData.checkOutDate,
+      status: formData.status,
+    };
+
+    console.log("Request Body:", body);
+
+    const url = editBookingData
+      ? `https://localhost:7204/api/Bookings/${formData.bookingId}`
+      : "https://localhost:7204/api/Bookings";
+    const method = editBookingData ? "PUT" : "POST";
+
+    fetch(url, {
+      method: method,
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        userId: formData.userId,
-        roomId: formData.roomId,
-        checkInDate: formData.checkInDate,
-        checkOutDate: formData.checkOutDate,
-        status: formData.status,
-      }),
+      body: JSON.stringify(body),
     })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
+        console.log("Response Status:", response.status);
+        return response.text().then((text) => {
+          if (!response.ok) {
+            console.error("Response Error Text:", text);
+            throw new Error(text || "Network response was not ok");
+          }
+          return text ? JSON.parse(text) : {};
+        });
       })
       .then((data) => {
-        setFormData({
-          userId: "",
-          roomId: "",
-          checkInDate: "",
-          checkOutDate: "",
-          status: "Pending", // Reset status after successful submission
-        });
-        onBookingAdded(data); // Notify parent component about the new booking
+        console.log("Response Data:", data);
+        if (editBookingData) {
+          onBookingUpdated(data);
+        } else {
+          onBookingAdded(data);
+        }
+        handleSuccess();
       })
       .catch((error) => {
         console.error("Error:", error);
+        setError("An error occurred. Please try again.");
       });
   }
 
@@ -75,95 +122,115 @@ export default function BookingForm({
     }));
   }
 
-  function handleCancel() {
+  function handleSuccess() {
     setFormData({
-      userId: "",
+      bookingId: null,
+      guestName: "",
+      guestEmail: "",
+      guestPhone: "",
       roomId: "",
       checkInDate: "",
       checkOutDate: "",
-      status: "Pending", // Reset status on cancel
+      status: "Pending",
     });
-    setError("");
-    onCancel(); // Notify parent component about cancellation
+    onCancel();
   }
 
+  const getHotelName = (roomId) => {
+    const room = rooms.find((room) => room.roomId === parseInt(roomId, 10));
+    if (room) {
+      const hotel = hotels.find((hotel) => hotel.hotelId === room.hotelId);
+      return hotel ? hotel.hotelName : "Unknown Hotel";
+    }
+    return "Unknown Hotel";
+  };
+
   return (
-    <form className="input-form">
-      <div className="input-form-group">
-        <label htmlFor="userId">Customer</label>
-        <select
-          id="userId"
-          name="userId"
-          value={formData.userId}
+    <form onSubmit={handleSubmit} className="input-form">
+      <h2>{editBookingData ? "Edit Booking" : "Add Booking"}</h2>
+      {error && <p className="error">{error}</p>}
+      <div>
+        <label>Guest Name:</label>
+        <input
+          type="text"
+          name="guestName"
+          value={formData.guestName}
           onChange={handleChange}
-        >
-          <option value="">Select Customer</option>
-          {users.map((user) => (
-            <option key={user.userId} value={user.userId}>
-              {user.userName}
-            </option>
-          ))}
-        </select>
+          required
+        />
       </div>
-      <div className="input-form-group">
-        <label htmlFor="roomId">Room</label>
+      <div>
+        <label>Guest Email:</label>
+        <input
+          type="email"
+          name="guestEmail"
+          value={formData.guestEmail}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <label>Guest Phone:</label>
+        <input
+          type="tel"
+          name="guestPhone"
+          value={formData.guestPhone}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <label>Room:</label>
         <select
-          id="roomId"
           name="roomId"
           value={formData.roomId}
           onChange={handleChange}
+          required
         >
           <option value="">Select Room</option>
           {rooms.map((room) => (
             <option key={room.roomId} value={room.roomId}>
-              {room.roomName} -{" "}
-              {
-                hotels.find((hotel) => hotel.hotelId === room.hotelId)
-                  ?.hotelName
-              }
+              {`${getHotelName(room.roomId)} - ${room.roomType}`}
             </option>
           ))}
         </select>
       </div>
-      <div className="input-form-group">
-        <label htmlFor="checkInDate">Check-in Date</label>
+      <div>
+        <label>Check-In Date:</label>
         <input
           type="date"
-          id="checkInDate"
           name="checkInDate"
           value={formData.checkInDate}
           onChange={handleChange}
+          required
         />
       </div>
-      <div className="input-form-group">
-        <label htmlFor="checkOutDate">Check-out Date</label>
+      <div>
+        <label>Check-Out Date:</label>
         <input
           type="date"
-          id="checkOutDate"
           name="checkOutDate"
           value={formData.checkOutDate}
           onChange={handleChange}
+          required
         />
       </div>
-      <div className="input-form-group">
-        <label htmlFor="status">Status</label>
+      <div>
+        <label>Status:</label>
         <select
-          id="status"
           name="status"
           value={formData.status}
           onChange={handleChange}
+          required
         >
           <option value="Pending">Pending</option>
-          <option value="Paid">Paid</option>
-          <option value="Declined">Declined</option>
+          <option value="Confirmed">Confirmed</option>
+          <option value="Cancelled">Cancelled</option>
         </select>
       </div>
-      {error && <p style={{ color: "var(--red)" }}>{error}</p>}
-      <div>
-        <button className="btn btn-blue" onClick={handleSubmit}>
-          Add Booking
-        </button>
-        <button className="btn btn-red" onClick={handleCancel}>
+      <div className="form-actions">
+        <button type="submit">{editBookingData ? "Update" : "Create"}</button>
+        <button type="button" onClick={onCancel}>
           Cancel
         </button>
       </div>
