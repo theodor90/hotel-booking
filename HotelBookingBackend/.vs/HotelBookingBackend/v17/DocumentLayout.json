@@ -1,37 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\",
+  "WorkspaceRootPath": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\alan\\desktop\\schoolprojects\\yellowgroup\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Migrations\\20240627083424_update-datatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HotelBookingBackend\\Migrations\\20240627083424_update-datatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\alan\\desktop\\schoolprojects\\yellowgroup\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\alan\\desktop\\schoolprojects\\yellowgroup\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\alan\\desktop\\schoolprojects\\yellowgroup\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\alan\\desktop\\schoolprojects\\yellowgroup\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Migrations\\20240627081816_update-tables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HotelBookingBackend\\Migrations\\20240627081816_update-tables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\alan\\desktop\\schoolprojects\\yellowgroup\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\models\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\alan\\desktop\\schoolprojects\\yellowgroup\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\migrations\\20240626111616_helloworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\migrations\\20240626111616_helloworld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\alan\\desktop\\schoolprojects\\yellowgroup\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|c:\\users\\theodor\\desktop\\hotel-booking\\hotelbookingbackend\\hotelbookingbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{057FD901-206E-4174-9B7E-F8A926BDB127}|HotelBookingBackend\\HotelBookingBackend.csproj|solutionrelative:hotelbookingbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,36 +54,66 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240627083424_update-datatable.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Migrations\\20240627083424_update-datatable.cs",
+              "RelativeDocumentMoniker": "HotelBookingBackend\\Migrations\\20240627083424_update-datatable.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Migrations\\20240627083424_update-datatable.cs",
+              "RelativeToolTip": "HotelBookingBackend\\Migrations\\20240627083424_update-datatable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:34:24.67Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "20240627081816_update-tables.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Migrations\\20240627081816_update-tables.cs",
+              "RelativeDocumentMoniker": "HotelBookingBackend\\Migrations\\20240627081816_update-tables.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Migrations\\20240627081816_update-tables.cs",
+              "RelativeToolTip": "HotelBookingBackend\\Migrations\\20240627081816_update-tables.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:18:16.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20240626111616_helloworld.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Migrations\\20240626111616_helloworld.cs",
+              "RelativeDocumentMoniker": "HotelBookingBackend\\Migrations\\20240626111616_helloworld.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Migrations\\20240626111616_helloworld.cs",
+              "RelativeToolTip": "HotelBookingBackend\\Migrations\\20240626111616_helloworld.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T11:16:16.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Hotel.cs",
-              "DocumentMoniker": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Hotel.cs",
               "RelativeDocumentMoniker": "HotelBookingBackend\\Models\\Hotel.cs",
-              "ToolTip": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Hotel.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Hotel.cs",
               "RelativeToolTip": "HotelBookingBackend\\Models\\Hotel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T07:02:24.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "HotelBookingBackend\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "HotelBookingBackend\\Data\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -79,36 +121,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Booking.cs",
               "RelativeDocumentMoniker": "HotelBookingBackend\\Models\\Booking.cs",
-              "ToolTip": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Booking.cs",
               "RelativeToolTip": "HotelBookingBackend\\Models\\Booking.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T07:38:32.416Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\appsettings.json",
-              "RelativeDocumentMoniker": "HotelBookingBackend\\appsettings.json",
-              "ToolTip": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\appsettings.json",
-              "RelativeToolTip": "HotelBookingBackend\\appsettings.json",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAcwAIAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-14T07:38:11.968Z",
+              "WhenOpened": "2024-06-14T07:38:32.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\appsettings.json",
+              "RelativeDocumentMoniker": "HotelBookingBackend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\appsettings.json",
+              "RelativeToolTip": "HotelBookingBackend\\appsettings.json",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAcwAIAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-14T07:38:11.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "BookingsController.cs",
-              "DocumentMoniker": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Controllers\\BookingsController.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Controllers\\BookingsController.cs",
               "RelativeDocumentMoniker": "HotelBookingBackend\\Controllers\\BookingsController.cs",
-              "ToolTip": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Controllers\\BookingsController.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Controllers\\BookingsController.cs",
               "RelativeToolTip": "HotelBookingBackend\\Controllers\\BookingsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -116,11 +158,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Room.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Room.cs",
               "RelativeDocumentMoniker": "HotelBookingBackend\\Models\\Room.cs",
-              "ToolTip": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Room.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Models\\Room.cs",
               "RelativeToolTip": "HotelBookingBackend\\Models\\Room.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -128,11 +170,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Services\\TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "HotelBookingBackend\\Services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Services\\TokenService.cs",
               "RelativeToolTip": "HotelBookingBackend\\Services\\TokenService.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -140,11 +182,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Program.cs",
               "RelativeDocumentMoniker": "HotelBookingBackend\\Program.cs",
-              "ToolTip": "C:\\Users\\Alan\\Desktop\\SchoolProjects\\YellowGroup\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Program.cs",
+              "ToolTip": "C:\\Users\\Theodor\\Desktop\\hotel-booking\\HotelBookingBackend\\HotelBookingBackend\\Program.cs",
               "RelativeToolTip": "HotelBookingBackend\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
