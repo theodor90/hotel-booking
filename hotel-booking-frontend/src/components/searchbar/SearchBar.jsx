@@ -1,32 +1,41 @@
 import { useState, useEffect } from "react";
 import "./SearchBar.css";
 import "../../css/Buttons.css";
-import DatePicker from "./datepicker/DatePicker";
-import DestinationPicker from "./destinationpicker/DestinationPicker";
 
 function SearchBar() {
-  const [nights, setNights] = useState(0);
-  const [dates, setDates] = useState([new Date(), new Date()]);
+  const [hotels, setHotels] = useState([]);
 
   useEffect(() => {
-    dates != null
-      ? setNights(dates[1].getDate() - dates[0].getDate())
-      : setNights(0);
-  });
+    fetch("https://localhost:7204/api/Hotels")
+      .then((response) => response.json())
+      .then((data) => setHotels(data))
+      .catch((error) => console.error("Error fetching hotels:", error));
+  }, []);
 
   return (
     <div className="search-bar">
-      <div className="search-item">
-        <p>DESTINATION</p>
-        <DestinationPicker />
+      <div>
+        <h6>Destination</h6>
+        <select name="destination" id="destination">
+          <option value="" disabled selected>
+            Select hotel
+          </option>
+          {hotels.map((hotel) => (
+            <option key={hotel.hotelId} value={hotel.location}>
+              {hotel.location}
+            </option>
+          ))}
+        </select>
       </div>
-      <div className="search-item">
-        <p>
-          {nights <= 0 ? "DATES" : nights == 1 ? "1 NIGHT" : nights + " NIGHTS"}
-        </p>
-        <DatePicker dates={dates} setDates={setDates} />
+      <div>
+        <h6>From</h6>
+        <input type="date" />
       </div>
-      <button className="btn btn-blue">Find Hotels</button>
+      <div>
+        <h6>To</h6>
+        <input type="date" />
+      </div>
+      <button className="btn btn-blue">Find</button>
     </div>
   );
 }
