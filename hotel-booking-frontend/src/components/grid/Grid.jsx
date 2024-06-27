@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Grid.css";
 
 function Grid({ type }) {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const url =
@@ -30,7 +32,7 @@ function Grid({ type }) {
               <h4>{hotel.location}</h4>
               <p className="hotel-description-text">{hotel.description}</p>
             </div>
-            <button className="custom-btn btn-blue">Book Now</button>
+            <button className="btn btn-blue"  onClick={() => navigate("/payment")}>Book Now</button>
           </div>
         ))}
       {type === "rooms" &&
@@ -47,7 +49,7 @@ function Grid({ type }) {
               <h4>{room.availability}</h4>
             </div>  
             </div>
-            <button className="custom-btn btn-blue">Book Now</button>
+            <button className="btn btn-blue"  onClick={() => navigate("/payment")}>Book Now</button>
           </div>
         ))}
     </div>

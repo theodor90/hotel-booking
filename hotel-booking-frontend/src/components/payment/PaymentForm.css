@@ -46,7 +46,7 @@
 
   }
 
-  .paymentform-container .form-group{
+  .paymentform-container .form-group {
     margin-bottom: 1rem;
   }
 
@@ -94,4 +94,23 @@
     width: 100%;
     display: block;
     flex-basis: 100%;
+  }
+
+  .thank-you-message {
+    display: block;
+    width: 100%;
+    min-height: 25%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    background: white;
+  }
+
+  .thank-you-message h3 {
+     font-family: "Inter", sans-serif;
+     text-align: center;
+     font-weight: 400;
+     font-size: 1rem;
   }
