@@ -1,3 +1,4 @@
+using HotelBookingBackend;
 using HotelBookingBackend.Data;
 using HotelBookingBackend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -70,6 +71,12 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    await DatabaseSeeder.SeedAsync(context);
+}
 
 if (app.Environment.IsDevelopment())
 {
