@@ -29,8 +29,8 @@ export default function BookingForm({
         guestEmail: editBookingData.guestEmail || "",
         guestPhone: editBookingData.guestPhone || "",
         roomId: editBookingData.roomId.toString(),
-        checkInDate: editBookingData.checkInDate.split('T')[0], // Extract only the date part
-        checkOutDate: editBookingData.checkOutDate.split('T')[0], // Extract only the date part
+        checkInDate: editBookingData.checkInDate.split("T")[0], // Extract only the date part
+        checkOutDate: editBookingData.checkOutDate.split("T")[0], // Extract only the date part
         status: editBookingData.status,
       });
     } else {
@@ -229,8 +229,14 @@ export default function BookingForm({
         </select>
       </div>
       <div className="form-actions">
-        <button type="submit">{editBookingData ? "Update" : "Create"}</button>
-        <button type="button" onClick={onCancel}>
+        <button type="submit" className="btn-overview btn-blue">
+          {editBookingData ? "Update" : "Create"}
+        </button>
+        <button
+          type="button"
+          className="btn-overview btn-red"
+          onClick={onCancel}
+        >
           Cancel
         </button>
       </div>

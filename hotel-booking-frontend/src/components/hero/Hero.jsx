@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="hero-bg">
         <div className="hero-content">
           <div>
-            <h1>Book your rooms now</h1>
+            <h1>Book your dream stay</h1>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
               error repudiandae tenetur accusantium.
@@ -20,8 +20,9 @@ export default function Hero() {
             <button className="btn btn-red-reverse">Button</button>
           </div>
         </div>
-        <SearchBar />
+        {/* <SearchBar /> */}
       </div>
     </div>
   );
 }
+// WORKING

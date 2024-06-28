@@ -1,20 +1,20 @@
 [
     {
-        "hotelName": "The Grand Marina Hotel",
-        "Location": "Miami, Florida, USA",
-        "description": "The Grand Marina Hotel offers a luxurious waterfront experience in the heart of Miami. Boasting modern amenities, spacious rooms with ocean views, and a rooftop infinity pool, it is the perfect destination for both relaxation and entertainment. The hotel's prime location provides easy access to South Beach, downtown Miami, and various cultural attractions.",
-        "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "hotelName": "Sunset Retreat",
+        "Location": "Bali, Indonesia",
+        "description": "Discover tranquility at Sunset Retreat, nestled in the heart of Bali amidst lush greenery and serene beaches. This idyllic escape offers a perfect blend of relaxation and adventure, where guests can immerse themselves in the beauty of nature and unwind in luxurious accommodations. Whether you're seeking a peaceful retreat or exciting exploration, Sunset Retreat provides an unforgettable experience in one of the world's most stunning destinations.",
+        "image": "https://images.unsplash.com/photo-1682181221957-7c2d6a28bed3?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        "hotelName": "Belmond Hotel Caruso",
-        "Location": "Ravello, Amalfi Coast, Italy",
-        "description": "Perched high above the Mediterranean Sea, the Belmond Hotel Caruso in Ravello offers breathtaking views of the Amalfi Coast. This former 11th-century palace is surrounded by terraced gardens and features an infinity pool that appears to blend seamlessly with the sea below. Guests can explore the historic town of Ravello, relax in the luxurious spa, and dine on authentic Italian cuisine while soaking up the sun and panoramic views.",
-        "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "hotelName": "The Grand Oasis",
+        "Location": "Cancun, Mexico",
+        "description": "Experience the ultimate luxury at The Grand Oasis, a magnificent beachfront resort in Cancun offering breathtaking views of the Caribbean Sea. This upscale oasis combines world-class amenities with vibrant nightlife, ensuring an unforgettable stay for every guest. Whether lounging by the pool, indulging in gourmet dining, or dancing the night away at the lively clubs, The Grand Oasis promises an unparalleled experience of relaxation and excitement.",
+        "image": "https://images.unsplash.com/photo-1535205148555-bcbbc2a78913?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-        "hotelName": "Hotel Palmilla",
-        "Location": "Los Cabos, Baja California Sur, Mexico",
-        "description": "Located on the Baja Peninsula, the One&Only Palmilla is a luxurious beachfront resort that combines traditional Mexican elegance with modern amenities. The resort boasts spacious suites and villas with private terraces, direct beach access, and stunning ocean views. Guests can enjoy the resort's championship golf course, world-class spa, and gourmet dining options, as well as participate in various water activities such as snorkeling, scuba diving, and deep-sea fishing.",
-        "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "hotelName": "Ocean Breeze",
+        "Location": "Sydney, Australia",
+        "description": "Embrace coastal chic at Ocean Breeze, a stylish hotel located near Bondi Beach in Sydney, Australia. Known for its contemporary decor and proximity to renowned surfing spots, Ocean Breeze offers a sophisticated retreat for travelers seeking both relaxation and adventure. Whether enjoying the vibrant beach scene or exploring Sydney's cultural attractions, guests at Ocean Breeze can unwind in comfort and style, making it an ideal destination for a memorable coastal getaway.",
+        "image": "https://images.unsplash.com/photo-1648701182966-8373dc943e23?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
 ]

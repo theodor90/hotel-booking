@@ -1,6 +1,7 @@
 :root {
   --red: #ef476f;
   --yellow: #ffd166;
+  --orange: #ffb066;
   --green: #06d6a0;
   --light-blue: #118ab2;
   --dark-blue: #073b4c;
@@ -38,11 +39,6 @@
   background-color: var(--green);
 }
 
-.btn-right {
-  float: right;
-  margin: 1rem;
-}
-
 .btn-green-reverse {
   color: var(--green);
   border: 1px solid var(--green);
@@ -71,4 +67,19 @@
   color: var(--dark-blue);
   border: 1px solid var(--dark-blue);
   background-color: var(--white);
+}
+
+.btn-overview {
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.btn-overview:hover {
+  opacity: 0.7;
+}
+
+.btn-overview:not(:last-of-type) {
+  margin-right: 0.5rem;
 }

@@ -72,10 +72,10 @@ export default function DashboardOverview() {
             {availableRoomCount} / {roomCount}
           </h2>
         </div>
-        <div className="overview-card overview-col">
+        {/* <div className="overview-card overview-col">
           <h5>Users</h5>
           <h2>{userCount}</h2>
-        </div>
+        </div> */}
       </div>
     </div>
   );

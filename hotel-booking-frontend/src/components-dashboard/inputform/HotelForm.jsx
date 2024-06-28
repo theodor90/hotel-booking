@@ -38,7 +38,7 @@ export default function InputForm({
 
   function handleSubmit(e) {
     e.preventDefault();
-  
+
     if (
       formData.hotelName.trim() === "" ||
       formData.location.trim() === "" ||
@@ -47,14 +47,14 @@ export default function InputForm({
       setError("Please fill out all fields");
       return;
     }
-  
+
     setError("");
-  
+
     const url = editHotelData
       ? `https://localhost:7204/api/Hotels/${formData.hotelId}`
       : "https://localhost:7204/api/Hotels";
     const method = editHotelData ? "PUT" : "POST";
-  
+
     const body = editHotelData
       ? JSON.stringify({
           hotelId: formData.hotelId,
@@ -69,9 +69,9 @@ export default function InputForm({
           description: formData.description,
           imgUrl: formData.imgUrl,
         });
-  
+
     console.log("Sending request with body:", body);
-  
+
     fetch(url, {
       method: method,
       headers: {
@@ -81,12 +81,12 @@ export default function InputForm({
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
-        return response.text();  // Read as text first
+        return response.text(); // Read as text first
       })
       .then((text) => {
-        return text ? JSON.parse(text) : {};  // Parse if not empty
+        return text ? JSON.parse(text) : {}; // Parse if not empty
       })
       .then((data) => {
         console.log("Success:", data);
@@ -101,7 +101,6 @@ export default function InputForm({
         setError("Failed to save hotel data");
       });
   }
-  
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -171,10 +170,10 @@ export default function InputForm({
       </div>
       {error && <p style={{ color: "var(--red)" }}>{error}</p>}
       <div>
-        <button className="btn btn-blue" onClick={handleSubmit}>
+        <button className="btn-overview btn-blue" onClick={handleSubmit}>
           {editHotelData ? "Update Hotel" : "Add Hotel"}
         </button>
-        <button className="btn btn-red" onClick={handleCancel}>
+        <button className="btn-overview btn-red" onClick={handleCancel}>
           Cancel
         </button>
       </div>

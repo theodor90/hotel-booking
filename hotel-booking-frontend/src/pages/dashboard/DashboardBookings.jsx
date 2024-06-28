@@ -71,6 +71,19 @@ export default function DashboardBookings() {
     return room ? room.roomType : "Unknown Room";
   };
 
+  const getStatusColor = (status) => {
+    switch (status) {
+      case "Confirmed":
+        return "var(--green)";
+      case "Pending":
+        return "var(--orange)";
+      case "Cancelled":
+        return "var(--red)";
+      default:
+        return "black"; // default color if status does not match
+    }
+  };
+
   return (
     <div className="dashboard">
       <div className="dashboard-header">
@@ -116,10 +129,18 @@ export default function DashboardBookings() {
               <td>{getRoomType(booking.roomId)}</td>
               <td>{new Date(booking.checkInDate).toLocaleDateString()}</td>
               <td>{new Date(booking.checkOutDate).toLocaleDateString()}</td>
-              <td>{booking.status}</td>
+              <td style={{ color: getStatusColor(booking.status) }}>
+                {booking.status}
+              </td>
               <td>
-                <button onClick={() => handleEdit(booking)}>Edit</button>
                 <button
+                  className="btn-overview btn-blue"
+                  onClick={() => handleEdit(booking)}
+                >
+                  Edit
+                </button>
+                <button
+                  className="btn-overview btn-red"
                   onClick={() => {
                     if (
                       window.confirm(

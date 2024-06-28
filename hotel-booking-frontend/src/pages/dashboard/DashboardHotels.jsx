@@ -38,13 +38,13 @@ export default function DashboardHotels() {
 
   const handleHotelAdded = (newHotel) => {
     fetchHotels();
-    setShowInputForm(false);  // Close the input form
+    setShowInputForm(false); // Close the input form
   };
 
   const handleHotelUpdated = (updatedHotel) => {
     fetchHotels();
-    setShowInputForm(false);  // Close the input form
-    setEditHotelId(null);     // Reset edit mode
+    setShowInputForm(false); // Close the input form
+    setEditHotelId(null); // Reset edit mode
   };
 
   const handleCancelForm = () => {
@@ -92,12 +92,15 @@ export default function DashboardHotels() {
               <td>{hotel.hotelName}</td>
               <td>{hotel.location}</td>
               <td>
-                <a href="#" onClick={() => updateHotel(hotel.hotelId)}>
+                <button
+                  className="btn-overview btn-blue"
+                  onClick={() => updateHotel(hotel.hotelId)}
+                >
                   Edit
-                </a>{" "}
-                |&nbsp;
-                <a
-                  href="#"
+                </button>
+
+                <button
+                  className="btn-overview btn-red"
                   onClick={() => {
                     if (
                       window.confirm(
@@ -109,7 +112,7 @@ export default function DashboardHotels() {
                   }}
                 >
                   Delete
-                </a>
+                </button>
               </td>
             </tr>
           ))}

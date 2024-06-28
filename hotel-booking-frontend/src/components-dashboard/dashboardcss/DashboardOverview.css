@@ -19,7 +19,7 @@
 
 .overview-row {
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
 }
 
 .overview-row:not(:last-of-type) {

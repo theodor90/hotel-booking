@@ -1,44 +1,12 @@
-/* Grid */
+/* Hotel Grid */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  padding: 1rem 0;
+  width: 60%;
+  margin: auto;
 }
-
-/* 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 10px;
-  padding: 20px;
-}
-
-.grid-item {
-  border: 1px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  height: 100%;
-  width: 100%;
-}
-
-.card-image {
-  width: 100px;
-  padding-bottom: 10px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  width: fit-content;
-  flex: 1 1 auto;
-  padding: 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
-
 
 .hotel-card {
   position: relative;
@@ -58,9 +26,8 @@
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-radius: 10px;
 }
-
-
 
 .hotel-card h2 {
   font-family: "Inter", sans-serif;
@@ -78,23 +45,29 @@
   color: #777;
 }
 
- 
+/* Room Grid */
+.grid-container-room {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1rem 0;
+  width: 60%;
+  margin: auto;
+}
+
 .room-card {
-  position: relative;
   height: 100%;
   width: 100%;
   margin: 10px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .room-card img {
-  width: 100%;
+  width: 30%;
   height: 250px;
   object-fit: cover;
 }
@@ -115,10 +88,10 @@
   color: #777;
 }
 
-.hotel-card div, .room-card div {
+.hotel-card div,
+.room-card div {
   width: 100%;
   padding: 15px;
-  text-align: center;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

@@ -68,13 +68,13 @@ export default function DashboardRooms() {
 
   const handleRoomAdded = (newRoom) => {
     fetchRooms();
-    setShowInputForm(false);  // Close the input form
+    setShowInputForm(false); // Close the input form
   };
 
   const handleRoomUpdated = (updatedRoom) => {
     fetchRooms();
-    setShowInputForm(false);  // Close the input form
-    setEditRoomId(null);      // Reset edit mode
+    setShowInputForm(false); // Close the input form
+    setEditRoomId(null); // Reset edit mode
   };
 
   const handleCancelForm = () => {
@@ -142,12 +142,14 @@ export default function DashboardRooms() {
                 {room.availability ? "Available" : "Not Available"}
               </td>
               <td>
-                <a href="#" onClick={() => updateRoom(room.roomId)}>
+                <button
+                  className="btn-overview btn-blue"
+                  onClick={() => updateRoom(room.roomId)}
+                >
                   Edit
-                </a>{" "}
-                |&nbsp;
-                <a
-                  href="#"
+                </button>
+                <button
+                  className="btn-overview btn-red"
                   onClick={(e) => {
                     e.preventDefault();
                     if (
@@ -160,7 +162,7 @@ export default function DashboardRooms() {
                   }}
                 >
                   Delete
-                </a>
+                </button>
               </td>
             </tr>
           ))}

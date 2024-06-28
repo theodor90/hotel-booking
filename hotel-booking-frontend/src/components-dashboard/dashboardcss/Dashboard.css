@@ -1,6 +1,6 @@
 .dashboard-container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .dashboard {
@@ -21,7 +21,8 @@
   width: 100%;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
-  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .dashboard th {
@@ -49,6 +50,7 @@
 .dashboard th,
 .dashboard td {
   padding: 0.5rem;
+  border: none; /* Remove any borders */
 }
 
 .dashboard tr:not(:last-of-type) {

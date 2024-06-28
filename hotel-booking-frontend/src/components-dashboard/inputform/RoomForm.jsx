@@ -178,8 +178,14 @@ export default function RoomForm({
         />
       </div>
       <div className="form-actions">
-        <button type="submit">{editRoomData ? "Update" : "Create"}</button>
-        <button type="button" onClick={onCancel}>
+        <button type="submit" className="btn-overview btn-blue">
+          {editRoomData ? "Update" : "Create"}
+        </button>
+        <button
+          type="button"
+          className="btn-overview btn-red"
+          onClick={onCancel}
+        >
           Cancel
         </button>
       </div>

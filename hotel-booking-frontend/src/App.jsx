@@ -53,7 +53,6 @@ const App = () => {
           }
         />
       </Routes>
-      {/* Remove footer at dashboard */}
       <Footer />
     </Router>
   );
