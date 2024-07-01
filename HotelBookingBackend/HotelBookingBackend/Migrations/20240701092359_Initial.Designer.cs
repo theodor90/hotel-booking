@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelBookingBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240627083424_update-datatable")]
-    partial class updatedatatable
+    [Migration("20240701092359_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

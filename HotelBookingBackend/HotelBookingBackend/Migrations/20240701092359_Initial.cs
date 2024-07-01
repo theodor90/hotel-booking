@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HotelBookingBackend.Migrations
 {
     /// <inheritdoc />
-    public partial class helloworld : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,10 +17,12 @@ namespace HotelBookingBackend.Migrations
                 {
                     BookingId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    GuestName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GuestEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GuestPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RoomId = table.Column<int>(type: "int", nullable: false),
-                    CheckInDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CheckOutDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CheckInDate = table.Column<DateOnly>(type: "date", nullable: false),
+                    CheckOutDate = table.Column<DateOnly>(type: "date", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
