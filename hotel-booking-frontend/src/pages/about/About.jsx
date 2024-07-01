@@ -3,37 +3,53 @@ import "./About.css";
 
 export default function About() {
   return (
-    <div className="about-bg-image">
-      <div className="spacer"></div>
-      <div className="profile-container">
-        <h3>About Us</h3>
+    <div>       
+      <div class="div-bg">
+      <div className="padded-h3-white"><h3>About Us</h3></div> 
+      <div className="spacer"></div>       
+        <div className="padded-paragraph-white">
         <p>
           Welcome to LuxuryStay, your trusted partner in finding the perfect
           hotel for your travels. Whether you're planning a business trip, a
           family vacation, or a romantic getaway, we are here to make your
           booking experience seamless and enjoyable.
-        </p>
+        </p>        
+        </div>
+    </div>
 
-        <h3>Our Story</h3>
+    <div class="content-container">
+      <div className="padded-h3"><h3>Our Story</h3></div> 
+      <div className="spacer"></div>       
+        <div className="padded-paragraph">
         <p>
           Founded in 2010, LuxuryStay was born out of a passion for travel and a
           desire to provide travelers with an easy and reliable way to book
           their accommodations. We started with a small team of travel
           enthusiasts and have grown into a global platform, offering a wide
           range of hotels, from budget-friendly options to luxury resorts.
-        </p>
+        </p>        
+        </div>
+      </div>
 
-        <h3>Our Mission</h3>
+      <div class="div-bg-mission">
+      <div className="padded-h3-white"><h3>Our Mission</h3></div> 
+      <div className="spacer"></div>       
+        <div className="padded-paragraph-white">
         <p>
           Our mission is simple: to help you find the perfect stay, no matter
           where you are in the world. We believe that a great hotel can enhance
           your travel experience, and we are committed to bringing you the best
           selection of accommodations at the best prices.
-        </p>
+        </p>        
+        </div>
+    </div>
 
-        <h3>What We Offer</h3>
+    <div class="content-container">
+      <div className="padded-h3"><h3>What We Offer</h3></div> 
+      <div className="spacer"></div>       
+        <div className="padded-paragraph">
         <p>
-          <strong>Wide Selection:</strong> From boutique hotels to international
+        <strong>Wide Selection:</strong> From boutique hotels to international
           chains, we offer a diverse range of options to suit every traveler's
           needs.
           <br />
@@ -48,11 +64,16 @@ export default function About() {
           <strong>User-Friendly Experience:</strong> Our website is designed to
           be intuitive and easy to use, allowing you to book your stay quickly
           and efficiently.
-        </p>
+        </p>        
+        </div>
+      </div>
 
-        <h3>Why Choose Us?</h3>
+      <div class="div-bg-why">
+      <div className="padded-h3-white"><h3>Why Choose Us</h3></div> 
+      <div className="spacer"></div>       
+        <div className="padded-paragraph-white">
         <p>
-          <strong>Trusted by Millions:</strong> We have helped millions of
+        <strong>Trusted by Millions:</strong> We have helped millions of
           travelers find their perfect stay, and our satisfied customers speak
           to our reliability and quality of service.
           <br />
@@ -62,13 +83,17 @@ export default function About() {
           <br />
           <strong>Travel Tips and Guides:</strong> Our blog and travel guides
           offer valuable insights and tips to help you make the most of your
-          trip.{" "}
-        </p>
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1773&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ0MnxGem8zenVPSE42d3x8ZW58MHx8fHx8"></img>
-
-        <h3>Contact Us</h3>
+          trip.
+        </p>        
+        </div>
+    </div>
+    
+    <div class="content-container">
+      <div className="padded-h3"><h3>Contact Us</h3></div> 
+      <div className="spacer"></div>       
+        <div className="padded-paragraph">
         <p>
-          Have questions or need assistance? Feel free to reach out to us:
+        Have questions or need assistance? Feel free to reach out to us:
           <br />
           Email: support@luxurystay.com
           <br />
@@ -77,10 +102,14 @@ export default function About() {
           Address: 123 Luxury Lane, Suite 100, Travel City, TX 75001
           <br />
           Thank you for choosing LuxuryStay. We look forward to helping you find
-          your perfect stay!{" "}
-        </p>
+          your perfect stay!
+        </p>        
+        </div>
       </div>
-      <div className="spacer"></div>
+
+
+
     </div>
+    
   );
 }
