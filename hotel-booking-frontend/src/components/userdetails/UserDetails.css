@@ -1,6 +1,55 @@
-.user-details {
+.user-wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   margin: 0.5rem;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   border-radius: 0.5rem;
+  width: 65%;
+  background-color: #fcfcf8;
+  outline: 1px solid transparent;
+  box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+}
+
+.user-wrapper > h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.name-container .input-container {
+  width: 50%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+.input-container label {
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  border: 1px solid lightgray;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.3rem;
+  width: 1.5rem;
+}
+
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 0.5rem 0;
 }
