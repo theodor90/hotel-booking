@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -11,12 +11,12 @@ import {
 } from "@mui/material";
 import "./RoomListPage.css"; // Ensure this includes your button styles
 import "../../css/Buttons.css";
-import Product from "../product/Product";
 
 const RoomListPage = () => {
   const { hotelId } = useParams();
   const [rooms, setRooms] = useState([]);
   const [hotel, setHotel] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchHotelAndRooms = async () => {
@@ -56,7 +56,7 @@ const RoomListPage = () => {
   };
 
   const handleClick = (roomId) => {
-    <Product roomId={roomId} />;
+    navigate(`/product/${roomId}`);
   };
 
   return (
@@ -79,7 +79,7 @@ const RoomListPage = () => {
                     {room.imgUrl ? (
                       <CardMedia
                         component="img"
-                        alt={room.name}
+                        alt={room.roomType}
                         height="200"
                         image={room.imgUrl}
                       />
@@ -109,7 +109,7 @@ const RoomListPage = () => {
                       </Typography>
                       <button
                         className="btn btn-green"
-                        onClick={() => handleClick(rooms.roomId)}
+                        onClick={() => handleClick(room.roomId)}
                       >
                         Book Now
                       </button>

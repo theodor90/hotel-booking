@@ -40,7 +40,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/grid" element={<Grid />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product/:roomId" element={<Product />} />
         <Route path="/productlist" element={<ProductList />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
@@ -48,6 +48,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/hotels" element={<HotelListPage />} />
         <Route path="/hotels/:hotelId" element={<RoomListPage />} />
+        
         <Route
           path="/dashboard/*"
           element={

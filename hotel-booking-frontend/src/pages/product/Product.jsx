@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "./Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,7 +14,8 @@ import {
   faSoap,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Product({ roomId }) {
+export default function Product() {
+  const { roomId } = useParams();
   const [room, setRoom] = useState(null);
   const [hotel, setHotel] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -82,7 +84,6 @@ export default function Product({ roomId }) {
           <h2 className="product-title">
             {room.roomType} at {hotel.hotelName}
           </h2>
-          {/* <p className="product-price">Price per night: ${room.price}</p> */}
           <p className="product-availability">
             {room.availability ? "✓ Available" : "X Not Available"}
           </p>
