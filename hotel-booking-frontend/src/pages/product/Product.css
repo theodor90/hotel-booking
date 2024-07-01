@@ -1,3 +1,79 @@
-.header{
-  padding-left: 20px;
+.product {
+  width: 60%;
+  margin: 3rem auto;
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.product-availability {
+  padding: 0.5rem 0 1rem 0;
+}
+
+.product .row {
+  display: flex;
+}
+
+.product .col-left {
+  flex: 3;
+}
+
+.product .col-right {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-input-group {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.product-input-group:not(:last-of-type) {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.product .split-col {
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.product .btn {
+  width: 100%;
+}
+
+.v-line {
+  width: 100%;
+  height: 1px;
+  margin: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.amenities-table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.amenities-table tr {
+  width: 100%;
+}
+
+.amenities-table td:not(:last-of-type) {
+  padding-bottom: 1rem;
+}
+
+.product .product-table {
+  width: 100%;
+}
+
+.product .product-tr {
+  display: flex;
+  justify-content: space-between;
 }

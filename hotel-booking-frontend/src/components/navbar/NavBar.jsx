@@ -12,19 +12,25 @@ const NavBar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
+          <Link to="/hotels">Hotels</Link>
+        </li>
+        {/* <li>
+          <Link to="/">Rooms</Link>
+        </li> */}
+        <li>
           <Link to="/about">About</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/register">Register</Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/login">Login</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/dashboard">Dashboard</Link>
-        </li>
+        </li> */}
       </ul>
-      <button className="btn btn-blue">Login</button>
+      {/* <button className="btn btn-blue">Login</button> */}
     </nav>
   );
 };
