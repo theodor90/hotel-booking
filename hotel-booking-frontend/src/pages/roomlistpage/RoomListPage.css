@@ -1,0 +1,42 @@
+/* RoomListPage.css */
+.room-list-page {
+    padding: 20px;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+  
+  .room-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .room-type {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .room-description {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .room-price {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .placeholder-image {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #aaa;
+    font-size: 1.2em;
+  }
+  

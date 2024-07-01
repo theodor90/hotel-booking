@@ -18,6 +18,8 @@ import ProductList from "./pages/productlist/ProductList";
 import Footer from "./components/footer/Footer";
 import Contact from "./pages/contact/Contact";
 import NavBar from "./components/navbar/NavBar";
+import HotelListPage from "./pages/hotellistpage/HotelListPage";
+import RoomListPage from "./pages/roomlistpage/RoomListPage";
 import "./index.css";
 
 const PrivateRoute = ({ children }) => {
@@ -44,6 +46,8 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/hotels" element={<HotelListPage />} />
+        <Route path="/hotels/:hotelId" element={<RoomListPage />} />
         <Route
           path="/dashboard/*"
           element={

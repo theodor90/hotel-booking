@@ -1,0 +1,49 @@
+/* HotelListPage.css */
+.hotel-list-page {
+    padding: 20px;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+  
+  .hotel-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .hotel-name {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .hotel-location {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .hotel-description {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .placeholder-image {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #aaa;
+    font-size: 1.2em;
+  }
+  
