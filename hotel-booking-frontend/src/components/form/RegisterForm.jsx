@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import './Form.css'
 
-
 function RegisterForm() {
     const [userName, setUserName] = useState('');
     const [email, setEmail] = useState('');
@@ -21,7 +20,6 @@ function RegisterForm() {
             setError('Registration failed. Please try again.');
         }
     };
-
 
     return (
             <div className="form-container">
