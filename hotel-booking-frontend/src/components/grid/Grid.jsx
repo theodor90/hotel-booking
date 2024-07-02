@@ -80,8 +80,10 @@ function Grid({ type, filter }) {
   return (
     <>
       <div className="grid-container">
+      
         {type === "hotels" &&
           hotels.map((hotel) => (
+            
             <div key={hotel.hotelId} className="hotel-card">
               <div>
                 {hotel.imgUrl ? (
@@ -103,12 +105,16 @@ function Grid({ type, filter }) {
             </div>
           ))}
       </div>
+   
       <div className="grid-container-room">
+      <h2>Rooms</h2>
         {type === "rooms" &&
           rooms.slice(0, 3).map((room) => {
             const hotel = hotelMap[room.hotelId];
             return (
+              
               <div key={room.roomId} className="room-card">
+                
                 {room.imgUrl ? (
                   <img src={room.imgUrl} alt={`${room.name}`} />
                 ) : (
