@@ -105,7 +105,7 @@ function Grid({ type, filter }) {
       </div>
       <div className="grid-container-room">
         {type === "rooms" &&
-          rooms.map((room) => {
+          rooms.slice(0, 3).map((room) => {
             const hotel = hotelMap[room.hotelId];
             return (
               <div key={room.roomId} className="room-card">
