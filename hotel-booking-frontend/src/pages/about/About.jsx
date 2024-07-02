@@ -17,7 +17,7 @@ export default function About() {
         </div>
     </div>
 
-    <div class="content-container">
+    <div class="card-frame">
       <div className="padded-h3"><h3>Our Story</h3></div> 
       <div className="spacer"></div>       
         <div className="padded-paragraph">
@@ -44,7 +44,7 @@ export default function About() {
         </div>
     </div>
 
-    <div class="content-container">
+    <div class="card-frame">
       <div className="padded-h3"><h3>What We Offer</h3></div> 
       <div className="spacer"></div>       
         <div className="padded-paragraph">
@@ -88,7 +88,7 @@ export default function About() {
         </div>
     </div>
     
-    <div class="content-container">
+    <div class="card-frame">
       <div className="padded-h3"><h3>Contact Us</h3></div> 
       <div className="spacer"></div>       
         <div className="padded-paragraph">
@@ -107,9 +107,6 @@ export default function About() {
         </div>
       </div>
 
-
-
-    </div>
-    
+    </div>    
   );
 }

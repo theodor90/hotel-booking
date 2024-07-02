@@ -1,11 +1,4 @@
 
-.content-container {
-  padding-top:50px;
-  padding-bottom:50px;
-  padding-left:700px;
-  position: relative;  
-}
-
 .padded-h3{
   padding-left: 20px;
   
@@ -29,6 +22,14 @@
 
 .spacer {
   padding-top: 20px;
+}
+
+.card-frame {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding-top:50px;
+  padding-bottom:50px;
+  padding-left:600px;
+  position: relative;     
 }
 
 .div-bg {  
