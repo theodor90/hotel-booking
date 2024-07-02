@@ -8,6 +8,11 @@
   font-size: 1rem;
 }
 
+.side-menu-container h2 {
+  margin: 2rem 0;
+  color: var(--yellow);
+}
+
 .side-menu-container a {
   width: 100%;
   text-align: center;
@@ -31,4 +36,8 @@
 .side-menu-container .selected {
   color: var(--dark-blue);
   background-color: var(--yellow);
+}
+
+#exit-dashboard {
+  margin-top: 2rem;
 }

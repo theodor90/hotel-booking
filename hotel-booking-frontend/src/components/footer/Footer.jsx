@@ -6,6 +6,11 @@ import {
   faXTwitter,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+
+const dummyClick = (event) => {
+  event.preventDefault();
+};
 
 export default function Footer() {
   return (
@@ -19,21 +24,32 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h4>Company</h4>
-          <a href="">Link</a>
-          <a href="">Link</a>
-          <a href="">Link</a>
+          <Link to="/hotels">Hotels</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </div>
         <div className="footer-col">
           <h4>Support</h4>
-          <a href="">Link</a>
-          <a href="">Link</a>
+          <a href="tel:+46733123456">Phone</a>
+          <a href="mailto:support@InnFinder.com">Email</a>
         </div>
         <div className="footer-col">
-          <h4>Links</h4>
-          <a href="">Link</a>
-          <a href="">Link</a>
-          <a href="">Link</a>
-          <a href="">Link</a>
+          <h4>Contributors</h4>
+          <a href="https://github.com/theodor90" target="_blank">
+            Theodor
+          </a>
+          <a href="https://github.com/DavidR12344" target="_blank">
+            David
+          </a>
+          <a href="https://github.com/al-swe" target="_blank">
+            Alan
+          </a>
+          <a href="https://github.com/MinaStormcloud" target="_blank">
+            Amina
+          </a>
+          <a href="https://github.com/mattiasvlex" target="_blank">
+            Mattias
+          </a>
         </div>
         <div className="footer-col">
           <h4>Contact Us</h4>
@@ -50,13 +66,19 @@ export default function Footer() {
         <p>&copy; 2024 InnFinder - All Rights Reserved</p>
         <ul>
           <li>
-            <a href="#">Terms & Conditions</a>
+            <a href="#" onClick={dummyClick}>
+              Terms & Conditions
+            </a>
           </li>
           <li>
-            <a href="#">Privacy Policy</a>
+            <a href="#" onClick={dummyClick}>
+              Privacy Policy
+            </a>
           </li>
           <li>
-            <a href="#">Cookie policy</a>
+            <a href="#" onClick={dummyClick}>
+              Cookie policy
+            </a>
           </li>
         </ul>
         <ul>

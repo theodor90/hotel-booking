@@ -64,17 +64,26 @@ function Grid({ type, filter }) {
       .length;
   };
 
-  // Create a lookup map for hotels
   const hotelMap = hotels.reduce((map, hotel) => {
     map[hotel.hotelId] = hotel;
     return map;
   }, {});
 
+  const handleClick = (roomId) => {
+    navigate(`/product/${roomId}`);
+  };
+
+  const handleHotelClick = (hotelId) => {
+    navigate(`/hotels/${hotelId}`);
+  };
+
   return (
     <>
       <div className="grid-container">
+      
         {type === "hotels" &&
           hotels.map((hotel) => (
+            
             <div key={hotel.hotelId} className="hotel-card">
               <div>
                 {hotel.imgUrl ? (
@@ -89,19 +98,23 @@ function Grid({ type, filter }) {
               </div>
               <button
                 className="btn btn-blue"
-                onClick={() => navigate("/payment")}
+                onClick={() => handleHotelClick(hotel.hotelId)}
               >
                 Book Now
               </button>
             </div>
           ))}
       </div>
+   
       <div className="grid-container-room">
+      <h2>Rooms</h2>
         {type === "rooms" &&
-          rooms.map((room) => {
+          rooms.slice(0, 3).map((room) => {
             const hotel = hotelMap[room.hotelId];
             return (
+              
               <div key={room.roomId} className="room-card">
+                
                 {room.imgUrl ? (
                   <img src={room.imgUrl} alt={`${room.name}`} />
                 ) : (
@@ -118,7 +131,7 @@ function Grid({ type, filter }) {
                   <h2>${room.price}</h2>
                   <button
                     className="btn btn-blue"
-                    onClick={() => navigate("/payment")}
+                    onClick={() => handleClick(room.roomId)}
                   >
                     Book Now
                   </button>
