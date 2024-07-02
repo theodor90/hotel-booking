@@ -64,11 +64,18 @@ function Grid({ type, filter }) {
       .length;
   };
 
-  // Create a lookup map for hotels
   const hotelMap = hotels.reduce((map, hotel) => {
     map[hotel.hotelId] = hotel;
     return map;
   }, {});
+
+  const handleClick = (roomId) => {
+    navigate(`/product/${roomId}`);
+  };
+
+  const handleHotelClick = (hotelId) => {
+    navigate(`/hotels/${hotelId}`);
+  };
 
   return (
     <>
@@ -89,7 +96,7 @@ function Grid({ type, filter }) {
               </div>
               <button
                 className="btn btn-blue"
-                onClick={() => navigate("/payment")}
+                onClick={() => handleHotelClick(hotel.hotelId)}
               >
                 Book Now
               </button>
@@ -118,7 +125,7 @@ function Grid({ type, filter }) {
                   <h2>${room.price}</h2>
                   <button
                     className="btn btn-blue"
-                    onClick={() => navigate("/payment")}
+                    onClick={() => handleClick(room.roomId)}
                   >
                     Book Now
                   </button>

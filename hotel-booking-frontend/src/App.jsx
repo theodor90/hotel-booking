@@ -4,6 +4,7 @@ import {
   Route,
   Routes,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import PropTypes from "prop-types";
 import Register from "./pages/Register";
@@ -13,7 +14,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Payment from "./pages/payment/Payment";
 import Product from "./pages/product/Product";
-import Grid from "./components//grid/Grid";
+import Grid from "./components/grid/Grid";
 import ProductList from "./pages/productlist/ProductList";
 import Footer from "./components/footer/Footer";
 import Contact from "./pages/contact/Contact";
@@ -32,10 +33,12 @@ PrivateRoute.propTypes = {
 };
 
 const App = () => {
+  const location = useLocation();
+  const isDashboard = location.pathname.startsWith("/dashboard");
+
   return (
-    <Router>
-      {/* Remove NavBar at dashboard */}
-      <NavBar />
+    <>
+      {!isDashboard && <NavBar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -48,7 +51,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/hotels" element={<HotelListPage />} />
         <Route path="/hotels/:hotelId" element={<RoomListPage />} />
-        
+
         <Route
           path="/dashboard/*"
           element={
@@ -58,9 +61,15 @@ const App = () => {
           }
         />
       </Routes>
-      <Footer />
-    </Router>
+      {!isDashboard && <Footer />}
+    </>
   );
 };
 
-export default App;
+const WrappedApp = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default WrappedApp;

@@ -7,6 +7,7 @@ import {
   faHotel,
   faTent,
   faPencil,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 function SideMenu() {
@@ -19,6 +20,7 @@ function SideMenu() {
 
   return (
     <div className="side-menu-container">
+      <h2>Dashboard</h2>
       <Link
         to="/dashboard"
         className={selectedMenu === "/dashboard" ? "selected" : ""}
@@ -42,6 +44,13 @@ function SideMenu() {
         className={selectedMenu === "/dashboard/bookings" ? "selected" : ""}
       >
         <FontAwesomeIcon icon={faPencil} /> Bookings
+      </Link>
+      <Link
+        to="/"
+        id="exit-dashboard"
+        className={selectedMenu === "/dashboard/bookings" ? "selected" : ""}
+      >
+        Exit dashboard
       </Link>
     </div>
   );
