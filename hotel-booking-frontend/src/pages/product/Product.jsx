@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -20,8 +20,9 @@ export default function Product() {
   const [hotel, setHotel] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [checkInDate, setCheckInDate] = useState("");
-  const [checkOutDate, setCheckOutDate] = useState("");
+  const [checkInDate, setCheckInDate] = useState(localStorage.getItem("startDate"));
+  const [checkOutDate, setCheckOutDate] = useState(localStorage.getItem("endDate"));
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchRoomData = async () => {
@@ -74,6 +75,10 @@ export default function Product() {
 
   if (!room || !hotel) {
     return <p>No data available.</p>;
+  }
+
+  const handleClick = () => {
+    navigate("/payment");
   }
 
   return (
@@ -160,7 +165,7 @@ export default function Product() {
               />
             </div>
           </div>
-          <button className="btn btn-blue">Book</button>
+          <button className="btn btn-blue" onClick={handleClick}>Book</button>
           <div className="v-line"></div>
           <table className="product-table">
             <tbody>

@@ -28,6 +28,9 @@ function SearchBar({ onSearch }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     onSearch(selectedDestination);
+    localStorage.setItem("destination", selectedDestination);
+    localStorage.setItem("startDate", document.getElementById("start-date").value);
+    localStorage.setItem("endDate", document.getElementById("end-date").value);
   };
 
   return (
@@ -53,11 +56,11 @@ function SearchBar({ onSearch }) {
       </div>
       <div>
         <h6>From</h6>
-        <input type="date" required />
+        <input id="start-date" type="date" required />
       </div>
       <div>
         <h6>To</h6>
-        <input type="date" required />
+        <input id="end-date" type="date" required />
       </div>
       <button className="btn btn-blue">Find</button>
     </form>
