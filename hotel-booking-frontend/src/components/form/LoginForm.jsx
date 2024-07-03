@@ -52,8 +52,8 @@ function LoginForm() {
 
                     <button type="submit" className="btn-login-right">Login</button>
 
-                    <div className="form-group mt-3">
-                        <input type="checkbox" name="remember" defaultChecked />
+                    <div className="form-group">
+                        <input id="form-checkbox" type="checkbox" name="remember" checked="checked" />
                         <label htmlFor="formRemember">Remember me</label>
                     </div>
                 <div className="container">

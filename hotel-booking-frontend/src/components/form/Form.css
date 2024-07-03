@@ -74,9 +74,10 @@
   outline: none;
 }
 
-input[type=checkbox] {  
+#form-checkbox{
+  border: 1px solid lightgray;
   margin-right: 2rem;    
-  max-width: 15px;
+  max-width: 15px;  
 }
 
 .btn-login {
