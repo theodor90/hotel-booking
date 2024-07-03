@@ -1,0 +1,27 @@
+.not-found {
+  position: relative;
+  min-height: 50vh;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--black);
+  overflow: hidden;
+}
+
+.not-found h1 {
+  color: var(--light-blue);
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  font-size: 1.5rem;
+}
+
+.not-found img {
+  position: absolute;
+  width: 25vw;
+  right: 0;
+}
