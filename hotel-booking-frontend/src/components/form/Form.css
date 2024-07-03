@@ -96,6 +96,11 @@
   transition: ease-in-out 0.5s;  
 }
 
+input[type=checkbox] {  
+  margin-right: 2rem;    
+  max-width: 15px;
+}
+
 .btn-login-right {
   font-weight: 700;
   border-radius: 0.25rem;

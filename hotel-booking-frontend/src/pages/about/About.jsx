@@ -9,7 +9,7 @@ export default function About() {
       <div className="spacer"></div>       
         <div className="padded-paragraph-white">
         <p>
-          Welcome to LuxuryStay, your trusted partner in finding the perfect
+          Welcome to InnFinder, your trusted partner in finding the perfect
           hotel for your travels. Whether you're planning a business trip, a
           family vacation, or a romantic getaway, we are here to make your
           booking experience seamless and enjoyable.
@@ -22,7 +22,7 @@ export default function About() {
       <div className="spacer"></div>       
         <div className="padded-paragraph">
         <p>
-          Founded in 2010, LuxuryStay was born out of a passion for travel and a
+          Founded in 2010, InnFinder was born out of a passion for travel and a
           desire to provide travelers with an easy and reliable way to book
           their accommodations. We started with a small team of travel
           enthusiasts and have grown into a global platform, offering a wide
@@ -97,13 +97,13 @@ export default function About() {
         <p>
         Have questions or need assistance? Feel free to reach out to us:
           <br />
-          Email: support@luxurystay.com
+          Email: support@InnFinder.com
           <br />
-          Phone: 1-800-123-4567
+          Phone: (+46) 733 12 34 56
           <br />
-          Address: 123 Luxury Lane, Suite 100, Travel City, TX 75001
+          Address: Storgatan 12, 111 22 Stockholm, Sweden
           <br />
-          Thank you for choosing LuxuryStay. We look forward to helping you find
+          Thank you for choosing InnFinder. We look forward to helping you find
           your perfect stay!
         </p>        
         </div>
