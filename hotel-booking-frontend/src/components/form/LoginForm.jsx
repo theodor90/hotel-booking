@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import api from "../../services/api";
 import './Form.css'
 
-
 function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -21,7 +20,6 @@ function LoginForm() {
             setError('Login failed. Please try again.');
         }
     };
-
 
     return (
         <div className="form-container">
@@ -52,7 +50,7 @@ function LoginForm() {
                         />
                     </div>
 
-                    <button type="submit" className="btn-login">Login</button>
+                    <button type="submit" className="btn-login-right">Login</button>
 
                     <div className="form-group mt-3">
                         <input type="checkbox" name="remember" defaultChecked />
@@ -60,7 +58,7 @@ function LoginForm() {
                     </div>
                 <div className="container">
                     <button type="button" className="btn-cancel">Cancel</button>
-                    <span className="forgot-password">Forgot <a href="#">password?</a></span>
+                    <span className="forgot-password"> Forgot <a href="#">password?</a></span>
                 </div>
             </form>
             {error && <p>{error}</p>}

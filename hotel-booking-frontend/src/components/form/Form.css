@@ -74,6 +74,11 @@
   outline: none;
 }
 
+input[type=checkbox] {  
+  margin-right: 2rem;    
+  max-width: 15px;
+}
+
 .btn-login {
   font-weight: 700;
   border-radius: 0.25rem;
@@ -82,7 +87,7 @@
   color: var(--white);
   border: 1px solid var(--white);
   background-color: var(--green);
-  transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;  
 }
 
 .btn-cancel {
@@ -93,7 +98,19 @@
   color: var(--white);
   border: 1px solid var(--whie);
   background-color: var(--red);
+  transition: ease-in-out 0.5s;  
+}
+
+.btn-login-right {
+  font-weight: 700;
+  border-radius: 0.25rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  color: var(--white);
+  border: 1px solid var(--white);
+  background-color: var(--green);
   transition: ease-in-out 0.5s;
+  float: right;
 }
 
 .clearfix::after {
