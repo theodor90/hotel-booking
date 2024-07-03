@@ -48,7 +48,7 @@ function SideMenu() {
       <Link
         to="/"
         id="exit-dashboard"
-        className={selectedMenu === "/dashboard/bookings" ? "selected" : ""}
+        className={selectedMenu === "/" ? "selected" : ""}
       >
         Exit dashboard
       </Link>

@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Home from "./pages/home/Home";
+import NotFound from "./pages/404/NotFound";
 import About from "./pages/about/About";
 import Payment from "./pages/payment/Payment";
 import Product from "./pages/product/Product";
@@ -41,6 +42,7 @@ const App = () => {
       {!isDashboard && <NavBar />}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/404" element={<NotFound />} />
         <Route path="/about" element={<About />} />
         <Route path="/grid" element={<Grid />} />
         <Route path="/product/:roomId" element={<Product />} />
@@ -60,6 +62,8 @@ const App = () => {
             </PrivateRoute>
           }
         />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {!isDashboard && <Footer />}
     </>

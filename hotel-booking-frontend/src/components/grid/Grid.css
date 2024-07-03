@@ -47,8 +47,8 @@
 
 /* Room Grid */
 .grid-container-room {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   padding: 1rem 0;
   width: 60%;
@@ -56,21 +56,18 @@
 }
 
 .room-card {
-  position: relative;
   height: 100%;
   width: 100%;
   margin: 10px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
 }
 
 .room-card img {
-  width: 100%;
+  width: 30%;
   height: 250px;
   object-fit: cover;
 }
@@ -95,13 +92,6 @@
 .room-card div {
   width: 100%;
   padding: 15px;
-}
-.centered-title {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #118ab2;
-
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

@@ -5,9 +5,8 @@ import "./Grid.css";
 function Grid({ type, filter }) {
   const [hotels, setHotels] = useState([]);
   const [rooms, setRooms] = useState([]);
-  const [originalRooms, setOriginalRooms] = useState([]);
+  const [originalRooms, setOriginalRooms] = useState([]); // Store the original rooms list
   const navigate = useNavigate();
-  const DISPLAY_LIMIT = 6;
 
   useEffect(() => {
     fetchHotelsAndRooms();
@@ -24,7 +23,7 @@ function Grid({ type, filter }) {
       .then(([hotelsData, roomsData]) => {
         setHotels(hotelsData);
         setRooms(roomsData);
-        setOriginalRooms(roomsData);
+        setOriginalRooms(roomsData); // Save the original rooms list
       })
       .catch((error) => console.error("Error fetching data:", error));
   };
@@ -60,13 +59,6 @@ function Grid({ type, filter }) {
     setRooms(filteredRooms);
   };
 
-  const shuffleArray = (array) => {
-    return array
-      .map((item) => ({ item, sort: Math.random() }))
-      .sort((a, b) => a.sort - b.sort)
-      .map(({ item }) => item);
-  };
-
   const getAvailableRoomCount = (hotelId) => {
     return rooms.filter((room) => room.hotelId === hotelId && room.availability)
       .length;
@@ -85,15 +77,13 @@ function Grid({ type, filter }) {
     navigate(`/hotels/${hotelId}`);
   };
 
-  const shuffledHotels = shuffleArray(hotels);
-  const shuffledRooms = shuffleArray(rooms);
-
   return (
     <>
-      {type === "hotels" && <h1 className="centered-title">Hotels</h1>}
       <div className="grid-container">
+      
         {type === "hotels" &&
-          shuffledHotels.slice(0, DISPLAY_LIMIT).map((hotel) => (
+          hotels.map((hotel) => (
+            
             <div key={hotel.hotelId} className="hotel-card">
               <div>
                 {hotel.imgUrl ? (
@@ -115,18 +105,22 @@ function Grid({ type, filter }) {
             </div>
           ))}
       </div>
-      {type === "rooms" && <h1 className="centered-title">Rooms</h1>}
+   
       <div className="grid-container-room">
+      <h2>Rooms</h2>
         {type === "rooms" &&
-          shuffledRooms.slice(0, DISPLAY_LIMIT).map((room) => {
+          rooms.slice(0, 3).map((room) => {
             const hotel = hotelMap[room.hotelId];
             return (
+              
               <div key={room.roomId} className="room-card">
+                
                 {room.imgUrl ? (
                   <img src={room.imgUrl} alt={`${room.name}`} />
                 ) : (
                   <div className="placeholder-image">Image not available</div>
                 )}
+
                 <div>
                   <h2>{room.roomType}</h2>
                   <h5>{hotel?.hotelName || "Hotel name not available"}</h5>

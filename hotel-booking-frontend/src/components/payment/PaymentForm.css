@@ -1,116 +1,106 @@
-  .paymentform-container {
-    box-sizing: border-box;
-    justify-content: center;
-    padding: 2rem;
-    box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
-    border-radius: 1rem;
-    align-items: center;
-    border: 1px solid lightgray;
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    background-color: #fcfcf8;
-  }
+.paymentform-container {
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: inset 0 0.75rem 2rem rgba(229, 225, 187, 0.5);
+  border-radius: 1rem;
+  align-items: center;
+  border: 1px solid lightgray;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fcfcf8;
+}
 
-  .paymentform-container .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+.paymentform-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
-  .paymentform-container .col {
-    width: 50%;
-    gap: 1rem;
-    flex: 1;
-  }
+.paymentform-container .col {
+  width: 50%;
+  gap: 1rem;
+  flex: 1;
+}
 
+.paymentform-container select {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0.63rem 1rem;
+  font-size: 15px;
+}
 
-  .paymentform-container select {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 0.63rem 1rem;
-    font-size: 15px;
-  }
+.paymentform-container img {
+  height: 40px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
 
-  .paymentform-container img {
-    height: 40px;
-    margin-top: 5px;
-    filter: drop-shadow(0 0 1px #000);
-  }
+.paymentform-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
 
+.paymentform-container .form-group {
+  margin-bottom: 1rem;
+}
 
-  .paymentform-title {
-    font-weight: 700;
-    font-size: 1.5rem;
+.form-group label {
+  font-weight: 700;
+  font-size: 1rem;
+  display: block;
+}
 
-  }
+.paymentform-container .cvc {
+  padding: 0.63rem 1rem;
+  width: 100%;
+}
 
-  .paymentform-container .form-group {
-    margin-bottom: 1rem;
-  }
+.form-group input {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background: white;
+}
 
-  .form-group label {
-    font-weight: 700;
-    font-size: 1rem;
-    display: block;
-  }
+.form-group input:focus {
+  background-color: #ddd;
+  outline: none;
+}
 
-  .paymentform-container .cvc {
-    padding: 0.63rem 1rem;
-    width: 100%;
-  }
+.form-group input:valid {
+  border: black;
+}
 
-  .form-group input {
-    display: inline-block;
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    box-sizing: border-box;
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    background: white;
-  }
+.form-group:required:valid {
+  border-color: green;
+}
 
+.paymentform-container .btn {
+  width: 100%;
+  display: block;
+  flex-basis: 100%;
+}
 
-  .form-group input:focus {
-    background-color: #ddd;
-    outline: none;
-  }
+.thank-you-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 25vh;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: white;
+}
 
-  .form-group input:valid {
-    border: black;
-  }
-
-  .form-group:required:valid {
-    border-color: green;
-  }
-
-  /*.form-group input:invalid {
-    border-color: red;
-  }*/
-
-  .paymentform-container .btn {
-    width: 100%;
-    display: block;
-    flex-basis: 100%;
-  }
-
-  .thank-you-message {
-    display: block;
-    width: 100%;
-    min-height: 25%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    box-sizing: border-box;
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    background: white;
-  }
-
-  .thank-you-message h3 {
-     font-family: "Inter", sans-serif;
-     text-align: center;
-     font-weight: 400;
-     font-size: 1rem;
-  }
+.thank-you-message h3 {
+  font-weight: 400;
+}

@@ -5,6 +5,7 @@ import Featured from "../../components/featured/Featured";
 import BackToTop from "../../components/backtotop/BackToTop";
 import Grid from "../../components/grid/Grid";
 import SearchBar from "../../components/searchbar/SearchBar";
+import Product from "../product/Product";
 
 export default function Home() {
   const [filter, setFilter] = useState(null);
@@ -21,8 +22,8 @@ export default function Home() {
       <Hero />
       <SearchBar onSearch={handleSearch} />
       <Grid type="rooms" filter={filter} />
-      <Featured />
       <Grid type="hotels" />
+      <Featured />
       <BackToTop />
     </>
   );

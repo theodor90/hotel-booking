@@ -108,7 +108,7 @@ const RoomListPage = () => {
                         Price: ${room.price}
                       </Typography>
                       <button
-                        className="btn btn-green"
+                        className="btn btn-blue"
                         onClick={() => handleClick(room.roomId)}
                       >
                         Book Now
