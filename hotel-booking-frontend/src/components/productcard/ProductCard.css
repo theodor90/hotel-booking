@@ -1,77 +1,46 @@
-  /* Style the counter cards */
+/* Style the counter cards */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 16px;
-    width: fit-content;
-    text-align: center;     
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  width: fit-content;
+  text-align: center;
+}
 
-  .image {    
-    padding-bottom: 10px;
-    padding-left:10px;
-    float:left;
-  }  
-  
-  .hotel-description {
-    text-align: left;
-    padding-left: 10px;
-  } 
-    
-  .price {
-    text-align: left;
-    font-weight: bold;
-    padding-right: 75px;
-  }  
+.image {
+  padding-bottom: 10px;
+  padding-left: 10px;
+  float: left;
+}
 
-  .card button {    
-    outline: 0;
-    padding: 12px;
-    color: var(--white);    
-    text-align: center;
-    cursor: pointer;    
-    font-size: 18px;
-  }
-  
-  .card button:hover {
-    opacity: 0.7;
-  }
+.hotel-description {
+  text-align: left;
+  padding-left: 10px;
+}
 
-  .card-footer {
-    display: flex;
-  }
+.price {
+  text-align: left;
+  font-weight: bold;
+  padding-right: 75px;
+}
 
-  .container{
-    padding-top: 100px;
-    padding-left: 10px;
-  }  
-   
-  /* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Larger screens: 4 columns */
-  @media (min-width: 1000px) {
-    .grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  /* Medium screens: 3 columns */
-  @media (min-width: 768px) and (max-width: 999px) {
-    .grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  /* Smaller screens: 2 columns */
-  @media (max-width: 767px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  } 
-  
+.card button {
+  outline: 0;
+  padding: 12px;
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card-footer {
+  display: flex;
+}
+
+.container {
+  padding-top: 100px;
+  padding-left: 10px;
+}
