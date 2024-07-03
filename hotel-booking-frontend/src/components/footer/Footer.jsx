@@ -17,7 +17,9 @@ export default function Footer() {
     <footer>
       <div className="footer-nav">
         <div className="footer-col">
-          <h1 className="logo">InnFinder</h1>
+          <Link to="/">
+            <h1 className="logo">InnFinder</h1>
+          </Link>
           <p>Storgatan 12</p>
           <p>111 22 Stockholm</p>
           <p>Sweden</p>

@@ -15,7 +15,9 @@ const NavBar = () => {
 
   return (
     <nav>
-      <h1 className="logo">InnFinder</h1>
+      <Link to="/">
+        <h1 className="logo">InnFinder</h1>
+      </Link>
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -37,7 +39,9 @@ const NavBar = () => {
               <Link to="/dashboard">Dashboard</Link>
             </li>
             <li>
-              <Link to="/logout" onClick={handleLogout}>Logout</Link>
+              <Link to="/logout" onClick={handleLogout}>
+                Logout
+              </Link>
             </li>
           </>
         )}
