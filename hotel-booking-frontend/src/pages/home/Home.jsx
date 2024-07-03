@@ -22,8 +22,8 @@ export default function Home() {
       <Hero />
       <SearchBar onSearch={handleSearch} />
       <Grid type="rooms" filter={filter} />
-      <Grid type="hotels" />
       <Featured />
+      <Grid type="hotels" />
       <BackToTop />
     </>
   );
