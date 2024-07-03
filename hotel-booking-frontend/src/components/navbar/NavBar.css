@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+PT:wght@100..400&display=swap");
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -7,8 +9,11 @@ nav {
   padding: 1rem;
 }
 
-nav h1 {
+.logo {
   color: var(--yellow);
+  font-family: "Playwrite PT", cursive;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 nav ul {
