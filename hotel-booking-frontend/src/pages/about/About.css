@@ -1,39 +1,62 @@
-.about-bg-image {
-  background-image: url("https://images.unsplash.com/photo-1618064541372-289bdb6f5b7b?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+.padded-h3{
+  padding-left: 20px;  
 }
 
-.profile-container {
-  width: 100%;
-  background-color: cornsilk;
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  box-shadow: 20px 20px 50px 10px burlywood inset;
+.padded-h3-white{
+  padding-left: 20px;
+  color:white;  
+}
+
+.padded-paragraph{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.padded-paragraph-white{
+  padding-left: 20px;
+  padding-right: 20px;
+  color:white;
 }
 
 .spacer {
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
-.about-bg-image h3 {
-  padding-top: 10px;
-  padding-bottom: 10 px;
-  padding-left: 10px;
+.card-frame {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-left:600px;
+  position: relative;     
 }
 
-.about-bg-image p {
-  padding-bottom: 20px;
+.div-bg {  
+  background-image: url("https://images.unsplash.com/photo-1506059612708-99d6c258160e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMyfEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fHw%3D");
+  padding-top:30px;
+  padding-bottom:30px;  
+  position: relative;
+  max-width: 500px;
+  height:auto;
+  text-align: left; 
+  
+}  
+
+.div-bg-mission {  
+  background-image: url("https://images.unsplash.com/photo-1699455790015-da3e113241f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2NXxGem8zenVPSE42d3x8ZW58MHx8fHx8");
+  padding-top:30px;
+  padding-bottom:30px;
+  max-width: 500px;
+  height:auto;  
+  position: relative;
+  text-align: left;  
 }
 
-.container {
-  padding-left: 10px;
-}
-
-.about-bg-image img {
-  float: right;
-  max-width: 250px;
-  height: auto;
-  padding-right: 50px;
+.div-bg-why {  
+  background-image: url("https://images.unsplash.com/photo-1718368199589-0d89a14a168e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE4MHxGem8zenVPSE42d3x8ZW58MHx8fHx8");
+  padding-top:30px;
+  padding-bottom:30px;
+  max-width: 500px;
+  height:auto;  
+  position: relative;
+  text-align: left;  
 }
