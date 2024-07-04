@@ -4,7 +4,7 @@ https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-
 "Hotel Booking" is a fullstack demo version of a hotel booking website. It supports search functionality, selection of booking dates in the calendar, and payment. Please note that running the application requires 
 both Visual Studio and Visual Studio Code, which can be installed from here:
 https://code.visualstudio.com/download
-https://visualstudio.microsoft.com/vs/
+https://visualstudio.microsoft.com/vs/.
 
 After installing Visual Studio Code, install the LiveServer extension.
 
@@ -15,8 +15,8 @@ Write "Update-Database" to complete the process.
 
 Now the application is ready to run. When Swagger starts up, backend data is passed to the frontend solution through the API. 
 If running https projects returns error messages, try these commands in the Command Prompt: 
-dotnet dev-certs https --clean
-dotnet dev-certs https --trust
+"dotnet dev-certs https --clean",
+"dotnet dev-certs https --trust".
 
 Install the new certificates and run the application.
 
