@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: var(--dark-blue);
 
   h1 {
     font-size: 3rem;
