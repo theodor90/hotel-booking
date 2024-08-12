@@ -40,11 +40,10 @@ export default function About() {
           </div>
           <div>
             <p>
-              Our mission is simple: to help you find the perfect stay, no
-              matter where you are in the world. We believe that a great hotel
-              can enhance your travel experience, and we are committed to
-              bringing you the best selection of accommodations at the best
-              prices.
+              Our mission is to help you find the perfect stay, no matter where
+              you are in the world. We believe that a great hotel can enhance
+              your travel experience, and we are committed to bringing you the
+              best selection of accommodations at the best prices.
             </p>
           </div>
         </div>
